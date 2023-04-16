@@ -299,13 +299,19 @@
 </li>
 </ol>
 <h4 id="Backup"><a href="#Backup" class="headerlink" title="Backup"></a>Backup</h4><p>I DON’T THINK THAT I HAVE DONE THIS PROPERLY. </p>
-<p>I firstly tried to commit my local directory to a new branch in the same repo which Hexo was deployed to. I somehow ended up with a new repo under my other account (the one I use for college work). (How could this even happen? I mean I have logged into my account both in vs code and git bash I simply can’t see why.) </p>
-<p>After initialising the git file I decided that I’m going to do the simpliest thing and just push everything to a new repo, EVERYTHING. This is the part that I believe is not the best solution. However, I thought about this: <em>if</em> one day I were to lose my computer, or it broke down, or, I simply wanted to replace it with a new one, with all the softwares and systems that would need to be reinstalled, I’m not going to make it a hard job when comes to restore my blog (<em>happily found myself an excuse to be stupid</em>). </p>
+<p>I first tried to commit my local directory to a new branch in the same repo to which Hexo was deployed, but somehow ended up with a new repo under my other account (the one I use for college work). (<em>How could this even happen? I mean I have logged into my account both in vs code and git bash I simply can’t see why</em>.) </p>
+<p>After initialising the git file I decided that I’m going to do the simpliest thing and just push everything to a new repo. This is the part that I believe is not the best solution. However, I thought about this: <em>if</em> one day I were to lose my computer, or it broke down, or, I simply wanted to replace it with a new one, with all the softwares and systems that would need to be reinstalled, I’m not going to make it a hard job when comes to restore my blog (<em>happily found myself an excuse to be stupid</em>). </p>
 <p>Anyway, the following are the commands I used to back up. </p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">git init</span><br><span class="line">git add . </span><br><span class="line">git commit -m &quot;commit message&quot;</span><br><span class="line">git remote add origin https://github.com/thisisamor/blog_backup</span><br><span class="line">git push -u origin main</span><br></pre></td></tr></table></figure>
 
-<p>(The gitignore file in <code>/themes/next</code> folder needs to be deleted as well, so that the customised theme could be backed up.)</p>
+<p>(The gitignore file in <code>/themes/next</code> folder needs to be deleted, so that the customised theme could be backed up.)</p>
 <p>When restoring the local blog folder, simply clone the whole repo and run <code>npm install</code>. Then everything should be back. </p>
+<p>I tested and it worked. </p>
+<hr>
+<h3 id="Troubleshooting"><a href="#Troubleshooting" class="headerlink" title="Troubleshooting"></a>Troubleshooting</h3><h4 id="Capitalisation"><a href="#Capitalisation" class="headerlink" title="Capitalisation"></a>Capitalisation</h4><p>Changing the category name from <code>test</code> to <code>Test</code> caused the “404 page not found” error. It is due to the fact that github is not case sensitive, while the URLs in HTTPS are. </p>
+<p>This problem was supposed to be fixed by changing <code>ignorecase = true</code> in the config file in <code>\.deploy_git\.git</code> into <code>ignorecase = false</code>. </p>
+<p>I tried, didn’t work for me. </p>
+<p>I removed the files from my posts folder, deployed my blog, then I put them back, deployed again. Issue fixed. </p>
 <hr>
 <h3 id="Cheat-Sheet"><a href="#Cheat-Sheet" class="headerlink" title="Cheat Sheet"></a>Cheat Sheet</h3><h4 id="Commands"><a href="#Commands" class="headerlink" title="Commands"></a>Commands</h4><ul>
 <li><p>The obvious ones in Hexo</p>
@@ -319,6 +325,7 @@
 <li>Faded<br>  <code>&lt;p style=&quot;opacity: 0.7;&quot;&gt; Faded text. &lt;/p&gt;</code></li>
 <li>Small faded<br>  <code>&lt;small style=&quot;opacity: 0.7;&quot;&gt; Small faded text. &lt;/small&gt;</code></li>
 <li>Icon<br>  <code>&lt;i class=&quot;fa-regular fa-icon&quot;&gt;&lt;/i&gt;</code></li>
+<li>Hyperlink<br>  <code>&lt;a href=&quot;URL&quot; style=&quot;text-decoration: none;&quot;&gt; text &lt;/a&gt;</code></li>
 </ul>
 <h4 id="Useful-Websites"><a href="#Useful-Websites" class="headerlink" title="Useful Websites"></a>Useful Websites</h4><p><i class="fa-solid fa-link"></i> <a target="_blank" rel="noopener" href="https://blog.csdn.net/sinat_37781304/article/details/82729029?ops_request_misc=%257B%2522request%255Fid%2522%253A%2522168150927616800215012048%2522%252C%2522scm%2522%253A%252220140713.130102334..%2522%257D&request_id=168150927616800215012048&biz_id=0&utm_medium=distribute.pc_search_result.none-task-blog-2~all~top_positive~default-1-82729029-null-null.142%5Ev83%5Ekoosearch_v1,239%5Ev2%5Einsert_chatgpt&utm_term=hexo&spm=1018.2226.3001.4187">Hexo setup manual on CSDN</a></p>
 <p><i class="fa-solid fa-link"></i> <a target="_blank" rel="noopener" href="https://fontawesome.com/search?o=r&m=free">Font Awsome</a></p>
@@ -517,7 +524,7 @@
 <p>（为啥手机界面上不显示 Noto Serif 字体啊）</p>
 <hr>
 <h4 id="Y-espanol-¡Hola"><a href="#Y-espanol-¡Hola" class="headerlink" title="Y español. ¡Hola!"></a>Y español. ¡Hola!</h4><p>Algunas de mis prácticas de escritura aleatorias en español: </p>
-<p>Lo primero que noté es la actitud hacia los maestros. En China, las personas son muy educadas con ellos y usan ‘por favor’ cuando hablan. Casi nunca se dirigen directamente a ellos por su nombre. Sin embargo, aquí en Occidente es común hacerlo, y las relaciones son más cercanas, como de amigos. De hecho, me gusta más esta costumbre occidental, ya que creo que es más fácil para los estudiantes hacer preguntas en este ambiente.</p>
+<p>Lo primero que noté es la actitud hacia los maestros. En China, las personas son muy educadas con ellos y usan ‘por favor’ cuando hablan. Casi nunca se dirigen directamente a ellos por su nombre. Sin embargo, aquí en Occidente es común hacerlo, y las relaciones son más cercanas, como de amigos. </p>
 <hr>
 <h4 id="Markdown-test"><a href="#Markdown-test" class="headerlink" title="Markdown test:"></a>Markdown test:</h4><p>Tables and equations: </p>
 <table>
