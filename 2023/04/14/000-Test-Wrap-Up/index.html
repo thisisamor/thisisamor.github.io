@@ -20,15 +20,15 @@
 
 <script class="next-config" data-name="main" type="application/json">{"hostname":"example.com","root":"/","images":"/images","scheme":"Gemini","darkmode":true,"version":"8.15.1","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":{"enable":false,"style":null},"bookmark":{"enable":false,"color":"#222","save":"manual"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"Searching...","empty":"We didn't find any results for the search: ${query}","hits_time":"${hits} results found in ${time} ms","hits":"${hits} results found"}}</script><script src="/js/config.js"></script>
 
-    <meta name="description" content="Start Notes:   I think it’s a proper time for me to summarise a little. It’s always good to write something down… Because my memory is poor.   Hexo (and Jekyll)HexoHexo is a static site generator that">
+    <meta name="description" content="I think it&#39;s a proper time for me to summarise a little. It&#39;s always good to write something down... Because my memory is poor.">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Test Wrap Up">
 <meta property="og:url" content="http://example.com/2023/04/14/000-Test-Wrap-Up/index.html">
 <meta property="og:site_name" content="This is Amor">
-<meta property="og:description" content="Start Notes:   I think it’s a proper time for me to summarise a little. It’s always good to write something down… Because my memory is poor.   Hexo (and Jekyll)HexoHexo is a static site generator that">
+<meta property="og:description" content="I think it&#39;s a proper time for me to summarise a little. It&#39;s always good to write something down... Because my memory is poor.">
 <meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2023-04-14T21:08:33.000Z">
-<meta property="article:modified_time" content="2023-04-16T20:48:40.991Z">
+<meta property="article:modified_time" content="2023-04-17T09:58:58.312Z">
 <meta property="article:author" content="Amor">
 <meta property="article:tag" content="test">
 <meta property="article:tag" content="cheat sheet">
@@ -89,7 +89,7 @@
 
 
 <nav class="site-nav">
-  <ul class="main-menu menu"><li class="menu-item menu-item-posts"><a href="/" rel="section">Posts</a></li><li class="menu-item menu-item-archives"><a href="/archives" rel="section">Archives</a></li><li class="menu-item menu-item-categories"><a href="/categories" rel="section">Categories</a></li><li class="menu-item menu-item-tags"><a href="/tags" rel="section">Tags</a></li><li class="menu-item menu-item-about"><a href="/about" rel="section">About</a></li>
+  <ul class="main-menu menu"><li class="menu-item menu-item-home"><a href="/" rel="section">Home</a></li><li class="menu-item menu-item-archives"><a href="/archives" rel="section">Archives</a></li><li class="menu-item menu-item-categories"><a href="/categories" rel="section">Categories</a></li><li class="menu-item menu-item-tags"><a href="/tags" rel="section">Tags</a></li><li class="menu-item menu-item-about"><a href="/about" rel="section">About</a></li>
   </ul>
 </nav>
 
@@ -189,7 +189,7 @@
 
     <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
       <meta itemprop="name" content="Test Wrap Up | This is Amor">
-      <meta itemprop="description" content="">
+      <meta itemprop="description" content="I think it's a proper time for me to summarise a little. It's always good to write something down... Because my memory is poor.">
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
@@ -219,6 +219,8 @@
   
 </div>
 
+
+          
         </div>
       </header>
 
@@ -250,7 +252,8 @@
 <li>Jekyll generates the website from scratch every time, which can be slow if there is a lot of content.</li>
 </ul>
 <p>Apart from the fact that Jekyll has a larger community, they seem pretty similar to me in terms of using their commands (eg: <code>jekyll build</code>, <code>jekyll deploy</code>, <code>jekyll-ftp</code>, etc). </p>
-<h4 id="Programming-Languages-and-Frameworks"><a href="#Programming-Languages-and-Frameworks" class="headerlink" title="Programming Languages and Frameworks"></a>Programming Languages and Frameworks</h4><p>Hexo is built with the Node.js runtime environment. </p>
+<h4 id="Programming-Languages-and-Frameworks"><a href="#Programming-Languages-and-Frameworks" class="headerlink" title="Programming Languages and Frameworks"></a>Programming Languages and Frameworks</h4><p><small style="opacity: 0.7; font-style: italic">“Hey gpt, what web development languages do hexo and Jekyll use? And also, give me a brief introduction on other popular languages.” </small></p>
+<p>Hexo is built with the Node.js runtime environment. </p>
 <p>Node.js is a JavaScript runtime that allows developers to write server-side code using JavaScript, which is traditionally a client-side language. Hexo also supports the use of Markdown for content creation and offers a powerful plugin system for extending its functionality.</p>
 <p>Jekyll is built with the Ruby programming language. </p>
 <p>Ruby is a dynamic, object-oriented programming language that is used for web development, among other things. Jekyll also uses the Markdown language for content creation and supports front matter, which allows for the addition of metadata to each page.</p>
@@ -281,7 +284,7 @@
 <li><p>Add SSH in github<br> Copy the key generated in <code>id_rsa.pub</code>.<br> Go to <code>https://github.com/settings/keys</code>, add new SSH key.<br> Should be identified in git bash now by running <code>ssh -T git@github.com</code>. </p>
 </li>
 <li><p>Configuration<br> Open <code>_config.yml</code> and add the following code to the deploy section at the bottom. </p>
- <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">deploy:</span><br><span class="line">type: git</span><br><span class="line">repo: git@github.com:&lt;username&gt;/&lt;username&gt;.github.io.git   // repo SSH can be copied from github</span><br><span class="line">branch: main</span><br></pre></td></tr></table></figure>
+ <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">deploy:</span><br><span class="line">  type: git</span><br><span class="line">  repo: git@github.com:&lt;username&gt;/&lt;username&gt;.github.io.git   // repo SSH can be copied from github</span><br><span class="line">  branch: main</span><br></pre></td></tr></table></figure>
 </li>
 <li><p>Deployment<br> To deploy for the first time, run <code>npm install hexo-deployer-git --save</code>.<br> After that, simply use the following commands:  </p>
  <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">hexo cl</span><br><span class="line">hexo g -d</span><br><span class="line">hexo s</span><br></pre></td></tr></table></figure></li>
@@ -293,17 +296,25 @@
 <ul>
 <li>scheme</li>
 <li>darkmode</li>
-<li>menu  <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">menu:</span><br><span class="line">Posts: /</span><br><span class="line">archives: /archives</span><br><span class="line">categories: /categories</span><br><span class="line">tags: /tags</span><br><span class="line">About: /about</span><br></pre></td></tr></table></figure></li>
+<li>menu  <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">menu:</span><br><span class="line">  Home: /</span><br><span class="line">  archives: /archives</span><br><span class="line">  categories: /categories</span><br><span class="line">  tags: /tags</span><br><span class="line">  About: /about</span><br></pre></td></tr></table></figure></li>
 <li>menu_settings</li>
 <li>avatar  <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">url: /images/amor_avatar.gif</span><br></pre></td></tr></table></figure></li>
 <li>social</li>
 <li>icon between year and copyright info</li>
+<li>excerpt_description and read_more_btn</li>
 <li>post_meta</li>
 <li>font (I used <a target="_blank" rel="noopener" href="https://fonts.google.com/specimen/Lora?query=lora">Lora</a> and <a target="_blank" rel="noopener" href="https://fonts.google.com/noto/specimen/Noto+Serif+SC?query=noto+serif+sc">Noto Serif SC</a>, serif was the default one)  <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">family: Lora, Noto Serif SC, serif</span><br></pre></td></tr></table></figure></li>
 <li>mermaid</li>
 <li>math</li>
 </ul>
-<p> I also deleted the “set cheers” part in <code>themes/next/layout/arhive.njk</code></p>
+<p> In <code>arhive.njk</code>: Deleted <code>set cheers</code> part. </p>
+<p> In <code>tags.njk</code>: Changed <code>min_font: 16, max_font: 16</code> (all tags would have the same size). </p>
+<p> In <code>tag-cloud.styl</code>: (all tags would have the same colour.)<br> <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">.tag-cloud &#123;</span><br><span class="line">  text-align: center;</span><br><span class="line">  a &#123;</span><br><span class="line">    display: inline-block;</span><br><span class="line">    margin: 10px;</span><br><span class="line">    color: #333; /* Set a single color value for all tags */</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line">if (hexo-config(&#x27;darkmode&#x27;)) &#123;</span><br><span class="line">  @media (prefers-color-scheme: dark) &#123;</span><br><span class="line">    .tag-cloud a &#123;</span><br><span class="line">      color: #fff; /* Set a different color for tags in dark mode */</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p> In file <code>post.njk</code></p>
+<ul>
+<li>Modified <code>post-meta-container</code> (the description would only be shown on home page). </li>
+<li>Changed <code>&lt;p style=&quot;opacity: 0.5&quot;&gt;&#123;&#123; post.description &#125;&#125;&lt;/p&gt;</code> (the description would be faded on home page).</li>
+</ul>
 </li>
 </ol>
 <h4 id="Backup"><a href="#Backup" class="headerlink" title="Backup"></a>Backup</h4><p>I DON’T THINK THAT I HAVE DONE THIS PROPERLY. </p>
@@ -313,12 +324,12 @@
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">git init</span><br><span class="line">git add . </span><br><span class="line">git commit -m &quot;commit message&quot;</span><br><span class="line">git remote add origin https://github.com/thisisamor/blog_backup</span><br><span class="line">git push -u origin main</span><br></pre></td></tr></table></figure>
 
 <p>(The gitignore file in <code>/themes/next</code> folder needs to be deleted, so that the customised theme could be backed up.)</p>
-<p>When restoring the local blog folder, simply clone the whole repo and run <code>npm install</code>. Then everything should be back. </p>
+<p>When restoring the local blog folder, simply clone the whole repo and run <code>npm install</code>. Then everything should be back. (If using new computer, regenerate and add new SSH key to github acc, obvi.)</p>
 <p>I tested and it worked. </p>
 <hr>
 <h3 id="Troubleshooting"><a href="#Troubleshooting" class="headerlink" title="Troubleshooting"></a>Troubleshooting</h3><h4 id="Capitalisation"><a href="#Capitalisation" class="headerlink" title="Capitalisation"></a>Capitalisation</h4><p>Changing the category name from <code>test</code> to <code>Test</code> caused the “404 page not found” error. It is due to the fact that github is not case sensitive, while the URLs in HTTPS are. </p>
-<p>This problem was supposed to be fixed by changing <code>ignorecase = true</code> in the config file in <code>\.deploy_git\.git</code> into <code>ignorecase = false</code>. </p>
-<p>I tried, didn’t work for me. </p>
+<p>This problem was supposed to be fixed by changing <code>ignorecase = true</code> into <code>ignorecase = false</code> in the config file in <code>\.deploy_git\.git</code>. </p>
+<p>I tried, didn’t work. </p>
 <p>I removed the files from my posts folder, deployed my blog, then I put them back, deployed again. Issue fixed. </p>
 <hr>
 <h3 id="Cheat-Sheet"><a href="#Cheat-Sheet" class="headerlink" title="Cheat Sheet"></a>Cheat Sheet</h3><h4 id="Commands"><a href="#Commands" class="headerlink" title="Commands"></a>Commands</h4><ul>
@@ -330,10 +341,13 @@
 </ul>
 <h4 id="Code"><a href="#Code" class="headerlink" title="Code"></a>Code</h4><p>Some HTML tags I used for styling: </p>
 <ul>
-<li>Faded<br>  <code>&lt;p style=&quot;opacity: 0.7;&quot;&gt; Faded text. &lt;/p&gt;</code></li>
-<li>Small faded<br>  <code>&lt;small style=&quot;opacity: 0.7;&quot;&gt; Small faded text. &lt;/small&gt;</code></li>
+<li>Read more button<br>  <code>&lt;!-- more --&gt;</code></li>
+<li>Faded<br>  <code>&lt;p style=&quot;opacity: 0.7;&quot;&gt; text &lt;/p&gt;</code></li>
+<li>Small faded<br>  <code>&lt;small style=&quot;opacity: 0.7;&quot;&gt; text &lt;/small&gt;</code></li>
+<li>Small italic faded<br>  <code>&lt;small style=&quot;opacity: 0.7; font-style: italic&quot;&gt; text &lt;/small&gt;</code></li>
 <li>Icon<br>  <code>&lt;i class=&quot;fa-regular fa-icon&quot;&gt;&lt;/i&gt;</code></li>
 <li>Hyperlink<br>  <code>&lt;a href=&quot;URL&quot; style=&quot;text-decoration: none;&quot;&gt; text &lt;/a&gt;</code></li>
+<li>Picture size and caption  <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&lt;figure&gt;</span><br><span class="line">  &lt;img src=&quot;image source&quot; width=&quot;width in px&quot; alt=&quot;alt text&quot;&gt;</span><br><span class="line">  &lt;figcaption&gt;This is a caption. &lt;/figcaption&gt;</span><br><span class="line">&lt;/figure&gt;</span><br></pre></td></tr></table></figure></li>
 </ul>
 <h4 id="Useful-Websites"><a href="#Useful-Websites" class="headerlink" title="Useful Websites"></a>Useful Websites</h4><p><i class="fa-solid fa-link"></i> <a target="_blank" rel="noopener" href="https://blog.csdn.net/sinat_37781304/article/details/82729029?ops_request_misc=%257B%2522request%255Fid%2522%253A%2522168150927616800215012048%2522%252C%2522scm%2522%253A%252220140713.130102334..%2522%257D&request_id=168150927616800215012048&biz_id=0&utm_medium=distribute.pc_search_result.none-task-blog-2~all~top_positive~default-1-82729029-null-null.142%5Ev83%5Ekoosearch_v1,239%5Ev2%5Einsert_chatgpt&utm_term=hexo&spm=1018.2226.3001.4187">Hexo setup manual on CSDN</a></p>
 <p><i class="fa-solid fa-link"></i> <a target="_blank" rel="noopener" href="https://fontawesome.com/search?o=r&m=free">Font Awsome</a></p>
