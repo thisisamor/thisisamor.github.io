@@ -1,0 +1,803 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width">
+<meta name="theme-color" content="#222" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#222" media="(prefers-color-scheme: dark)"><meta name="generator" content="Hexo 6.3.0">
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lora:300,300italic,400,400italic,700,700italic%7CNoto+Serif+SC:300,300italic,400,400italic,700,700italic%7Cserif:300,300italic,400,400italic,700,700italic&display=swap&subset=latin,latin-ext">
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha256-HtsXJanqjKTc8vVQjO4YMhiqFoXkfBsjBWcX91T1jr8=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
+
+<script class="next-config" data-name="main" type="application/json">{"hostname":"example.com","root":"/","images":"/images","scheme":"Gemini","darkmode":true,"version":"8.15.1","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":{"enable":false,"style":null},"bookmark":{"enable":false,"color":"#222","save":"manual"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"Searching...","empty":"We didn't find any results for the search: ${query}","hits_time":"${hits} results found in ${time} ms","hits":"${hits} results found"}}</script><script src="/js/config.js"></script>
+
+    <meta name="description" content="Review notes of Software Systems.">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Software Systems Review">
+<meta property="og:url" content="http://example.com/2023/04/18/001-Software-Systems-Review/index.html">
+<meta property="og:site_name" content="This is Amor">
+<meta property="og:description" content="Review notes of Software Systems.">
+<meta property="og:locale" content="en_US">
+<meta property="og:image" content="https://github.com/thisisamor/blog_pic/blob/main/Software_Systems/ER-diagram.jpg?raw=true">
+<meta property="og:image" content="https://github.com/thisisamor/blog_pic/blob/main/Software_Systems/relational%20schema.jpg?raw=true">
+<meta property="article:published_time" content="2023-04-18T08:22:42.000Z">
+<meta property="article:modified_time" content="2023-04-19T16:11:04.333Z">
+<meta property="article:author" content="Amor">
+<meta property="article:tag" content="study">
+<meta property="article:tag" content="review">
+<meta property="article:tag" content="software systems">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://github.com/thisisamor/blog_pic/blob/main/Software_Systems/ER-diagram.jpg?raw=true">
+
+
+<link rel="canonical" href="http://example.com/2023/04/18/001-Software-Systems-Review/">
+
+
+
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"en","comments":true,"permalink":"http://example.com/2023/04/18/001-Software-Systems-Review/","path":"2023/04/18/001-Software-Systems-Review/","title":"Software Systems Review"}</script>
+
+<script class="next-config" data-name="calendar" type="application/json">""</script>
+<title>Software Systems Review | This is Amor</title>
+  
+
+
+
+
+
+
+
+
+  <noscript>
+    <link rel="stylesheet" href="/css/noscript.css">
+  </noscript>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
+  <div class="headband"></div>
+
+  <main class="main">
+    <div class="column">
+      <header class="header" itemscope itemtype="http://schema.org/WPHeader"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="Toggle navigation bar" role="button">
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <i class="logo-line"></i>
+      <p class="site-title">This is Amor</p>
+      <i class="logo-line"></i>
+    </a>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger" aria-label="Search" role="button">
+    </div>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  <ul class="main-menu menu"><li class="menu-item menu-item-home"><a href="/" rel="section">Home</a></li><li class="menu-item menu-item-archives"><a href="/archives" rel="section">Archives</a></li><li class="menu-item menu-item-categories"><a href="/categories" rel="section">Categories</a></li><li class="menu-item menu-item-tags"><a href="/tags" rel="section">Tags</a></li><li class="menu-item menu-item-about"><a href="/about" rel="section">About</a></li>
+  </ul>
+</nav>
+
+
+
+
+</header>
+        
+  
+  <aside class="sidebar">
+
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
+      <ul class="sidebar-nav">
+        <li class="sidebar-nav-toc">
+          Table of Contents
+        </li>
+        <li class="sidebar-nav-overview">
+          Overview
+        </li>
+      </ul>
+
+      <div class="sidebar-panel-container">
+        <!--noindex-->
+        <div class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Intro"><span class="nav-number">1.</span> <span class="nav-text">Intro</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Overview"><span class="nav-number">1.1.</span> <span class="nav-text">Overview</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Degrees-of-Data-Abstraction"><span class="nav-number">1.2.</span> <span class="nav-text">Degrees of Data Abstraction</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Notice"><span class="nav-number">1.3.</span> <span class="nav-text">Notice</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Entity-Relationship-Modelling-ERM"><span class="nav-number">2.</span> <span class="nav-text">Entity Relationship Modelling (ERM)</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Conceptual-model-of-data"><span class="nav-number">2.1.</span> <span class="nav-text">Conceptual model of data</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Entity-Relationship-Modelling"><span class="nav-number">2.2.</span> <span class="nav-text">Entity Relationship Modelling</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Primary-Keys"><span class="nav-number">2.3.</span> <span class="nav-text">Primary Keys</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Complex-attributes"><span class="nav-number">2.4.</span> <span class="nav-text">Complex attributes</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Cardinality-and-Participation-constraints"><span class="nav-number">2.5.</span> <span class="nav-text">Cardinality and Participation constraints</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Self-relationships"><span class="nav-number">2.6.</span> <span class="nav-text">Self-relationships</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Relationship-set-attributes"><span class="nav-number">2.7.</span> <span class="nav-text">Relationship set attributes</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Ternary-relationships"><span class="nav-number">2.8.</span> <span class="nav-text">Ternary relationships</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#Ternary-relationships-1"><span class="nav-number">2.8.1.</span> <span class="nav-text">Ternary relationships</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Weak-entity"><span class="nav-number">2.8.2.</span> <span class="nav-text">Weak entity</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Inheritance"><span class="nav-number">2.9.</span> <span class="nav-text">Inheritance</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Completed-ER-diagram"><span class="nav-number">2.10.</span> <span class="nav-text">Completed ER diagram</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Relationship-model-RM"><span class="nav-number">3.</span> <span class="nav-text">Relationship model (RM)</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Database-based-on-the-relationship-model"><span class="nav-number">3.1.</span> <span class="nav-text">Database based on  the relationship model</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Basic-components"><span class="nav-number">3.2.</span> <span class="nav-text">Basic components</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#Field-attribute-column"><span class="nav-number">3.2.1.</span> <span class="nav-text">Field (attribute, column)</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Table-relations"><span class="nav-number">3.2.2.</span> <span class="nav-text">Table (relations)</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Keys"><span class="nav-number">3.2.3.</span> <span class="nav-text">Keys</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Relational-Schema"><span class="nav-number">3.3.</span> <span class="nav-text">Relational Schema</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Anomaly-and-Redundancies"><span class="nav-number">3.4.</span> <span class="nav-text">Anomaly and Redundancies</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#Insertion-anomaly"><span class="nav-number">3.4.1.</span> <span class="nav-text">Insertion anomaly</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Deletion-anomaly"><span class="nav-number">3.4.2.</span> <span class="nav-text">Deletion anomaly</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Updation-anomaly"><span class="nav-number">3.4.3.</span> <span class="nav-text">Updation anomaly</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#A-good-relational-schema"><span class="nav-number">3.5.</span> <span class="nav-text">A good relational schema</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Normalization-and-Functional-Dependencies"><span class="nav-number">3.6.</span> <span class="nav-text">Normalization and Functional Dependencies</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#Functional-Dependencies"><span class="nav-number">3.6.1.</span> <span class="nav-text">Functional Dependencies</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#Full-functional-dependency"><span class="nav-number">3.6.1.1.</span> <span class="nav-text">Full functional dependency</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#Partial-functional-dependency"><span class="nav-number">3.6.1.2.</span> <span class="nav-text">Partial functional dependency</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#Transitive-dependency"><span class="nav-number">3.6.1.3.</span> <span class="nav-text">Transitive dependency</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#First-normal-form-1NF"><span class="nav-number">3.6.2.</span> <span class="nav-text">First normal form (1NF)</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Second-normal-form-2NF"><span class="nav-number">3.6.3.</span> <span class="nav-text">Second normal form (2NF)</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Third-normal-form-3NF"><span class="nav-number">3.6.4.</span> <span class="nav-text">Third normal form (3NF)</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Boyce-Codd-Normal-form-BCNF"><span class="nav-number">3.6.5.</span> <span class="nav-text">Boyce-Codd Normal form (BCNF)</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Relationship-algebra"><span class="nav-number">4.</span> <span class="nav-text">Relationship algebra</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Relational-algebra-operators"><span class="nav-number">4.1.</span> <span class="nav-text">Relational algebra operators</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#Union"><span class="nav-number">4.1.1.</span> <span class="nav-text">Union</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Intersection"><span class="nav-number">4.1.2.</span> <span class="nav-text">Intersection</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Difference"><span class="nav-number">4.1.3.</span> <span class="nav-text">Difference</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Projection"><span class="nav-number">4.1.4.</span> <span class="nav-text">Projection</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Selection"><span class="nav-number">4.1.5.</span> <span class="nav-text">Selection</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Cross-product-cross-join"><span class="nav-number">4.1.6.</span> <span class="nav-text">Cross product (cross join)</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Join-Inner-join"><span class="nav-number">4.1.7.</span> <span class="nav-text">Join (Inner join)</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Natual-join"><span class="nav-number">4.1.8.</span> <span class="nav-text">Natual join</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Left-natural-join"><span class="nav-number">4.1.9.</span> <span class="nav-text">Left natural join</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Aggregation"><span class="nav-number">4.1.10.</span> <span class="nav-text">Aggregation</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Rename"><span class="nav-number">4.1.11.</span> <span class="nav-text">Rename</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#RDBMS"><span class="nav-number">4.2.</span> <span class="nav-text">RDBMS</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#Introduction"><span class="nav-number">4.2.1.</span> <span class="nav-text">Introduction</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#RDBMS-vs-Flat-Files"><span class="nav-number">4.2.2.</span> <span class="nav-text">RDBMS vs. Flat Files</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#ACID-properties-of-RDBMS"><span class="nav-number">4.2.3.</span> <span class="nav-text">ACID properties of RDBMS</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#SQL-Data-Query-Language-DQL"><span class="nav-number">5.</span> <span class="nav-text">SQL - Data Query Language (DQL)</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#SQL-Data-Manipulation-Language-DML"><span class="nav-number">6.</span> <span class="nav-text">SQL - Data Manipulation Language (DML)</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#SQL-Data-Definition-Language-DDL"><span class="nav-number">7.</span> <span class="nav-text">SQL - Data Definition Language (DDL)</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Layered-network"><span class="nav-number">8.</span> <span class="nav-text">Layered network</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Application-layer"><span class="nav-number">9.</span> <span class="nav-text">Application layer</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Peer-to-peer-applications"><span class="nav-number">10.</span> <span class="nav-text">Peer to peer applications</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Transport-layer"><span class="nav-number">11.</span> <span class="nav-text">Transport layer</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Network-layer"><span class="nav-number">12.</span> <span class="nav-text">Network layer</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Link-layer"><span class="nav-number">13.</span> <span class="nav-text">Link layer</span></a></li></ol></div>
+        </div>
+        <!--/noindex-->
+
+        <div class="site-overview-wrap sidebar-panel">
+          <div class="site-author animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="Amor"
+      src="/images/amor_avatar.gif">
+  <p class="site-author-name" itemprop="name">Amor</p>
+  <div class="site-description" itemprop="description"></div>
+</div>
+<div class="site-state-wrap animated">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+        <a href="/archives">
+          <span class="site-state-item-count">7</span>
+          <span class="site-state-item-name">posts</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+          <a href="/categories">
+        <span class="site-state-item-count">2</span>
+        <span class="site-state-item-name">categories</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+          <a href="/tags">
+        <span class="site-state-item-count">7</span>
+        <span class="site-state-item-name">tags</span></a>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author animated">
+      <span class="links-of-author-item">
+        <a href="https://github.com/thisisamor" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;thisisamor" rel="noopener me" target="_blank">GitHub</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="https://amor-zhao.notion.site/amor-zhao/Amor-s-Dashboard-33d838340d45480980835d213c19ea5a" title="Dashboard → https:&#x2F;&#x2F;amor-zhao.notion.site&#x2F;amor-zhao&#x2F;Amor-s-Dashboard-33d838340d45480980835d213c19ea5a" rel="noopener me" target="_blank">Dashboard</a>
+      </span>
+  </div>
+
+        </div>
+      </div>
+    </div>
+
+    
+  </aside>
+
+
+    </div>
+
+    <div class="main-inner post posts-expand">
+
+
+  
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="en">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2023/04/18/001-Software-Systems-Review/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/amor_avatar.gif">
+      <meta itemprop="name" content="Amor">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="This is Amor">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="Software Systems Review | This is Amor">
+      <meta itemprop="description" content="Review notes of Software Systems.">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          Software Systems Review
+        </h1>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">Posted on</span>
+
+      <time title="Created: 18-04-2023 09:22:42" itemprop="dateCreated datePublished" datetime="2023-04-18T09:22:42+01:00">18-04-2023</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">In</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/Study/" itemprop="url" rel="index"><span itemprop="name">Study</span></a>
+        </span>
+    </span>
+
+  
+</div>
+
+
+          
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+        <p style="opacity: 0.7;">Start Notes: 
+
+<p><small style="opacity: 0.7;">My conversation with GPT (about Hexo) eventually turned to database and network systems. So, I wrote this post to review of my Software Systems course. (It’s the 2nd last exam on the timetable so I wasn’t expecting to post this one first.) </small></p>
+<hr>
+<h2 id="Intro"><a href="#Intro" class="headerlink" title="Intro"></a>Intro</h2><h3 id="Overview"><a href="#Overview" class="headerlink" title="Overview"></a>Overview</h3><p>Almost any modern <strong>software system</strong> comprises of: </p>
+<ul>
+<li><strong>Databases</strong>: Where data is stored.</li>
+<li><strong>Networks</strong>: How data move around between different computers. </li>
+<li><strong>Applications</strong>: How applications access and utilize networks and databases to implement their functionalities.</li>
+</ul>
+<p>An <strong>Internet exchange point</strong> (IXP) is a physical location through which internet infrastructure companies such as <strong>Internet Service Providers</strong> (ISPs) and <strong>Content distribution networks</strong> (CDNs) connect with each other. </p>
+<h3 id="Degrees-of-Data-Abstraction"><a href="#Degrees-of-Data-Abstraction" class="headerlink" title="Degrees of Data Abstraction"></a>Degrees of Data Abstraction</h3><ul>
+<li><strong>External models</strong><ul>
+<li>User’s view of the database</li>
+</ul>
+</li>
+<li><strong>Conceptual models</strong><ul>
+<li>A logical structure of the entire database</li>
+<li>eg: <mark style="background-color: #9fc5e8;">ER diagram</mark></li>
+</ul>
+</li>
+<li><strong>Internal models</strong><ul>
+<li>A representation of the database as seen by the DBMS</li>
+<li>The database is considered as a collection of fixed-size records, closer to the physical level or file structure</li>
+<li>eg: <mark style="background-color: #9fc5e8;">Relational model</mark></li>
+</ul>
+</li>
+<li><strong>Physical models</strong><ul>
+<li>The physical implementation of the database </li>
+<li>Deal with runtime performance, storage utilization, file organization, etc.</li>
+<li>eg: <mark style="background-color: #9fc5e8;">data in an RDBMS</mark>, such as SQLite, MySQL or Amazon RDS</li>
+</ul>
+</li>
+</ul>
+<h3 id="Notice"><a href="#Notice" class="headerlink" title="Notice"></a>Notice</h3><p>Other ways of <strong>conceptually modeling data</strong> than ER diagrams: hierarchical models, object-oriented models. </p>
+<p>Other <strong>internal models</strong> than the relational one: a key-store, or a document database. </p>
+<p>Other ways of <strong>physically storing data</strong> than an RDBMS: a distributed non-relational database like Amazon’s DynamoDB or MongoDB. </p>
+<hr>
+<h2 id="Entity-Relationship-Modelling-ERM"><a href="#Entity-Relationship-Modelling-ERM" class="headerlink" title="Entity Relationship Modelling (ERM)"></a>Entity Relationship Modelling (ERM)</h2><h3 id="Conceptual-model-of-data"><a href="#Conceptual-model-of-data" class="headerlink" title="Conceptual model of data"></a>Conceptual model of data</h3><ul>
+<li><p>An abstract structural representation of a system’s data</p>
+<ul>
+<li>Do not identify the data structures and storage optimizations. </li>
+<li>Simply try to capture a complete synthesis of the data and the operations to implement upon it.</li>
+</ul>
+</li>
+<li><p>All the high-level functions of a system should be captured by a conceptual model</p>
+<ul>
+<li>eg: searching Netflix movies by genre, by directors, by collaboration, etc.</li>
+</ul>
+</li>
+</ul>
+<h3 id="Entity-Relationship-Modelling"><a href="#Entity-Relationship-Modelling" class="headerlink" title="Entity Relationship Modelling"></a>Entity Relationship Modelling</h3><p>An Entity Relationship Model is a conceptual model of data that is about identifying the entities which make up the data and the relationships between these entities</p>
+<p>Components of an ER Model: </p>
+<ul>
+<li><strong>Entities</strong>: the “things” in the system</li>
+<li><strong>Relationships</strong>: how the entities relate to each other (and themselves)</li>
+<li><strong>Attributes</strong>: properties of an entity or relationship</li>
+</ul>
+<p>Components of an ER diagram: </p>
+<ul>
+<li><strong>Entity Sets</strong><ul>
+<li>A set of distinguishable entities that all have the same set of properties (attributes). </li>
+<li>Could be physical things, events, conceptual…</li>
+<li>Normally correspond to nouns </li>
+<li>Rectangle</li>
+</ul>
+</li>
+<li><strong>Relationship Sets</strong><ul>
+<li>A relationship set describes how two or more entity sets are related to each other. </li>
+<li>Usually correspond to verbs : owns, has, drives…</li>
+<li>Entity sets can be involved in many relationship sets </li>
+<li>Diamond</li>
+</ul>
+</li>
+<li><strong>Attributes</strong><ul>
+<li>Properties or attributes of an entity or relationship set. Underlined attributes are primary keys, which uniquely identify entities. </li>
+<li>Small circles</li>
+</ul>
+</li>
+</ul>
+<h3 id="Primary-Keys"><a href="#Primary-Keys" class="headerlink" title="Primary Keys"></a>Primary Keys</h3><p>A primary key is an attribute which <strong>uniquely identifies an entity</strong> in an entity set</p>
+<ul>
+<li>There must never exist two entities with the same key</li>
+<li>Primary keys are shown on ERD as <strong>underlined attributes</strong></li>
+</ul>
+<p>Primary keys may be natural or surrogate</p>
+<ul>
+<li><strong>Natural keys</strong> 自然键: attributes arising from the application data</li>
+<li><strong>Surrogate keys</strong> 代理键: “invented” attributes only for use within the database (internal functions are used to generate them)</li>
+</ul>
+<p>Primary keys may be composed of multiple attributes</p>
+<ul>
+<li>Natural keys are often composite, eg: (firstname, lastname, date_of_birth)</li>
+<li>We usually want the key to use the smallest possible set of attributes</li>
+</ul>
+<h3 id="Complex-attributes"><a href="#Complex-attributes" class="headerlink" title="Complex attributes"></a>Complex attributes</h3><p>Some more complex types of attributes: </p>
+<ul>
+<li><strong>Computed attributes</strong>: properties that can be calculated from other attributes<ul>
+<li>Sometimes called <strong>derived attributes</strong></li>
+</ul>
+</li>
+<li><strong>Multi-valued attributes</strong>: sets of multiple values</li>
+<li><strong>Composite attributes</strong>: logical properties that break down into sub-attributes</li>
+</ul>
+<h3 id="Cardinality-and-Participation-constraints"><a href="#Cardinality-and-Participation-constraints" class="headerlink" title="Cardinality and Participation constraints"></a>Cardinality and Participation constraints</h3><p>Constrain relationships: </p>
+<ul>
+<li>to model how the world actually works</li>
+<li><strong>to eliminate the possibility of nonsensical relations</strong></li>
+</ul>
+<p><strong>Cardinality constraints</strong>: How many times does each entity appear?</p>
+<ul>
+<li>One-to-one: “each person has exactly one ID card”</li>
+<li>One-to-many: “each person can manage multiple computers”</li>
+<li>Many-to-many: “multiple students can register in modules”</li>
+</ul>
+<p><strong>Participation constraints</strong>: Are entities required to appear in the relationship?</p>
+<ul>
+<li>Each person must have a swipe card</li>
+<li>Each module must have a teacher</li>
+</ul>
+<h3 id="Self-relationships"><a href="#Self-relationships" class="headerlink" title="Self-relationships"></a>Self-relationships</h3><p>Some binary relationships can involve the same entity set twice. </p>
+<ul>
+<li>“A movie may be a sequel of another movie”</li>
+<li>“A studio owns another studio”</li>
+<li>We need to label the two connecting lines to distinguish the roles played by them.</li>
+</ul>
+<h3 id="Relationship-set-attributes"><a href="#Relationship-set-attributes" class="headerlink" title="Relationship set attributes"></a>Relationship set attributes</h3><p>Some relationship sets might have their own attributes</p>
+<ul>
+<li>“A sequel has a part number” (as measured from the first movie)</li>
+</ul>
+<p>Must make sure these are really on the relationship sets, not one of the entity sets</p>
+<h3 id="Ternary-relationships"><a href="#Ternary-relationships" class="headerlink" title="Ternary relationships"></a>Ternary relationships</h3><p>Some relationships involve more than two entity sets. </p>
+<h4 id="Ternary-relationships-1"><a href="#Ternary-relationships-1" class="headerlink" title="Ternary relationships"></a>Ternary relationships</h4><p>Relationships involving three entity sets are called ternary relationships. </p>
+<ul>
+<li>Ternary relationships are less common than binary relationships, but they can sometimes simplify the conceptual model. </li>
+<li>eg: “Studios may promote movies on Netflix featuring their actors”<ul>
+<li>This represents a high level function in Netflix that allows a studio to promote a movie using its actors in the promotional material.</li>
+</ul>
+</li>
+</ul>
+<h4 id="Weak-entity"><a href="#Weak-entity" class="headerlink" title="Weak entity"></a>Weak entity</h4><ul>
+<li>Ternary relationships are a more accurate representation of the real world scenario, however, they break into binary relationships internally. </li>
+<li>We can re-draw ternary relationships as a set of binary relations, using a weak entity<ul>
+<li>A <strong>weak entity</strong> is one that does not have its own primary key</li>
+</ul>
+</li>
+</ul>
+<p>Weak entities do not have their own stand-alone primary keys. In the internal model, they acquire keys from the entities participating in relationships with them, getting a borrowed composite primary key as a result. This makes sense because the only reason why weak entities exist are their relationships with other other entities, unlike strong entities which are representations of actual things in the external data, such as, in our example, Actor, Movie and Studio, etc</p>
+<h3 id="Inheritance"><a href="#Inheritance" class="headerlink" title="Inheritance"></a>Inheritance</h3><p>Attributes that are shared by several entities</p>
+<ul>
+<li>eg: Actor, Director and User all have names: first name and second name, gender and age.</li>
+</ul>
+<p>Inheritance was not originally a part of ER diagrams. But later it was added into the Extended ER diagrams. In the original ER diagrams, an inheritance relationship is modeled as a binary ‘is a’ relationship with full participation on the child side and a 1-1 cardinality. </p>
+<h3 id="Completed-ER-diagram"><a href="#Completed-ER-diagram" class="headerlink" title="Completed ER diagram"></a>Completed ER diagram</h3><p>Below shows a short and simple version of Netflix movie meta-data: </p>
+<p><img src="https://github.com/thisisamor/blog_pic/blob/main/Software_Systems/ER-diagram.jpg?raw=true" alt="ER diagram"></p>
+<p><em>How to draw it?</em> </p>
+<ol>
+<li>Decide Initial entity sets <ul>
+<li>rectangle</li>
+<li>eg: Movie, Studio, Actor</li>
+</ul>
+</li>
+<li>Add attributes to entity sets <ul>
+<li>circle</li>
+<li>eg: title, sname, release_date, etc.</li>
+</ul>
+</li>
+<li>Add basic relationship sets <ul>
+<li>diamond</li>
+<li>eg: stars in, publishes</li>
+</ul>
+</li>
+<li>Underline primary keys for each entity set<ul>
+<li>eg: mid, sname, aid</li>
+</ul>
+</li>
+<li>Add computed attributes <ul>
+<li>dashed line and circle</li>
+<li>eg: isNewRelease</li>
+</ul>
+</li>
+<li>Add multi-valued attributes <ul>
+<li>concentric circle</li>
+<li>eg: contact_no</li>
+</ul>
+</li>
+<li>Break down composite attributes<ul>
+<li>circle</li>
+<li>eg: fname, lname</li>
+</ul>
+</li>
+<li>Add participation constraints<ul>
+<li>double line</li>
+<li>eg: <code>Movie==stars in</code> (every movie must be stared in by an actor)</li>
+</ul>
+</li>
+<li>Add cardinality constraints<ul>
+<li>numbered square</li>
+<li>eg: <code>publishes [N] Movie</code> (a studio may publish any number of movies)</li>
+</ul>
+</li>
+<li>Add self-relationships<ul>
+<li>diamond</li>
+<li>add constraints if needed</li>
+<li>eg: sequel of</li>
+</ul>
+</li>
+<li>Add relation attributes<ul>
+<li>circle</li>
+<li>eg: partno</li>
+</ul>
+</li>
+<li>Add ternary relationships<ul>
+<li>diamond</li>
+<li>eg: promotion could be shown as a ternary relationship</li>
+</ul>
+</li>
+<li>Add weak entity<ul>
+<li>concentic rectangle</li>
+<li>eg: promotion</li>
+</ul>
+</li>
+<li>Add inheritance<ul>
+<li>rectangle, diamond, circle</li>
+<li>create a parent entity set from which other entity sets inherit</li>
+<li>add constraints if needed</li>
+<li>eg: create <code>Person</code>, Actor is a Person, Director is a Person</li>
+</ul>
+</li>
+</ol>
+<hr>
+<h2 id="Relationship-model-RM"><a href="#Relationship-model-RM" class="headerlink" title="Relationship model (RM)"></a>Relationship model (RM)</h2><h3 id="Database-based-on-the-relationship-model"><a href="#Database-based-on-the-relationship-model" class="headerlink" title="Database based on  the relationship model"></a>Database based on  the relationship model</h3><ul>
+<li>All the data is represented in terms of <mark style="background-color: #9fc5e8;">tuples (rows)</mark> in <mark style="background-color: #9fc5e8;">relations (tables)</mark>. </li>
+<li>Relationships between data are implemented by <strong>joining together different tables</strong> based on the attributes <strong>common</strong> among them. </li>
+<li>Further filters can then be applied to this joined tables to produce specific information.</li>
+</ul>
+<h3 id="Basic-components"><a href="#Basic-components" class="headerlink" title="Basic components"></a>Basic components</h3><h4 id="Field-attribute-column"><a href="#Field-attribute-column" class="headerlink" title="Field (attribute, column)"></a>Field (attribute, column)</h4><ul>
+<li>Each field has a <strong>unique</strong> name</li>
+<li>Each field stores a <strong>single</strong> item of data<br>When implemented as a physical model</li>
+<li>Each field has a <strong>particular</strong> data type (eg: text, boolean, etc)</li>
+<li>Each field can have its own <strong>validation rules</strong> (to represent constraints, eg: can’t be null)</li>
+</ul>
+<h4 id="Table-relations"><a href="#Table-relations" class="headerlink" title="Table (relations)"></a>Table (relations)</h4><ul>
+<li><p>Each table must have one or more fields which <strong>uniquely identify a record in the table</strong>, which is called the <mark style="background-color: #9fc5e8;">key field</mark> or the <mark style="background-color: #9fc5e8;">primary key</mark>. </p>
+</li>
+<li><p>Two tables may be <strong>joined</strong> through their key fields. </p>
+<ul>
+<li>The key field of one table must appear as a <mark style="background-color: #9fc5e8;">foreign key</mark> in the other table. </li>
+<li>The ability to create joins makes the relational model a powerful and flexible representation of data. </li>
+<li><strong>Referential Integrity</strong> 参照完整性: When a primary key appear as a foreign key in other table, referential integrity is the logical dependency of a foreign key on a primary key. It ensures that foreign keys always have a valid reference to an existing row in the referenced table.</li>
+</ul>
+</li>
+</ul>
+<h4 id="Keys"><a href="#Keys" class="headerlink" title="Keys"></a>Keys</h4><ul>
+<li><p>If a relation has more than one key, each is called a <mark style="background-color: #9fc5e8;">candidate key</mark>. </p>
+<ul>
+<li>One of the candidate keys is arbitratily designated to be the <mark style="background-color: #9fc5e8;">primary key</mark>. </li>
+<li>The rest are <mark style="background-color: #9fc5e8;">secondary keys</mark>.</li>
+</ul>
+</li>
+<li><p>If an attribute is a member of some candidate key of R, it is called a <mark style="background-color: #9fc5e8;">prime attribute</mark> of R</p>
+</li>
+<li><p>Attributes that are not prime are called <mark style="background-color: #9fc5e8;">non-prime attributes</mark>.</p>
+</li>
+</ul>
+<h3 id="Relational-Schema"><a href="#Relational-Schema" class="headerlink" title="Relational Schema"></a>Relational Schema</h3><ul>
+<li>The name of a relation and its set of attributes together</li>
+<li>eg: Movies (title,  year, length, genre)</li>
+<li>The schemas of the <strong>entire set of relations</strong> of a database make up the <mark style="background-color: #9fc5e8;">relational database schema</mark> (or database schema).</li>
+</ul>
+<p><img src="https://github.com/thisisamor/blog_pic/blob/main/Software_Systems/relational%20schema.jpg?raw=true" alt="Relational Schema"></p>
+<p><em>How to convert the conceptual model (ER diagram) to an internal model (relational schema)?</em></p>
+<ol>
+<li>strong entity sets -&gt; relations<ul>
+<li>eg: Movie(), Actor(), Studio()</li>
+</ul>
+</li>
+<li>weak entity sets -&gt; relations<ul>
+<li>borrow keys from all entities</li>
+<li>Promotion()</li>
+</ul>
+</li>
+<li>1-to-many realtionships<ul>
+<li>migrate the key from 1-side to many-side</li>
+<li>eg: Movie (sname)</li>
+</ul>
+</li>
+<li>1-to-many with partial participation<ul>
+<li>create new relations</li>
+<li>migrate keys from both sides</li>
+<li>eg: Owns()</li>
+</ul>
+</li>
+<li>many-to-many relationships<ul>
+<li>create new relations</li>
+<li>migrate keys from both sides</li>
+<li>eg: sequel_of(), stars_in()</li>
+</ul>
+</li>
+<li>relationship attributes<ul>
+<li>add to appropriate relations</li>
+<li>eg: sequel_of (partno)</li>
+</ul>
+</li>
+<li>multi-valued attributes<ul>
+<li>create new relations</li>
+<li>eg: contact()</li>
+</ul>
+</li>
+</ol>
+<h3 id="Anomaly-and-Redundancies"><a href="#Anomaly-and-Redundancies" class="headerlink" title="Anomaly and Redundancies"></a>Anomaly and Redundancies</h3><h4 id="Insertion-anomaly"><a href="#Insertion-anomaly" class="headerlink" title="Insertion anomaly"></a>Insertion anomaly</h4><ul>
+<li>Values of attributes not known at the insertion time and need to be assigned NULL values</li>
+</ul>
+<h4 id="Deletion-anomaly"><a href="#Deletion-anomaly" class="headerlink" title="Deletion anomaly"></a>Deletion anomaly</h4><ul>
+<li>Deleting one part of the information deletes another</li>
+</ul>
+<h4 id="Updation-anomaly"><a href="#Updation-anomaly" class="headerlink" title="Updation anomaly"></a>Updation anomaly</h4><ul>
+<li>Updating the value of one of the attributes of a particular department, must update the tuples of all the employees who work in that department.</li>
+</ul>
+<h3 id="A-good-relational-schema"><a href="#A-good-relational-schema" class="headerlink" title="A good relational schema"></a>A good relational schema</h3><ul>
+<li>Do not combine attributes from multiple entity types and relationship types into a single relation. </li>
+<li>Design the relational schema so that no insertion deletion or updation anomalies are present in the relations. </li>
+<li>Avoid placing attributes in a relation whose values may frequently change. </li>
+<li>Minimise redundant copying of attribute values in relations.</li>
+</ul>
+<h3 id="Normalization-and-Functional-Dependencies"><a href="#Normalization-and-Functional-Dependencies" class="headerlink" title="Normalization and Functional Dependencies"></a>Normalization and Functional Dependencies</h3><p>Normalization of data can be considered a process of analysing the given relational schema based on their Functional Dependencies (FDs) and primary keys to: </p>
+<ul>
+<li>minimize redundancy </li>
+<li>minimize insertion, deletion, and update anomalies.</li>
+</ul>
+<h4 id="Functional-Dependencies"><a href="#Functional-Dependencies" class="headerlink" title="Functional Dependencies"></a>Functional Dependencies</h4><ul>
+<li>for any two tuples t1 and t2 in R, if t1[X] &#x3D; t2[X], then t1[Y] &#x3D; t2[Y]</li>
+<li>given the value of attributes in X, can uniquely determine the values of attributes in Y</li>
+<li>denoted by X → Y</li>
+</ul>
+<h5 id="Full-functional-dependency"><a href="#Full-functional-dependency" class="headerlink" title="Full functional dependency"></a>Full functional dependency</h5><ul>
+<li>If removal of any attribute A from X means that the dependency does not hold any more. </li>
+<li>eg: {Ssn, Pnumber} -&gt; Hours</li>
+</ul>
+<h5 id="Partial-functional-dependency"><a href="#Partial-functional-dependency" class="headerlink" title="Partial functional dependency"></a>Partial functional dependency</h5><ul>
+<li>If after removal of some attributes the denpendency still holds</li>
+<li>eg: {Ssn, Pnumber} -&gt; Ename</li>
+</ul>
+<h5 id="Transitive-dependency"><a href="#Transitive-dependency" class="headerlink" title="Transitive dependency"></a>Transitive dependency</h5><ul>
+<li>The functional dependency X → Y in a relation R is a transitive dependency if there is a set of attributes Z that is neither a candidate key nor a subset of any key of R, and both X → Z and Z → Y hold.</li>
+</ul>
+<p><em>The following are four forms of relations which are at increasing stages of refinement (1st, 2nd, 3rd, BCNF)</em></p>
+<h4 id="First-normal-form-1NF"><a href="#First-normal-form-1NF" class="headerlink" title="First normal form (1NF)"></a>First normal form (1NF)</h4><ul>
+<li>A relation has no composite attributes or multivalued attributes. </li>
+<li>In other words, each attribute value in the table must be atomic.</li>
+</ul>
+<h4 id="Second-normal-form-2NF"><a href="#Second-normal-form-2NF" class="headerlink" title="Second normal form (2NF)"></a>Second normal form (2NF)</h4><ul>
+<li>The relation is in 1NF. </li>
+<li>Every nonprime attribute in R is <strong>fully Functionally dependent</strong> on the <strong>primary key</strong> of R. </li>
+<li>1NF to 2NF: <ul>
+<li>Identify all functional dependencies whose left sides (determinants) are proper subsets of the primary key, and right sides are non-prime attributes. </li>
+<li>Break the table accordingly. </li>
+<li>The splitted tables are 2NF</li>
+</ul>
+</li>
+</ul>
+<h4 id="Third-normal-form-3NF"><a href="#Third-normal-form-3NF" class="headerlink" title="Third normal form (3NF)"></a>Third normal form (3NF)</h4><ul>
+<li>The relation is in 2NF. </li>
+<li>No nonprime attribute in the relation is transitively dependent on the primary key. </li>
+<li>If there are nonprime attributes Z, Y in the relation, such that, for the primary key X, X → Z and Z → Y</li>
+<li>2NF to 3NF: <ul>
+<li>Split the relation on Z</li>
+<li>Repeat the process on the resultant tables</li>
+</ul>
+</li>
+</ul>
+<h4 id="Boyce-Codd-Normal-form-BCNF"><a href="#Boyce-Codd-Normal-form-BCNF" class="headerlink" title="Boyce-Codd Normal form (BCNF)"></a>Boyce-Codd Normal form (BCNF)</h4><ul>
+<li>The relation is in 3NF. </li>
+<li>All determinants (left hand sides of dependencies) are candidate keys, i.e. possible primary keys. We want to remove redundancies within the prime attributes themselves</li>
+<li>If there is a non-prime attribute Z, and a prime attribute X, such that Z → X exists</li>
+<li>eg: {Student, Course} → Instructor, Instructor → Course</li>
+<li>3NF to BCNF:<ul>
+<li>Split the table on Z.</li>
+<li>Repeat the process on the resultant tables</li>
+</ul>
+</li>
+</ul>
+<hr>
+<h2 id="Relationship-algebra"><a href="#Relationship-algebra" class="headerlink" title="Relationship algebra"></a>Relationship algebra</h2><p>A set of operators to <strong>combine and filter</strong> the information in various tables, to implement high-level functions of the system. </p>
+<p>The set of mathematical operators used are called <mark style="background-color: #9fc5e8;">relational algebra operators</mark>. </p>
+<p>Relational algebra statements are like ‘intermediate code’ for SQL statements, which constitute a higher-level language.</p>
+<h3 id="Relational-algebra-operators"><a href="#Relational-algebra-operators" class="headerlink" title="Relational algebra operators"></a>Relational algebra operators</h3><table>
+<thead>
+<tr>
+<th>Set Operators</th>
+<th>Database Operators</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><ul><li>Union</li><li>Intersection</li><li>Difference</li><li>Cartesian Product</li><ul></td>
+<td><ul><li>Select</li><li>Project</li><li>Join</li><li>Aggregate</li><li>Division</li><li>Rename</li><ul></td>
+</tr>
+</tbody></table>
+<h4 id="Union"><a href="#Union" class="headerlink" title="Union"></a>Union</h4><ul>
+<li>Written as (r + s) or (r U s)</li>
+<li>Relations must be union compatible</li>
+<li>Duplicate rows are eliminated</li>
+</ul>
+<h4 id="Intersection"><a href="#Intersection" class="headerlink" title="Intersection"></a>Intersection</h4><ul>
+<li>Written as (r ∩ s)</li>
+<li>Relations must be intersection compatible</li>
+</ul>
+<h4 id="Difference"><a href="#Difference" class="headerlink" title="Difference"></a>Difference</h4><ul>
+<li>Written as (r - s)</li>
+<li>Relations have to be difference compatible</li>
+<li>Includes rows that are in r but not in s</li>
+</ul>
+<h4 id="Projection"><a href="#Projection" class="headerlink" title="Projection"></a>Projection</h4><ul>
+<li>Extracts certain columns from the table</li>
+</ul>
+<h4 id="Selection"><a href="#Selection" class="headerlink" title="Selection"></a>Selection</h4><ul>
+<li>The selection operator extracts certain rows from the table and discards the others. Retrieved tuples must satisfy a given filtering condition.</li>
+</ul>
+<h4 id="Cross-product-cross-join"><a href="#Cross-product-cross-join" class="headerlink" title="Cross product (cross join)"></a>Cross product (cross join)</h4><ul>
+<li>Written as (r X s)</li>
+<li>Concatenates rows from two relations, making all possible combinations of rows.</li>
+</ul>
+<h4 id="Join-Inner-join"><a href="#Join-Inner-join" class="headerlink" title="Join (Inner join)"></a>Join (Inner join)</h4><ul>
+<li>The join operation, denoted by ($r ⋈_{COND} s$), is used to combine related tuples from two relations.</li>
+<li>Here COND is the matching condition $r ⋈_{COND} s$</li>
+</ul>
+<h4 id="Natual-join"><a href="#Natual-join" class="headerlink" title="Natual join"></a>Natual join</h4><ul>
+<li>Denoted by (r * s)</li>
+<li>Combines tuples of two relations using an implicit condition, i.e. the tables are related by columns that have the same names and domains.</li>
+</ul>
+<h4 id="Left-natural-join"><a href="#Left-natural-join" class="headerlink" title="Left natural join"></a>Left natural join</h4><ul>
+<li>Denoted ($r ⟕_{COND} s$)</li>
+<li>Combines tuples of two relations and keeps in the result every tuple from the left table, but only those from the right table that meet the join condition.</li>
+</ul>
+<h4 id="Aggregation"><a href="#Aggregation" class="headerlink" title="Aggregation"></a>Aggregation</h4><ul>
+<li>Syntax: ($_{Grouping attribute} F _{function list} (relation name)$ ) </li>
+<li>The function list contains simple mathematical functions. </li>
+<li>Common functions are: MAX, MIN, AVG, SUM and COUNT</li>
+<li>A column name may be given as a grouping attribute to fragment the function outputs into groups.</li>
+</ul>
+<h4 id="Rename"><a href="#Rename" class="headerlink" title="Rename"></a>Rename</h4><ul>
+<li>Syntax: ρ (c1, c2, …, ck) (E) Rename the columns of E to c1, c2, …, ck respectively.</li>
+</ul>
+<h3 id="RDBMS"><a href="#RDBMS" class="headerlink" title="RDBMS"></a>RDBMS</h3><h4 id="Introduction"><a href="#Introduction" class="headerlink" title="Introduction"></a>Introduction</h4><ul>
+<li><p>A database is a structured collection of data that is managed by a DBMS (Database management system)</p>
+</li>
+<li><p>Some of the most powerful and widely used database management systems are relational: RDBMS.<br>They provide a high-level query language called SQL, which is based on relational algebra.<br>Examples of RDBMS: Oracle, MySQL, Microsoft SQL Server, PostgreSQL, SQLite, Amazon RDS, etc.</p>
+</li>
+</ul>
+<h4 id="RDBMS-vs-Flat-Files"><a href="#RDBMS-vs-Flat-Files" class="headerlink" title="RDBMS vs. Flat Files"></a>RDBMS vs. Flat Files</h4><ul>
+<li>File systems do not provide a guarantee against loss of data unless backed up explicitly.</li>
+<li>Efficient access to specific content in a files is difficult – not explicitly provided.</li>
+<li>File systems do not provide an associated high-level language for the definition, manipulation and querying of data.</li>
+<li>Do not provide mechanisms to control concurrent access to a file and ensuring the consistency of data and atomicity of operations.</li>
+<li>A relational database management system, or RDBMS, handles these issues particularly well.</li>
+</ul>
+<h4 id="ACID-properties-of-RDBMS"><a href="#ACID-properties-of-RDBMS" class="headerlink" title="ACID properties of RDBMS"></a>ACID properties of RDBMS</h4><ul>
+<li><p>Atomicity: transactions, which consist of multiple statements, are treated as atomic.<br>Either the whole thing succeeds or the whole thing fails</p>
+</li>
+<li><p>Consistency: transactions can only bring the database from one valid state to another<br>a state is valid if it follows all the specified rules including constraints</p>
+</li>
+<li><p>Isolation: ensures that concurrent execution of transactions leaves the database in the same state that would have been obtained if the transactions were executed sequentially. </p>
+</li>
+<li><p>Durability: database commits are final and durable even if system fails after a commit.</p>
+</li>
+</ul>
+<hr>
+<h2 id="SQL-Data-Query-Language-DQL"><a href="#SQL-Data-Query-Language-DQL" class="headerlink" title="SQL - Data Query Language (DQL)"></a>SQL - Data Query Language (DQL)</h2><hr>
+<h2 id="SQL-Data-Manipulation-Language-DML"><a href="#SQL-Data-Manipulation-Language-DML" class="headerlink" title="SQL - Data Manipulation Language (DML)"></a>SQL - Data Manipulation Language (DML)</h2><hr>
+<h2 id="SQL-Data-Definition-Language-DDL"><a href="#SQL-Data-Definition-Language-DDL" class="headerlink" title="SQL - Data Definition Language (DDL)"></a>SQL - Data Definition Language (DDL)</h2><hr>
+<p><small style="opacity: 0.7;">Part two is about the layered network, I will finish this later. </small></p>
+<h2 id="Layered-network"><a href="#Layered-network" class="headerlink" title="Layered network"></a>Layered network</h2><h2 id="Application-layer"><a href="#Application-layer" class="headerlink" title="Application layer"></a>Application layer</h2><h2 id="Peer-to-peer-applications"><a href="#Peer-to-peer-applications" class="headerlink" title="Peer to peer applications"></a>Peer to peer applications</h2><h2 id="Transport-layer"><a href="#Transport-layer" class="headerlink" title="Transport layer"></a>Transport layer</h2><h2 id="Network-layer"><a href="#Network-layer" class="headerlink" title="Network layer"></a>Network layer</h2><h2 id="Link-layer"><a href="#Link-layer" class="headerlink" title="Link layer"></a>Link layer</h2><hr>
+<p style="opacity: 0.7;">End Notes: 
+
+<p><small style="opacity: 0.7;">This <i class="fa-sharp fa-solid fa-book"></i> <a target="_blank" rel="noopener" href="https://amor-zhao.notion.site/Information-Processing-Logbook-a2f60455afb44e84a3b1b1c15cbb5d14">Notion site</a> shows my logbook for the Information Processing Lab. It was not assessed, so I just used it to keep track of what I’ve done. Specifically, lab 5 and 6 required to use the knowledge and techniques covered in this course. </small></p>
+
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/study/" rel="tag"># study</a>
+              <a href="/tags/review/" rel="tag"># review</a>
+              <a href="/tags/software-systems/" rel="tag"># software systems</a>
+          </div>
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-item">
+                <a href="/2023/04/14/000-Test-Wrap-Up/" rel="prev" title="Test Wrap Up">
+                  <i class="fa fa-chevron-left"></i> Test Wrap Up
+                </a>
+            </div>
+            <div class="post-nav-item">
+                <a href="/2023/04/18/002-Communications-Review/" rel="next" title="Communications Review">
+                  Communications Review <i class="fa fa-chevron-right"></i>
+                </a>
+            </div>
+          </div>
+    </footer>
+  </article>
+</div>
+
+
+
+
+
+
+</div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+
+
+<div class="copyright">
+  &copy; 
+  <span itemprop="copyrightYear">2023</span>
+  <span class="with-love">
+    <i class="fa-solid fa-carrot"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Amor</span>
+</div>
+  <div class="powered-by">Powered by <a href="https://hexo.io/" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/" rel="noopener" target="_blank">NexT.Gemini</a>
+  </div>
+
+    </div>
+  </footer>
+
+  
+  <div class="back-to-top" role="button" aria-label="Back to top">
+    <i class="fa fa-arrow-up fa-lg"></i>
+    <span>0%</span>
+  </div>
+
+<noscript>
+  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
+
+
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js" integrity="sha256-XL2inqUJaslATFnHdJOi9GfQ60on8Wx1C2H8DYiN1xY=" crossorigin="anonymous"></script>
+<script src="/js/comments.js"></script><script src="/js/utils.js"></script><script src="/js/motion.js"></script><script src="/js/next-boot.js"></script>
+
+  
+
+  <script class="next-config" data-name="mermaid" type="application/json">{"enable":true,"theme":{"light":"default","dark":"dark"},"js":{"url":"https://cdnjs.cloudflare.com/ajax/libs/mermaid/9.4.3/mermaid.min.js","integrity":"sha256-e0o3JYsdjqKajf9eOe22FhioYSz9WofRY4dLKo3F6do="}}</script>
+  <script src="/js/third-party/tags/mermaid.js"></script>
+
+
+
+  
+
+
+
+
+  
+
+  <script class="next-config" data-name="enableMath" type="application/json">true</script><script class="next-config" data-name="mathjax" type="application/json">{"enable":true,"tags":"none","js":{"url":"https://cdnjs.cloudflare.com/ajax/libs/mathjax/3.2.2/es5/tex-mml-chtml.js","integrity":"sha256-MASABpB4tYktI2Oitl4t+78w/lyA+D7b/s9GEP0JOGI="}}</script>
+<script src="/js/third-party/math/mathjax.js"></script>
+
+
+
+</body>
+</html>
