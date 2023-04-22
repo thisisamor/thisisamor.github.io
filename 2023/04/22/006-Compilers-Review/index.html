@@ -27,13 +27,16 @@
 <meta property="og:site_name" content="This is Amor">
 <meta property="og:description" content="Review of Compilers.">
 <meta property="og:locale" content="en_US">
+<meta property="og:image" content="https://github.com/thisisamor/blog_pic/blob/main/Compilers/NFA1.jpg?raw=true">
+<meta property="og:image" content="https://github.com/thisisamor/blog_pic/blob/main/Compilers/NFA2.jpg?raw=true">
 <meta property="article:published_time" content="2023-04-22T08:03:19.000Z">
-<meta property="article:modified_time" content="2023-04-22T08:04:19.504Z">
+<meta property="article:modified_time" content="2023-04-22T16:52:55.963Z">
 <meta property="article:author" content="Amor">
 <meta property="article:tag" content="study">
 <meta property="article:tag" content="review">
 <meta property="article:tag" content="compilers">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://github.com/thisisamor/blog_pic/blob/main/Compilers/NFA1.jpg?raw=true">
 
 
 <link rel="canonical" href="http://example.com/2023/04/22/006-Compilers-Review/">
@@ -115,7 +118,7 @@
       <div class="sidebar-panel-container">
         <!--noindex-->
         <div class="post-toc-wrap sidebar-panel">
-            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Introduction"><span class="nav-number">1.</span> <span class="nav-text">Introduction</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Lexical-analysis"><span class="nav-number">2.</span> <span class="nav-text">Lexical analysis</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Top-down-parsing"><span class="nav-number">3.</span> <span class="nav-text">Top down parsing</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Bottom-up-parsing"><span class="nav-number">4.</span> <span class="nav-text">Bottom up parsing</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Code-generation"><span class="nav-number">5.</span> <span class="nav-text">Code generation</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Optimization"><span class="nav-number">6.</span> <span class="nav-text">Optimization</span></a></li></ol></div>
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Introduction"><span class="nav-number">1.</span> <span class="nav-text">Introduction</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Terminology"><span class="nav-number">1.1.</span> <span class="nav-text">Terminology</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Phases-of-a-Compiler"><span class="nav-number">1.2.</span> <span class="nav-text">Phases of a Compiler</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#Lexical-analysis-lexical-scanner"><span class="nav-number">1.2.1.</span> <span class="nav-text">Lexical analysis (lexical scanner)</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Syntax-analysis-phase-Parser"><span class="nav-number">1.2.2.</span> <span class="nav-text">Syntax analysis phase (Parser)</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Global-optimization-optional"><span class="nav-number">1.2.3.</span> <span class="nav-text">Global optimization (optional)</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Code-generation"><span class="nav-number">1.2.4.</span> <span class="nav-text">Code generation</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Local-optimization-optional"><span class="nav-number">1.2.5.</span> <span class="nav-text">Local optimization (optional)</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Implementation-Techniques"><span class="nav-number">1.3.</span> <span class="nav-text">Implementation Techniques</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#Bootstrapping"><span class="nav-number">1.3.1.</span> <span class="nav-text">Bootstrapping</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Cross-Compiling"><span class="nav-number">1.3.2.</span> <span class="nav-text">Cross Compiling</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Compiling-to-intermediate-form"><span class="nav-number">1.3.3.</span> <span class="nav-text">Compiling to intermediate form</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Lexical-Analysis"><span class="nav-number">2.</span> <span class="nav-text">Lexical Analysis</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Formal-Languages"><span class="nav-number">2.1.</span> <span class="nav-text">Formal Languages</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#Language-elements"><span class="nav-number">2.1.1.</span> <span class="nav-text">Language elements</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Regular-expressions-regex"><span class="nav-number">2.1.2.</span> <span class="nav-text">Regular expressions (regex)</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Finite-automation-finite-state-machines"><span class="nav-number">2.1.3.</span> <span class="nav-text">Finite automation (finite state machines)</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Lex"><span class="nav-number">2.2.</span> <span class="nav-text">Lex</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#structure"><span class="nav-number">2.2.1.</span> <span class="nav-text">structure</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Syntax-Analysis"><span class="nav-number">3.</span> <span class="nav-text">Syntax Analysis</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Top-down-parsing"><span class="nav-number">4.</span> <span class="nav-text">Top down parsing</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Bottom-up-parsing"><span class="nav-number">5.</span> <span class="nav-text">Bottom up parsing</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Code-generation-1"><span class="nav-number">6.</span> <span class="nav-text">Code generation</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Optimization"><span class="nav-number">7.</span> <span class="nav-text">Optimization</span></a></li></ol></div>
         </div>
         <!--/noindex-->
 
@@ -224,7 +227,155 @@
 
 <p><small style="opacity: 0.7;"> <a target="_blank" rel="noopener" href="https://library-search.imperial.ac.uk/discovery/fulldisplay?docid=alma995919234401591&context=L&vid=44IMP_INST:ICL_VU1&lang=en&search_scope=MyInst_and_CI&adaptor=Local%20Search%20Engine&tab=Everything&query=any,contains,compilers&offset=0"><em>Compilers : principles, techniques, and tools by Aho, Alfred</em></a> was the textbook. It was so popular during the Easter break so I got a copy of <a target="_blank" rel="noopener" href="https://library-search.imperial.ac.uk/discovery/fulldisplay?docid=alma99775304401591&context=L&vid=44IMP_INST:ICL_VU1&lang=en&search_scope=MyInst_and_CI&adaptor=Local%20Search%20Engine&tab=Everything&query=any,contains,compilers%20design%20theory&offset=0"><em>Compiler design : theory, tools, and examples by Bergmann, Seth</em></a>. </small></p>
 <hr>
-<h2 id="Introduction"><a href="#Introduction" class="headerlink" title="Introduction"></a>Introduction</h2><h2 id="Lexical-analysis"><a href="#Lexical-analysis" class="headerlink" title="Lexical analysis"></a>Lexical analysis</h2><h2 id="Top-down-parsing"><a href="#Top-down-parsing" class="headerlink" title="Top down parsing"></a>Top down parsing</h2><h2 id="Bottom-up-parsing"><a href="#Bottom-up-parsing" class="headerlink" title="Bottom up parsing"></a>Bottom up parsing</h2><h2 id="Code-generation"><a href="#Code-generation" class="headerlink" title="Code generation"></a>Code generation</h2><h2 id="Optimization"><a href="#Optimization" class="headerlink" title="Optimization"></a>Optimization</h2>
+<h2 id="Introduction"><a href="#Introduction" class="headerlink" title="Introduction"></a>Introduction</h2><h3 id="Terminology"><a href="#Terminology" class="headerlink" title="Terminology"></a>Terminology</h3><p>High-level languages &#x3D; programming languages</p>
+<p>Target machine: the particular machine language</p>
+<p>Equivalent programs: always provide the same output when given the same input. </p>
+<p>Source program</p>
+<p>Source language</p>
+<p>Obeject program</p>
+<p>Object language</p>
+<p>Syntax: whether the input is a correctly formed program</p>
+<p>Compiler: the output is a program</p>
+<p>Interpreter: carries out the computations specified in the source program, the output is the source program’s output</p>
+<p>Compile time</p>
+<p>Run time</p>
+<table>
+<thead>
+<tr>
+<th>Compile-time errors</th>
+<th>Run-time errors</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>a := ((b+c)*d</code></td>
+<td>devide by 0</td>
+</tr>
+<tr>
+<td><code>if x&lt;b proc1 else proc2</code></td>
+<td>use of null pointer</td>
+</tr>
+</tbody></table>
+<h3 id="Phases-of-a-Compiler"><a href="#Phases-of-a-Compiler" class="headerlink" title="Phases of a Compiler"></a>Phases of a Compiler</h3><p><em>The input to a compiler is simply a string of characters.</em></p>
+<p><em>In general, a compiler consists of at least three phases: <strong>lexical analysis</strong>, <strong>syntax analysis</strong>, and <strong>code generation</strong>.</em></p>
+<h4 id="Lexical-analysis-lexical-scanner"><a href="#Lexical-analysis-lexical-scanner" class="headerlink" title="Lexical analysis (lexical scanner)"></a>Lexical analysis (lexical scanner)</h4><p>A word &#x3D; lexeme &#x3D; lexical item &#x3D; lexical token &#x3D; a finite sequence of characters. </p>
+<ul>
+<li>Key words (eg: while, for…)</li>
+<li>Identifiers</li>
+<li>Operators (eg: +, -…)</li>
+<li>Numeric constants</li>
+<li>Character constants</li>
+<li>Special constants (characters used as delimeters)</li>
+<li>Comments</li>
+</ul>
+<p>Provide <strong>a stream of tokens</strong> corresponding to the words, build <strong>tables</strong> which are used by subsequent phases of the compiler (eg: symbol table, stores all identifiers). </p>
+<p>Symbol table: A data structure which stores each identifier once, with the information about the identifier (kind, value, etc), usually organised as a binary search tree or hash table. </p>
+<h4 id="Syntax-analysis-phase-Parser"><a href="#Syntax-analysis-phase-Parser" class="headerlink" title="Syntax analysis phase (Parser)"></a>Syntax analysis phase (Parser)</h4><p>Provide <strong>a stream of atoms</strong> or <strong>a collection of syntax trees</strong></p>
+<p>A <strong>postfix traversal</strong> can be used to generate code from the syntax tree. (后缀遍历)</p>
+<p>Sometimes used: <strong>Semantic analysis</strong>. </p>
+<h4 id="Global-optimization-optional"><a href="#Global-optimization-optional" class="headerlink" title="Global optimization (optional)"></a>Global optimization (optional)</h4><p>Examine the sequence of atoms put out by the parser, find redundant or unnecessary instructions or inefficient code. </p>
+<p>(Machine independent. )</p>
+<h4 id="Code-generation"><a href="#Code-generation" class="headerlink" title="Code generation"></a>Code generation</h4><p>Atoms or sytax trees are translated to machine language instructions, or to assembly language. </p>
+<p>Responsible for <strong>register allocation</strong>. </p>
+<h4 id="Local-optimization-optional"><a href="#Local-optimization-optional" class="headerlink" title="Local optimization (optional)"></a>Local optimization (optional)</h4><p>Examine sequences of instructions put out by the code generator, find unnecessary or redundant instructions. </p>
+<p>(Machine dependent. )</p>
+<h3 id="Implementation-Techniques"><a href="#Implementation-Techniques" class="headerlink" title="Implementation Techniques"></a>Implementation Techniques</h3><h4 id="Bootstrapping"><a href="#Bootstrapping" class="headerlink" title="Bootstrapping"></a>Bootstrapping</h4><h4 id="Cross-Compiling"><a href="#Cross-Compiling" class="headerlink" title="Cross Compiling"></a>Cross Compiling</h4><h4 id="Compiling-to-intermediate-form"><a href="#Compiling-to-intermediate-form" class="headerlink" title="Compiling to intermediate form"></a>Compiling to intermediate form</h4><hr>
+<h2 id="Lexical-Analysis"><a href="#Lexical-Analysis" class="headerlink" title="Lexical Analysis"></a>Lexical Analysis</h2><h3 id="Formal-Languages"><a href="#Formal-Languages" class="headerlink" title="Formal Languages"></a>Formal Languages</h3><p>Formal language: can be specified precisely and is amenable for use with computers. </p>
+<p>Natual language: is normally spoken by people. </p>
+<h4 id="Language-elements"><a href="#Language-elements" class="headerlink" title="Language elements"></a>Language elements</h4><p><strong>Set</strong>: a collection of unique items</p>
+<p><strong>Empty set</strong>: $\phi$</p>
+<p><strong>String</strong>: a list of characters from a given alphabet</p>
+<p><strong>Null string</strong>: $\varepsilon$</p>
+<p><strong>Concatenation</strong>: eg: wv is the concatenation of word w and word v. </p>
+<p><strong>Language</strong>: a set of words</p>
+<h4 id="Regular-expressions-regex"><a href="#Regular-expressions-regex" class="headerlink" title="Regular expressions (regex)"></a>Regular expressions (regex)</h4><p><mark style="background-color: #9fc5e8;">L(r) &#x3D; the language accepted by regex r. </mark></p>
+<p><mark style="background-color: #9fc5e8;">zero</mark>: 0 is a regex. (no language)</p>
+<ul>
+<li>L(0) &#x3D; $\phi$</li>
+</ul>
+<p><mark style="background-color: #9fc5e8;">unit</mark>: 1 is a regex. (empty word)</p>
+<ul>
+<li>L(1) &#x3D; {$\varepsilon$}</li>
+</ul>
+<p><mark style="background-color: #9fc5e8;">singleton</mark>: if c is a single character, then c is a regex. </p>
+<ul>
+<li>L(c) &#x3D; {c}</li>
+</ul>
+<p><mark style="background-color: #9fc5e8;">alternation</mark>: if r and s are regexes, then r+s is a regex. (OR)</p>
+<ul>
+<li>L(r+s) &#x3D; L(r) U L(s) </li>
+<li>r + s &#x3D; s + r (alternation is cummutative)</li>
+<li>r + (s + t) &#x3D; (r + s) + t (alternation is associative)</li>
+<li>0 + r &#x3D; r (alternation has 0 as <strong>identity</strong> element)</li>
+</ul>
+<p><mark style="background-color: #9fc5e8;">concatenation</mark>: if r and s are regexes, then rs is a regex. </p>
+<ul>
+<li>L (rs) &#x3D; {w1 w2 | w1 $\epsilon$ L(r) ∩ w2 $\epsilon$ L(s) }</li>
+<li>is formed by concatenation of w1 and w2, where w1 is drawn from L(r) and W2 is drawn from L(s)</li>
+<li>r(st) &#x3D; (rs)t (concatenation is associative)</li>
+<li>1r &#x3D; r1 &#x3D; r (concatenation has 1 as <strong>identity</strong> element)</li>
+<li>0r &#x3D; r0 &#x3D; 0 (concatenation has 0 as **absorbing element)</li>
+</ul>
+<p><mark style="background-color: #9fc5e8;">iteration</mark>: if r is a regex, then r* is a regex. (kleene star)</p>
+<ul>
+<li>r repeated 0 or more times. </li>
+<li>(r*)* &#x3D; r* (<strong>idempotency</strong> of iteration)</li>
+</ul>
+<p><mark style="background-color: #9fc5e8;">r+</mark></p>
+<ul>
+<li>r repeated 1 or more times</li>
+<li>same as rr*</li>
+</ul>
+<p><mark style="background-color: #9fc5e8;">r?</mark></p>
+<ul>
+<li>r repeated 0 or 1 times</li>
+<li>same as r + 1</li>
+</ul>
+<p><mark style="background-color: #9fc5e8;">[abcdef]</mark></p>
+<ul>
+<li>class of characters</li>
+<li>same as a+b+c+d+e+f</li>
+</ul>
+<p><mark style="background-color: #9fc5e8;">[a-f]</mark></p>
+<ul>
+<li>range of characters</li>
+<li>same as [abcdef]</li>
+</ul>
+<h4 id="Finite-automation-finite-state-machines"><a href="#Finite-automation-finite-state-machines" class="headerlink" title="Finite automation (finite state machines)"></a>Finite automation (finite state machines)</h4><ol>
+<li>A finite set of states</li>
+</ol>
+<ul>
+<li>one starting state (may also be an accepting state)</li>
+<li>zero or more designed accepting states (double circle)</li>
+</ul>
+<ol start="2">
+<li>A state tramsition function</li>
+</ol>
+<ul>
+<li>an input state</li>
+<li>an input symbol</li>
+<li>a result state</li>
+</ul>
+<p><mark style="background-color: #9fc5e8;">Non-Deterministic Finite Automaton (NFA)</mark></p>
+<p>Need to keep track of all the states you <strong>could</strong> be in. </p>
+<p><img src="https://github.com/thisisamor/blog_pic/blob/main/Compilers/NFA1.jpg?raw=true" alt="NFA1"><br><img src="https://github.com/thisisamor/blog_pic/blob/main/Compilers/NFA2.jpg?raw=true" alt="NFA2"></p>
+<p><mark style="background-color: #9fc5e8;">Deterministic Finite Automaton (DFA)</mark></p>
+<p>Need to keep track of the state you <strong>are</strong> in. </p>
+<p>Steps: </p>
+<ol>
+<li>Start with the starting state. </li>
+<li>“If we have input a, what are the possible states we can go to, from all of which states we are possibly in currently.”</li>
+<li>The “epsilon transition” ($\varepsilon$) means that we can go to either of the states. </li>
+<li>Only create a new state if there isn’t one. </li>
+<li>If there is no state for a input, go to the “empty state”, where it goes to itself whatever the input is. </li>
+<li>After considering all the possible states, add the final states. </li>
+<li>The final states are the ones that include any of the final states in NFA.</li>
+</ol>
+<h3 id="Lex"><a href="#Lex" class="headerlink" title="Lex"></a>Lex</h3><p>Lex is used to generate a lexical analyser. The programmer specifies the words to be put out as tokens, using a extension of regexes. Lex then generates a C function, <code>yylex()</code>, which will be the lexical analysis phase of a compiler. </p>
+<h4 id="structure"><a href="#structure" class="headerlink" title="structure"></a>structure</h4><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line">// ----Definition section----</span><br><span class="line">// Give options that tell lex how to run</span><br><span class="line">%option noyywrap</span><br><span class="line">// Import C header files as necessary</span><br><span class="line">%&#123;</span><br><span class="line">  #include &lt;studio.h&gt;</span><br><span class="line">&#125;%</span><br><span class="line">// Define names for regexes</span><br><span class="line">D [ 0-9 ]</span><br><span class="line">l [ A-Z ]</span><br><span class="line">%%</span><br><span class="line">// ----Rules section----------</span><br><span class="line">// List of regexes and associated actions</span><br><span class="line">// &quot;if you see smth like...&quot;</span><br><span class="line">&#123;L&#125;&#123;L&#125;?&#123;D&#125; &#123;</span><br><span class="line">  printf(&quot;%s\n&quot;, yytext); </span><br><span class="line">&#125;</span><br><span class="line">// &quot;anything else...&quot;</span><br><span class="line">. &#123;</span><br><span class="line">  printf(&quot;Error!\n);</span><br><span class="line">&#125;</span><br><span class="line">%%</span><br><span class="line">// ----Code section-----------</span><br><span class="line">// Define any functions called in the rules section</span><br><span class="line">int main() &#123;</span><br><span class="line">  yylex(); </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<hr>
+<h2 id="Syntax-Analysis"><a href="#Syntax-Analysis" class="headerlink" title="Syntax Analysis"></a>Syntax Analysis</h2><hr>
+<h2 id="Top-down-parsing"><a href="#Top-down-parsing" class="headerlink" title="Top down parsing"></a>Top down parsing</h2><h2 id="Bottom-up-parsing"><a href="#Bottom-up-parsing" class="headerlink" title="Bottom up parsing"></a>Bottom up parsing</h2><h2 id="Code-generation-1"><a href="#Code-generation-1" class="headerlink" title="Code generation"></a>Code generation</h2><h2 id="Optimization"><a href="#Optimization" class="headerlink" title="Optimization"></a>Optimization</h2>
     </div>
 
     
