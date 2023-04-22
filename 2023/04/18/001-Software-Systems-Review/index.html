@@ -30,7 +30,7 @@
 <meta property="og:image" content="https://github.com/thisisamor/blog_pic/blob/main/Software_Systems/ER-diagram.jpg?raw=true">
 <meta property="og:image" content="https://github.com/thisisamor/blog_pic/blob/main/Software_Systems/relational%20schema.jpg?raw=true">
 <meta property="article:published_time" content="2023-04-18T08:22:42.000Z">
-<meta property="article:modified_time" content="2023-04-19T16:11:04.333Z">
+<meta property="article:modified_time" content="2023-04-22T12:07:41.052Z">
 <meta property="article:author" content="Amor">
 <meta property="article:tag" content="study">
 <meta property="article:tag" content="review">
@@ -133,18 +133,18 @@
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
         <a href="/archives">
-          <span class="site-state-item-count">7</span>
+          <span class="site-state-item-count">9</span>
           <span class="site-state-item-name">posts</span>
         </a>
       </div>
       <div class="site-state-item site-state-categories">
           <a href="/categories">
-        <span class="site-state-item-count">2</span>
+        <span class="site-state-item-count">3</span>
         <span class="site-state-item-name">categories</span></a>
       </div>
       <div class="site-state-item site-state-tags">
           <a href="/tags">
-        <span class="site-state-item-count">7</span>
+        <span class="site-state-item-count">9</span>
         <span class="site-state-item-name">tags</span></a>
       </div>
   </nav>
@@ -631,49 +631,52 @@
 </tr>
 </tbody></table>
 <h4 id="Union"><a href="#Union" class="headerlink" title="Union"></a>Union</h4><ul>
-<li>Written as (r + s) or (r U s)</li>
+<li>$(r + s)$ or $(r U s)$</li>
 <li>Relations must be union compatible</li>
 <li>Duplicate rows are eliminated</li>
 </ul>
 <h4 id="Intersection"><a href="#Intersection" class="headerlink" title="Intersection"></a>Intersection</h4><ul>
-<li>Written as (r ∩ s)</li>
+<li>$(r ∩ s)$</li>
 <li>Relations must be intersection compatible</li>
 </ul>
 <h4 id="Difference"><a href="#Difference" class="headerlink" title="Difference"></a>Difference</h4><ul>
-<li>Written as (r - s)</li>
+<li>$(r - s)$</li>
 <li>Relations have to be difference compatible</li>
 <li>Includes rows that are in r but not in s</li>
 </ul>
 <h4 id="Projection"><a href="#Projection" class="headerlink" title="Projection"></a>Projection</h4><ul>
+<li>( ${\Pi}_{COND} (r) $ )</li>
 <li>Extracts certain columns from the table</li>
 </ul>
 <h4 id="Selection"><a href="#Selection" class="headerlink" title="Selection"></a>Selection</h4><ul>
-<li>The selection operator extracts certain rows from the table and discards the others. Retrieved tuples must satisfy a given filtering condition.</li>
+<li>( $ {\sigma}_{COND} (r) $ )</li>
+<li>Extracts certain rows from the table and discards the others. Retrieved tuples must satisfy a given filtering condition.</li>
 </ul>
 <h4 id="Cross-product-cross-join"><a href="#Cross-product-cross-join" class="headerlink" title="Cross product (cross join)"></a>Cross product (cross join)</h4><ul>
-<li>Written as (r X s)</li>
+<li>$(r X s)$</li>
 <li>Concatenates rows from two relations, making all possible combinations of rows.</li>
 </ul>
 <h4 id="Join-Inner-join"><a href="#Join-Inner-join" class="headerlink" title="Join (Inner join)"></a>Join (Inner join)</h4><ul>
-<li>The join operation, denoted by ($r ⋈_{COND} s$), is used to combine related tuples from two relations.</li>
-<li>Here COND is the matching condition $r ⋈_{COND} s$</li>
+<li>($r ⋈_{COND} s$)</li>
+<li>Combine related tuples from two relations.</li>
+<li>COND &#x3D; the matching condition</li>
 </ul>
 <h4 id="Natual-join"><a href="#Natual-join" class="headerlink" title="Natual join"></a>Natual join</h4><ul>
-<li>Denoted by (r * s)</li>
+<li>($r * s$)</li>
 <li>Combines tuples of two relations using an implicit condition, i.e. the tables are related by columns that have the same names and domains.</li>
 </ul>
 <h4 id="Left-natural-join"><a href="#Left-natural-join" class="headerlink" title="Left natural join"></a>Left natural join</h4><ul>
-<li>Denoted ($r ⟕_{COND} s$)</li>
+<li>($r ⟕_{COND} s$)</li>
 <li>Combines tuples of two relations and keeps in the result every tuple from the left table, but only those from the right table that meet the join condition.</li>
 </ul>
 <h4 id="Aggregation"><a href="#Aggregation" class="headerlink" title="Aggregation"></a>Aggregation</h4><ul>
-<li>Syntax: ($_{Grouping attribute} F _{function list} (relation name)$ ) </li>
-<li>The function list contains simple mathematical functions. </li>
-<li>Common functions are: MAX, MIN, AVG, SUM and COUNT</li>
+<li>($_{Grouping attribute} F _{function list} (relation name)$ ) </li>
+<li>The function list contains simple mathematical functions, eg: MAX, MIN, AVG, SUM, COUNT</li>
 <li>A column name may be given as a grouping attribute to fragment the function outputs into groups.</li>
 </ul>
 <h4 id="Rename"><a href="#Rename" class="headerlink" title="Rename"></a>Rename</h4><ul>
-<li>Syntax: ρ (c1, c2, …, ck) (E) Rename the columns of E to c1, c2, …, ck respectively.</li>
+<li>$ρ (c1, c2, …, ck) (E) $</li>
+<li>Rename the columns of E to c1, c2, …, ck respectively.</li>
 </ul>
 <h3 id="RDBMS"><a href="#RDBMS" class="headerlink" title="RDBMS"></a>RDBMS</h3><h4 id="Introduction"><a href="#Introduction" class="headerlink" title="Introduction"></a>Introduction</h4><ul>
 <li><p>A database is a structured collection of data that is managed by a DBMS (Database management system)</p>

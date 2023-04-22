@@ -27,13 +27,15 @@
 <meta property="og:site_name" content="This is Amor">
 <meta property="og:description" content="Review notes of Communications.">
 <meta property="og:locale" content="en_US">
+<meta property="og:image" content="https://github.com/thisisamor/blog_pic/blob/main/Communications/review%20notes/1%20additive%20noise%20channel.jpg?raw=true">
 <meta property="article:published_time" content="2023-04-18T13:37:41.000Z">
-<meta property="article:modified_time" content="2023-04-19T12:19:47.303Z">
+<meta property="article:modified_time" content="2023-04-22T09:53:12.708Z">
 <meta property="article:author" content="Amor">
 <meta property="article:tag" content="study">
 <meta property="article:tag" content="review">
 <meta property="article:tag" content="communications">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://github.com/thisisamor/blog_pic/blob/main/Communications/review%20notes/1%20additive%20noise%20channel.jpg?raw=true">
 
 
 <link rel="canonical" href="http://example.com/2023/04/18/002-Communications-Review/">
@@ -115,7 +117,7 @@
       <div class="sidebar-panel-container">
         <!--noindex-->
         <div class="post-toc-wrap sidebar-panel">
-            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Introduction"><span class="nav-number">1.</span> <span class="nav-text">Introduction</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Definition"><span class="nav-number">1.1.</span> <span class="nav-text">Definition</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#Signal"><span class="nav-number">1.1.1.</span> <span class="nav-text">Signal</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Deterministic-and-random-stochastic-signals-%E7%A1%AE%E5%AE%9A%E6%80%A7"><span class="nav-number">1.1.2.</span> <span class="nav-text">Deterministic and random (stochastic) signals 确定性</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Analog-and-digital-signals"><span class="nav-number">1.1.3.</span> <span class="nav-text">Analog and digital signals</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Power"><span class="nav-number">1.1.4.</span> <span class="nav-text">Power</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Energy"><span class="nav-number">1.1.5.</span> <span class="nav-text">Energy</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Bandwidth"><span class="nav-number">1.1.6.</span> <span class="nav-text">Bandwidth</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Phasor"><span class="nav-number">1.1.7.</span> <span class="nav-text">Phasor</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Noise"><span class="nav-number">2.</span> <span class="nav-text">Noise</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Noise-in-Analog-Communication-Systems"><span class="nav-number">3.</span> <span class="nav-text">Noise in Analog Communication Systems</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Digital-Communication-Systems"><span class="nav-number">4.</span> <span class="nav-text">Digital Communication Systems</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Information-Theory-and-coding"><span class="nav-number">5.</span> <span class="nav-text">Information Theory and coding</span></a></li></ol></div>
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Introduction"><span class="nav-number">1.</span> <span class="nav-text">Introduction</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Definition"><span class="nav-number">1.1.</span> <span class="nav-text">Definition</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#Signal"><span class="nav-number">1.1.1.</span> <span class="nav-text">Signal</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Noise"><span class="nav-number">1.1.2.</span> <span class="nav-text">Noise</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Deterministic-and-random-stochastic-signals-%E7%A1%AE%E5%AE%9A%E6%80%A7"><span class="nav-number">1.1.3.</span> <span class="nav-text">Deterministic and random (stochastic) signals 确定性</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Analog-and-digital-signals"><span class="nav-number">1.1.4.</span> <span class="nav-text">Analog and digital signals</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Power"><span class="nav-number">1.1.5.</span> <span class="nav-text">Power</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Energy"><span class="nav-number">1.1.6.</span> <span class="nav-text">Energy</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Bandwidth"><span class="nav-number">1.1.7.</span> <span class="nav-text">Bandwidth</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Phasor"><span class="nav-number">1.1.8.</span> <span class="nav-text">Phasor</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Noise-1"><span class="nav-number">2.</span> <span class="nav-text">Noise</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#A-Model-of-Noise"><span class="nav-number">2.1.</span> <span class="nav-text">A Model of Noise</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#Source-of-noise"><span class="nav-number">2.1.1.</span> <span class="nav-text">Source of noise</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#The-additive-noise-channel"><span class="nav-number">2.1.2.</span> <span class="nav-text">The additive noise channel</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#A-statistical-Description-of-Noise"><span class="nav-number">2.2.</span> <span class="nav-text">A statistical Description of Noise</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#Probability"><span class="nav-number">2.2.1.</span> <span class="nav-text">Probability</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Autocorrelation"><span class="nav-number">2.2.2.</span> <span class="nav-text">Autocorrelation</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Power-spectral-density"><span class="nav-number">2.2.3.</span> <span class="nav-text">Power spectral density</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Wiener-Khinchine-Theorem"><span class="nav-number">2.2.4.</span> <span class="nav-text">Wiener-Khinchine Theorem</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Representation-of-Bandlimited-Noise"><span class="nav-number">2.3.</span> <span class="nav-text">Representation of Bandlimited Noise</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Noise-in-Analog-Communication-Systems"><span class="nav-number">3.</span> <span class="nav-text">Noise in Analog Communication Systems</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Baseband-Communication-System"><span class="nav-number">3.1.</span> <span class="nav-text">Baseband Communication System</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Amplitude-Modulation-AM"><span class="nav-number">3.2.</span> <span class="nav-text">Amplitude Modulation (AM)</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#General-form"><span class="nav-number">3.2.1.</span> <span class="nav-text">General form:</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Double-sideband-suppressed-carrier-DSB-SC"><span class="nav-number">3.2.2.</span> <span class="nav-text">Double-sideband suppressed carrier (DSB-SC)</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Noise-in-DSB-SC"><span class="nav-number">3.2.3.</span> <span class="nav-text">Noise in DSB-SC</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Synchronous-detection"><span class="nav-number">3.2.4.</span> <span class="nav-text">Synchronous detection</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Envelope-detection"><span class="nav-number">3.2.5.</span> <span class="nav-text">Envelope detection</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Frequency-Modulation-FM"><span class="nav-number">3.3.</span> <span class="nav-text">Frequency Modulation (FM)</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Comparison-of-Analogue-Communication-Systems"><span class="nav-number">3.4.</span> <span class="nav-text">Comparison of Analogue Communication Systems</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Digital-Communication-Systems"><span class="nav-number">4.</span> <span class="nav-text">Digital Communication Systems</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Information-Theory-and-coding"><span class="nav-number">5.</span> <span class="nav-text">Information Theory and coding</span></a></li></ol></div>
         </div>
         <!--/noindex-->
 
@@ -130,18 +132,18 @@
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
         <a href="/archives">
-          <span class="site-state-item-count">7</span>
+          <span class="site-state-item-count">9</span>
           <span class="site-state-item-name">posts</span>
         </a>
       </div>
       <div class="site-state-item site-state-categories">
           <a href="/categories">
-        <span class="site-state-item-count">2</span>
+        <span class="site-state-item-count">3</span>
         <span class="site-state-item-name">categories</span></a>
       </div>
       <div class="site-state-item site-state-tags">
           <a href="/tags">
-        <span class="site-state-item-count">7</span>
+        <span class="site-state-item-count">9</span>
         <span class="site-state-item-name">tags</span></a>
       </div>
   </nav>
@@ -241,8 +243,9 @@
   Receiver-->B[Output transducer]
   B-->C[Output signal]</pre>
 
-<p>Main question: <em>How do communication systems perform in the presence of noise and how is noise to be coped with?</em> </p>
+<p><em>How do communication systems perform in the presence of noise and how is noise to be coped with?</em> </p>
 <h3 id="Definition"><a href="#Definition" class="headerlink" title="Definition"></a>Definition</h3><h4 id="Signal"><a href="#Signal" class="headerlink" title="Signal"></a>Signal</h4><p>A single valued function of time that conveys information. </p>
+<h4 id="Noise"><a href="#Noise" class="headerlink" title="Noise"></a>Noise</h4><p>The unwanted waves that disturb the transmission of signals, and over which we have incomplete control. </p>
 <h4 id="Deterministic-and-random-stochastic-signals-确定性"><a href="#Deterministic-and-random-stochastic-signals-确定性" class="headerlink" title="Deterministic and random (stochastic) signals 确定性"></a>Deterministic and random (stochastic) signals 确定性</h4><p>A deterministic signal can be modelled as a completely specified function of time (no uncertainty at any time). </p>
 <p>A random signal must be modelled probabilistically. </p>
 <h4 id="Analog-and-digital-signals"><a href="#Analog-and-digital-signals" class="headerlink" title="Analog and digital signals"></a>Analog and digital signals</h4><p>An analog signal is a continuous function of <strong>time</strong>. </p>
@@ -257,10 +260,59 @@
 <li>3-dB bandwidth</li>
 <li>Equivalent noise bandwidth</li>
 </ul>
-<h4 id="Phasor"><a href="#Phasor" class="headerlink" title="Phasor"></a>Phasor</h4><p>The waveform can be considered as <mark style="background-color: #9fc5e8;">the projection of a rotating phasor onto the real axis</mark>.<br>  $$y(t) &#x3D; A\sin(\omega t + \phi) &#x3D; \text{Re} (A e^{j(\omega t + \phi)} ) $$</p>
+<h4 id="Phasor"><a href="#Phasor" class="headerlink" title="Phasor"></a>Phasor</h4><p>A general sinusoid:<br>  $$y(t) &#x3D; A\sin(\omega t + \phi) &#x3D; A e^{j(\omega t + \phi)} $$</p>
+<p>The waveform can be considered as <mark style="background-color: #9fc5e8;">the projection of a rotating phasor onto the real axis</mark>:<br>  $$ \text{Re} (A e^{j(\omega t + \phi)} ) $$</p>
 <hr>
-<h2 id="Noise"><a href="#Noise" class="headerlink" title="Noise"></a>Noise</h2><hr>
-<h2 id="Noise-in-Analog-Communication-Systems"><a href="#Noise-in-Analog-Communication-Systems" class="headerlink" title="Noise in Analog Communication Systems"></a>Noise in Analog Communication Systems</h2><hr>
+<h2 id="Noise-1"><a href="#Noise-1" class="headerlink" title="Noise"></a>Noise</h2><p><em>Noise is inevitable.</em></p>
+<p><em>How to develop a model for the noise?</em></p>
+<h3 id="A-Model-of-Noise"><a href="#A-Model-of-Noise" class="headerlink" title="A Model of Noise"></a>A Model of Noise</h3><h4 id="Source-of-noise"><a href="#Source-of-noise" class="headerlink" title="Source of noise"></a>Source of noise</h4><ul>
+<li>External: <ul>
+<li>atmospheric, galactic, synthetic…</li>
+</ul>
+</li>
+<li>Internal: <ul>
+<li>due to spontaneous fluctuation of current of voltage in electrical circuits</li>
+<li>shot noise<ul>
+<li>the random arrival of electrons at the output of semicondector devices</li>
+<li>Gaussian distributed with 0 mean</li>
+<li>follows central limit theorem</li>
+</ul>
+</li>
+<li>thermal noise (Johnson noise)<ul>
+<li>the rapid and random motion of electrons within a condector due to thermal agitation</li>
+<li>Gaussian distributed with 0 mean</li>
+<li>follows central limit theorem</li>
+<li>effective noise temperature: $T_e &#x3D; \frac {P} {kB}$</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h4 id="The-additive-noise-channel"><a href="#The-additive-noise-channel" class="headerlink" title="The additive noise channel"></a>The additive noise channel</h4><p>Signal s(t) is corrupted by the addition of a random noise signal n(t): </p>
+<p><img src="https://github.com/thisisamor/blog_pic/blob/main/Communications/review%20notes/1%20additive%20noise%20channel.jpg?raw=true" alt="additive noise channel"></p>
+<h3 id="A-statistical-Description-of-Noise"><a href="#A-statistical-Description-of-Noise" class="headerlink" title="A statistical Description of Noise"></a>A statistical Description of Noise</h3><h4 id="Probability"><a href="#Probability" class="headerlink" title="Probability"></a>Probability</h4><p><mark style="background-color: #9fc5e8;">random variable</mark></p>
+<p><mark style="background-color: #9fc5e8;">distribution functions</mark></p>
+<p><mark style="background-color: #9fc5e8;">probability density functions</mark></p>
+<p><mark style="background-color: #9fc5e8;">statistical average</mark></p>
+<p><mark style="background-color: #9fc5e8;">random process</mark></p>
+<p>(see <a target="_blank" rel="noopener" href="https://github.com/thisisamor/blog_pic/blob/main/Maths/Maths-B-Probability.pdf">maths B</a>)</p>
+<h4 id="Autocorrelation"><a href="#Autocorrelation" class="headerlink" title="Autocorrelation"></a>Autocorrelation</h4><h4 id="Power-spectral-density"><a href="#Power-spectral-density" class="headerlink" title="Power spectral density"></a>Power spectral density</h4><h4 id="Wiener-Khinchine-Theorem"><a href="#Wiener-Khinchine-Theorem" class="headerlink" title="Wiener-Khinchine Theorem"></a>Wiener-Khinchine Theorem</h4><p>The power spectral density of a random process is defined as the Fourier Transform of the autocorrelation function. </p>
+<h3 id="Representation-of-Bandlimited-Noise"><a href="#Representation-of-Bandlimited-Noise" class="headerlink" title="Representation of Bandlimited Noise"></a>Representation of Bandlimited Noise</h3><hr>
+<h2 id="Noise-in-Analog-Communication-Systems"><a href="#Noise-in-Analog-Communication-Systems" class="headerlink" title="Noise in Analog Communication Systems"></a>Noise in Analog Communication Systems</h2><h3 id="Baseband-Communication-System"><a href="#Baseband-Communication-System" class="headerlink" title="Baseband Communication System"></a>Baseband Communication System</h3><p>SNR at the receiver output: </p>
+<p>$$ {SNR}_{baseband} &#x3D; \frac {P_T} {N_o W} $$</p>
+<p>To improve SNR: </p>
+<ul>
+<li>increasing the transmitted power ($P_T$)</li>
+<li>restricting the message bandwidth ($W$)</li>
+<li>making the receiver less noisy ($N_o$)</li>
+</ul>
+<h3 id="Amplitude-Modulation-AM"><a href="#Amplitude-Modulation-AM" class="headerlink" title="Amplitude Modulation (AM)"></a>Amplitude Modulation (AM)</h3><h4 id="General-form"><a href="#General-form" class="headerlink" title="General form:"></a>General form:</h4><p>$$ s(t)_{AM} &#x3D; (A+m(t)) cos(2 \pi f_c t) $$</p>
+<h4 id="Double-sideband-suppressed-carrier-DSB-SC"><a href="#Double-sideband-suppressed-carrier-DSB-SC" class="headerlink" title="Double-sideband suppressed carrier (DSB-SC)"></a>Double-sideband suppressed carrier (DSB-SC)</h4><p>$$ s(t)_{DSB-SC} &#x3D; Am(t)cos(2 \pi f_c t) $$</p>
+<h4 id="Noise-in-DSB-SC"><a href="#Noise-in-DSB-SC" class="headerlink" title="Noise in DSB-SC"></a>Noise in DSB-SC</h4><p>$$ P_N &#x3D; \int_{-W}^{W} N_o df &#x3D; 2 N_o W $$</p>
+<p>$$ {SNR}_o &#x3D; \frac {A^2 P} {2 N_o W} &#x3D; \frac {P_T} {N_o W} $$</p>
+<h4 id="Synchronous-detection"><a href="#Synchronous-detection" class="headerlink" title="Synchronous detection"></a>Synchronous detection</h4><p>$$ {SNR}<em>{AM} &#x3D; \frac {P} {A^2 + P} {SNR}</em>{baseband} $$</p>
+<p>Performing AM is always worse than that of a baseband system, because of the wasted power which results from transmitting the carrier explicitly in the AM waveform. </p>
+<h4 id="Envelope-detection"><a href="#Envelope-detection" class="headerlink" title="Envelope detection"></a>Envelope detection</h4><h3 id="Frequency-Modulation-FM"><a href="#Frequency-Modulation-FM" class="headerlink" title="Frequency Modulation (FM)"></a>Frequency Modulation (FM)</h3><h3 id="Comparison-of-Analogue-Communication-Systems"><a href="#Comparison-of-Analogue-Communication-Systems" class="headerlink" title="Comparison of Analogue Communication Systems"></a>Comparison of Analogue Communication Systems</h3><hr>
 <h2 id="Digital-Communication-Systems"><a href="#Digital-Communication-Systems" class="headerlink" title="Digital Communication Systems"></a>Digital Communication Systems</h2><hr>
 <h2 id="Information-Theory-and-coding"><a href="#Information-Theory-and-coding" class="headerlink" title="Information Theory and coding"></a>Information Theory and coding</h2>
     </div>
