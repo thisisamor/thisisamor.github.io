@@ -1,0 +1,635 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width">
+<meta name="theme-color" content="#222" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#222" media="(prefers-color-scheme: dark)"><meta name="generator" content="Hexo 6.3.0">
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lora:300,300italic,400,400italic,700,700italic%7CNoto+Serif+SC:300,300italic,400,400italic,700,700italic%7Cserif:300,300italic,400,400italic,700,700italic&display=swap&subset=latin,latin-ext">
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha256-HtsXJanqjKTc8vVQjO4YMhiqFoXkfBsjBWcX91T1jr8=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
+
+<script class="next-config" data-name="main" type="application/json">{"hostname":"example.com","root":"/","images":"/images","scheme":"Gemini","darkmode":true,"version":"8.15.1","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":{"enable":false,"style":null},"bookmark":{"enable":false,"color":"#222","save":"manual"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"Searching...","empty":"We didn't find any results for the search: ${query}","hits_time":"${hits} results found in ${time} ms","hits":"${hits} results found"}}</script><script src="/js/config.js"></script>
+
+    <meta name="description" content="Review notes of Signals and Systems.">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Signals And Systems Review">
+<meta property="og:url" content="http://example.com/2023/04/23/003-Signals-And-Systems-Review/index.html">
+<meta property="og:site_name" content="This is Amor">
+<meta property="og:description" content="Review notes of Signals and Systems.">
+<meta property="og:locale" content="en_US">
+<meta property="og:image" content="https://github.com/thisisamor/blog_pic/blob/main/year2/Signals_and_Systems/unit-impulse.jpg?raw=true">
+<meta property="og:image" content="https://github.com/thisisamor/blog_pic/blob/main/year2/Signals_and_Systems/unit-step.jpg?raw=true">
+<meta property="og:image" content="https://github.com/thisisamor/blog_pic/blob/main/year2/Signals_and_Systems/graph1.jpg?raw=true">
+<meta property="og:image" content="https://github.com/thisisamor/blog_pic/blob/main/year2/Signals_and_Systems/graph2.jpg?raw=true">
+<meta property="og:image" content="https://github.com/thisisamor/blog_pic/blob/main/year2/Signals_and_Systems/block-diagram.jpg?raw=true">
+<meta property="og:image" content="https://github.com/thisisamor/blog_pic/blob/main/year2/Signals_and_Systems/anti-aliasing-filter.jpg?raw=true">
+<meta property="og:image" content="https://github.com/thisisamor/blog_pic/blob/main/year2/Signals_and_Systems/rectangular-func-inverse-fourier.jpg?raw=true">
+<meta property="og:image" content="https://github.com/thisisamor/blog_pic/blob/main/year2/Signals_and_Systems/signal-reconstruction.jpg?raw=true">
+<meta property="og:image" content="https://github.com/thisisamor/blog_pic/blob/main/year2/Signals_and_Systems/ZOH.jpg?raw=true">
+<meta property="og:image" content="https://github.com/thisisamor/blog_pic/blob/main/year2/Signals_and_Systems/ZOH-anti-imaging-combined.jpg?raw=true">
+<meta property="article:published_time" content="2023-04-23T07:45:40.000Z">
+<meta property="article:modified_time" content="2023-04-23T14:17:45.868Z">
+<meta property="article:author" content="Amor">
+<meta property="article:tag" content="study">
+<meta property="article:tag" content="review">
+<meta property="article:tag" content="signals and systems">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://github.com/thisisamor/blog_pic/blob/main/year2/Signals_and_Systems/unit-impulse.jpg?raw=true">
+
+
+<link rel="canonical" href="http://example.com/2023/04/23/003-Signals-And-Systems-Review/">
+
+
+
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"en","comments":true,"permalink":"http://example.com/2023/04/23/003-Signals-And-Systems-Review/","path":"2023/04/23/003-Signals-And-Systems-Review/","title":"Signals And Systems Review"}</script>
+
+<script class="next-config" data-name="calendar" type="application/json">""</script>
+<title>Signals And Systems Review | This is Amor</title>
+  
+
+
+
+
+
+
+
+
+  <noscript>
+    <link rel="stylesheet" href="/css/noscript.css">
+  </noscript>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
+  <div class="headband"></div>
+
+  <main class="main">
+    <div class="column">
+      <header class="header" itemscope itemtype="http://schema.org/WPHeader"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="Toggle navigation bar" role="button">
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <i class="logo-line"></i>
+      <p class="site-title">This is Amor</p>
+      <i class="logo-line"></i>
+    </a>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger" aria-label="Search" role="button">
+    </div>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  <ul class="main-menu menu"><li class="menu-item menu-item-home"><a href="/" rel="section">Home</a></li><li class="menu-item menu-item-archives"><a href="/archives" rel="section">Archives</a></li><li class="menu-item menu-item-categories"><a href="/categories" rel="section">Categories</a></li><li class="menu-item menu-item-tags"><a href="/tags" rel="section">Tags</a></li><li class="menu-item menu-item-about"><a href="/about" rel="section">About</a></li>
+  </ul>
+</nav>
+
+
+
+
+</header>
+        
+  
+  <aside class="sidebar">
+
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
+      <ul class="sidebar-nav">
+        <li class="sidebar-nav-toc">
+          Table of Contents
+        </li>
+        <li class="sidebar-nav-overview">
+          Overview
+        </li>
+      </ul>
+
+      <div class="sidebar-panel-container">
+        <!--noindex-->
+        <div class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Introduction"><span class="nav-number">1.</span> <span class="nav-text">Introduction</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Continuous-time-and-Discrete-time-Signals"><span class="nav-number">1.1.</span> <span class="nav-text">Continuous-time and Discrete-time Signals</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Symmetric-Signals-even-or-odd"><span class="nav-number">1.2.</span> <span class="nav-text">Symmetric Signals (even or odd)</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Periodic-and-Non-periodic-Signals"><span class="nav-number">1.3.</span> <span class="nav-text">Periodic and Non-periodic Signals</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Deterministic-and-Random-Ssignals"><span class="nav-number">1.4.</span> <span class="nav-text">Deterministic and Random Ssignals</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Energy-and-Power-Signals"><span class="nav-number">1.5.</span> <span class="nav-text">Energy and Power Signals</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Special-Signals"><span class="nav-number">1.6.</span> <span class="nav-text">Special Signals</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Signal-Operators"><span class="nav-number">1.7.</span> <span class="nav-text">Signal Operators</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Precedence-Rule"><span class="nav-number">1.8.</span> <span class="nav-text">Precedence Rule</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#System"><span class="nav-number">1.9.</span> <span class="nav-text">System</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Properties-of-systems"><span class="nav-number">1.10.</span> <span class="nav-text">Properties of systems</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#Linearity"><span class="nav-number">1.10.1.</span> <span class="nav-text">Linearity</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Time-Invariance"><span class="nav-number">1.10.2.</span> <span class="nav-text">Time Invariance</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Memory"><span class="nav-number">1.10.3.</span> <span class="nav-text">Memory</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Stability"><span class="nav-number">1.10.4.</span> <span class="nav-text">Stability</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Causality-%E5%9B%A0%E6%9E%9C"><span class="nav-number">1.10.5.</span> <span class="nav-text">Causality 因果</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#System-architecture"><span class="nav-number">1.11.</span> <span class="nav-text">System architecture</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#LTI-Systems"><span class="nav-number">2.</span> <span class="nav-text">LTI Systems</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Impulse-Response"><span class="nav-number">2.1.</span> <span class="nav-text">Impulse Response</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Convolution"><span class="nav-number">2.2.</span> <span class="nav-text">Convolution</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#Convolution-Sum"><span class="nav-number">2.2.1.</span> <span class="nav-text">Convolution Sum</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Convolution-Integral"><span class="nav-number">2.2.2.</span> <span class="nav-text">Convolution Integral</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Step-Response"><span class="nav-number">2.2.3.</span> <span class="nav-text">Step Response</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Differential-and-Difference-Representations"><span class="nav-number">2.3.</span> <span class="nav-text">Differential and Difference Representations</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#Differential-equation-continuous"><span class="nav-number">2.3.1.</span> <span class="nav-text">Differential equation (continuous)</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Difference-equation-discrete"><span class="nav-number">2.3.2.</span> <span class="nav-text">Difference equation (discrete)</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Roots-of-the-characteristic-equation"><span class="nav-number">2.3.3.</span> <span class="nav-text">Roots of the characteristic equation</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Natural-response"><span class="nav-number">2.3.4.</span> <span class="nav-text">Natural response</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Forced-response"><span class="nav-number">2.3.5.</span> <span class="nav-text">Forced response</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Block-Diagrams"><span class="nav-number">2.4.</span> <span class="nav-text">Block Diagrams</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Frequency-Response"><span class="nav-number">2.5.</span> <span class="nav-text">Frequency Response</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Sampling"><span class="nav-number">3.</span> <span class="nav-text">Sampling</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Sampling-Theorem"><span class="nav-number">3.1.</span> <span class="nav-text">Sampling Theorem</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Sampling-Process"><span class="nav-number">3.2.</span> <span class="nav-text">Sampling Process</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Aliasing-%E6%B7%B7%E5%8F%A0"><span class="nav-number">3.3.</span> <span class="nav-text">Aliasing 混叠</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#Anti-aliasing-filter"><span class="nav-number">3.3.1.</span> <span class="nav-text">Anti-aliasing filter</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Signal-Reconstruction"><span class="nav-number">3.4.</span> <span class="nav-text">Signal Reconstruction</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#Ideal-implementation"><span class="nav-number">3.4.1.</span> <span class="nav-text">Ideal implementation</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Practical-implementation"><span class="nav-number">3.4.2.</span> <span class="nav-text">Practical implementation</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Oversampling"><span class="nav-number">3.5.</span> <span class="nav-text">Oversampling</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Quantization"><span class="nav-number">3.6.</span> <span class="nav-text">Quantization</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Fourier"><span class="nav-number">4.</span> <span class="nav-text">Fourier</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Laplace"><span class="nav-number">5.</span> <span class="nav-text">Laplace</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Z-transforms"><span class="nav-number">6.</span> <span class="nav-text">Z-transforms</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Filters"><span class="nav-number">7.</span> <span class="nav-text">Filters</span></a></li></ol></div>
+        </div>
+        <!--/noindex-->
+
+        <div class="site-overview-wrap sidebar-panel">
+          <div class="site-author animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="Amor"
+      src="/images/amor_avatar.gif">
+  <p class="site-author-name" itemprop="name">Amor</p>
+  <div class="site-description" itemprop="description"></div>
+</div>
+<div class="site-state-wrap animated">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+        <a href="/archives">
+          <span class="site-state-item-count">10</span>
+          <span class="site-state-item-name">posts</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+          <a href="/categories">
+        <span class="site-state-item-count">4</span>
+        <span class="site-state-item-name">categories</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+          <a href="/tags">
+        <span class="site-state-item-count">10</span>
+        <span class="site-state-item-name">tags</span></a>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author animated">
+      <span class="links-of-author-item">
+        <a href="https://github.com/thisisamor" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;thisisamor" rel="noopener me" target="_blank">GitHub</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="https://amor-zhao.notion.site/amor-zhao/Amor-s-Dashboard-33d838340d45480980835d213c19ea5a" title="Dashboard → https:&#x2F;&#x2F;amor-zhao.notion.site&#x2F;amor-zhao&#x2F;Amor-s-Dashboard-33d838340d45480980835d213c19ea5a" rel="noopener me" target="_blank">Dashboard</a>
+      </span>
+  </div>
+
+        </div>
+      </div>
+    </div>
+
+    
+  </aside>
+
+
+    </div>
+
+    <div class="main-inner post posts-expand">
+
+
+  
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="en">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2023/04/23/003-Signals-And-Systems-Review/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/amor_avatar.gif">
+      <meta itemprop="name" content="Amor">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="This is Amor">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="Signals And Systems Review | This is Amor">
+      <meta itemprop="description" content="Review notes of Signals and Systems.">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          Signals And Systems Review
+        </h1>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">Posted on</span>
+
+      <time title="Created: 23-04-2023 08:45:40" itemprop="dateCreated datePublished" datetime="2023-04-23T08:45:40+01:00">23-04-2023</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">In</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/Review/" itemprop="url" rel="index"><span itemprop="name">Review</span></a>
+        </span>
+    </span>
+
+  
+</div>
+
+
+          
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+        <p style="opacity: 0.7;">Start Notes: 
+
+<p><small style="opacity: 0.7;">This course is the first part of EIE’s “Information Processing” course but I prefer the name “Signals and Systems” which is the one we had together with EEE students. It established the basis for signal processing and was used in Control Systems course later.  </small></p>
+<hr>
+<h2 id="Introduction"><a href="#Introduction" class="headerlink" title="Introduction"></a>Introduction</h2><table>
+<thead>
+<tr>
+<th></th>
+<th>Continuous time</th>
+<th></th>
+<th>Discrete time</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>t</td>
+<td>continuous time(s)</td>
+<td>n</td>
+<td>discrete time index</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td>$T_s$</td>
+<td>sampling period</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td>$f_s$</td>
+<td>sampling frequency(s)</td>
+</tr>
+<tr>
+<td>$\omega$</td>
+<td>angular freq (rads&#x2F;sec)</td>
+<td>$\Omega &#x3D; \omega T &#x3D; \frac {2 \pi f} {f_s}$</td>
+<td>normalised angular freq (rads&#x2F;sec)</td>
+</tr>
+<tr>
+<td>$x(t)$</td>
+<td>signal</td>
+<td>$x[n]$</td>
+<td>signal</td>
+</tr>
+<tr>
+<td>$X(j\omega)$</td>
+<td>Fourier transform of $x(t)$</td>
+<td>$X(e^{j\Omega})$</td>
+<td>Discrete-time Fourier transform of $x[n]$</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td>$x[k]$</td>
+<td>Discrete Fourier transform of $x[n]$</td>
+</tr>
+<tr>
+<td>$X(s)$</td>
+<td>Laplace transform of x(t)</td>
+<td>$X(z)$</td>
+<td>z-transform of $x[n]$</td>
+</tr>
+</tbody></table>
+<p>Lower case used for time-domain functions. </p>
+<p>Upper case used for transform-domain functions. </p>
+<h3 id="Continuous-time-and-Discrete-time-Signals"><a href="#Continuous-time-and-Discrete-time-Signals" class="headerlink" title="Continuous-time and Discrete-time Signals"></a>Continuous-time and Discrete-time Signals</h3><p>Discrete-time signals may be intrinsically discrete or may be obtained from continuous-time signals by sampling the amplitude at $t&#x3D;nT_s$. </p>
+<p>$$ x[n] &#x3D; x(nT_s) $$</p>
+<h3 id="Symmetric-Signals-even-or-odd"><a href="#Symmetric-Signals-even-or-odd" class="headerlink" title="Symmetric Signals (even or odd)"></a>Symmetric Signals (even or odd)</h3><p>Any signal may be written as the sum of an even-symmetric signal $x_e(t)$ and an odd-symmetric signal $x_o(t)$. </p>
+<p>$$ x(t) &#x3D; x_e(t) + x_o(t) $$</p>
+<p>$$ x_e(t) &#x3D; \frac {1} {2} (x(t)+x(-t)) $$</p>
+<p>$$ x_o(t) &#x3D; \frac {1} {2} (x(t)-x(-t)) $$</p>
+<h3 id="Periodic-and-Non-periodic-Signals"><a href="#Periodic-and-Non-periodic-Signals" class="headerlink" title="Periodic and Non-periodic Signals"></a>Periodic and Non-periodic Signals</h3><p>$$ x(t) &#x3D; x(t + T_0) \quad \forall t $$</p>
+<p>$$ x(t) &#x3D; x(t + \alpha T_0) \quad \forall \alpha \in \mathbb{Z} $$</p>
+<p>$T_0$ : the <strong>fundamental period</strong> in seconds</p>
+<p>$\omega_0 &#x3D; \frac {2\pi} {T_0} $ : the <strong>fundamental angular frequency</strong> in rads&#x2F;sec</p>
+<p>$$ x[n] &#x3D; x[n + N_0] \quad \forall n $$</p>
+<p>$$ x[n] &#x3D; x[n + \alpha N_0] \quad \forall \alpha \in \mathbb{Z} $$</p>
+<p>$N_0$ : the <strong>fundamental period</strong> in samples</p>
+<p>$\Omega_0 &#x3D; \frac {2\pi} {N_0} $ : the <strong>fundamental angular frequency</strong> in rads&#x2F;sample</p>
+<h3 id="Deterministic-and-Random-Ssignals"><a href="#Deterministic-and-Random-Ssignals" class="headerlink" title="Deterministic and Random Ssignals"></a>Deterministic and Random Ssignals</h3><p>Uncertainty at any observation instant in time? </p>
+<h3 id="Energy-and-Power-Signals"><a href="#Energy-and-Power-Signals" class="headerlink" title="Energy and Power Signals"></a>Energy and Power Signals</h3><p>$$ E &#x3D; \lim_{T \to \infty}\int_{-T&#x2F;2}^{T&#x2F;2}x^2(t)dt &#x3D; \int_{-\infty}^{\infty}x^2(t)dt $$</p>
+<p>$$ P &#x3D; \lim_{T \to \infty}\frac{1}{T}\int_{-T&#x2F;2}^{T&#x2F;2}x^2(t)dt $$</p>
+<p>$$ E &#x3D; \sum_{n &#x3D; -\infty}^\infty x^2[n] $$</p>
+<p>$$ P &#x3D; \lim_{N \to \infty}\frac{1}{N}\sum_{n &#x3D; 0}^{N-1} x^2[n] $$</p>
+<p>A signal is an <strong>energy signal</strong> iff $ 0 &lt; E &lt; \infty $. Energy signals have 0 average power. </p>
+<p>A signal is a <strong>power signal</strong> iff $ 0 &lt; P &lt; \infty $. Power signals have infinite energy. </p>
+<h3 id="Special-Signals"><a href="#Special-Signals" class="headerlink" title="Special Signals"></a>Special Signals</h3><p><mark style="background-color: #9fc5e8;">Unit impulse function</mark> (discrete)</p>
+<p><img src="https://github.com/thisisamor/blog_pic/blob/main/year2/Signals_and_Systems/unit-impulse.jpg?raw=true" alt="$$\delta (t) = \left\{\begin{matrix} 0, t \not= 0 \\∞, t = 0 \end{matrix}\right.$$"></p>
+<p><mark style="background-color: #9fc5e8;">Dirac delta fucntion</mark> (continuous)</p>
+<p>$$ \int_{-\infty}^{\infty} \delta(t)dt &#x3D; 1 \quad and \quad \delta (t) &#x3D; 0 \ for \ t \not&#x3D; 0 $$</p>
+<p><mark style="background-color: #9fc5e8;">Unit step function</mark> </p>
+<p><img src="https://github.com/thisisamor/blog_pic/blob/main/year2/Signals_and_Systems/unit-step.jpg?raw=true" alt="unit step"></p>
+<p>Relationship: </p>
+<p>$$ \delta (t) &#x3D; \frac {d} {dt} u(t) $$</p>
+<p>$$ u(t) &#x3D; \int_{-\infty}^{t} \delta(\tau) d\tau $$</p>
+<p><img src="https://github.com/thisisamor/blog_pic/blob/main/year2/Signals_and_Systems/graph1.jpg?raw=true" alt="graph1"></p>
+<p><mark style="background-color: #9fc5e8;">Complex exponential</mark> </p>
+<p>$$ x(t) &#x3D; e^{j\omega_0t} $$</p>
+<p><mark style="background-color: #9fc5e8;">Cosine and sine</mark> </p>
+<p>$$ cos(\omega_0 t) &#x3D; \frac {1} {2} ( e^{j\omega_0t} + e^{-j\omega_0t} ) $$</p>
+<p>$$ sin(\omega_0 t) &#x3D; \frac {1} {2} ( e^{j\omega_0t} - e^{-j\omega_0t} ) $$</p>
+<p><img src="https://github.com/thisisamor/blog_pic/blob/main/year2/Signals_and_Systems/graph2.jpg?raw=true" alt="graph2"></p>
+<h3 id="Signal-Operators"><a href="#Signal-Operators" class="headerlink" title="Signal Operators"></a>Signal Operators</h3><ul>
+<li><p>Amplification<br>$$ y(t) &#x3D; cx(t) \qquad y[n] &#x3D; cx[n] $$</p>
+</li>
+<li><p>Addition<br>$$ y(t) &#x3D; x_1(t) + x_2(t)  \qquad y[n] &#x3D; x_1[n] + x_2[n] $$</p>
+</li>
+<li><p>Multiplication (Modulation)<br>$$ y(t) &#x3D; x_1(t)x_2(t) \qquad y[n] &#x3D; x_1[n]x_2[n] $$</p>
+</li>
+<li><p>Differentiation<br>$$ y(t) &#x3D; \frac {d}{dt} x(t) $$</p>
+</li>
+<li><p>Integration<br>$$ y(t) &#x3D; \int_{-\infty}^{t}x(\tau)d\tau $$</p>
+</li>
+<li><p>Time scaling<br>$$ y(t) &#x3D; x(at) \qquad y[n] &#x3D; x[kn] $$</p>
+</li>
+<li><p>Time shifting<br>$$ y(t) &#x3D; x(t-t_0) $$</p>
+</li>
+<li><p>Time reflection<br>$$ y(t) &#x3D; x(-t) $$</p>
+</li>
+</ul>
+<h3 id="Precedence-Rule"><a href="#Precedence-Rule" class="headerlink" title="Precedence Rule"></a>Precedence Rule</h3><p>Consider the operation on $x(t)$ denoted by $y(t)&#x3D;x(at+t_0)$, <mark style="background-color: #9fc5e8;">the precedence rule states that time-shift is done first, then time-scaling. </p>
+<h3 id="System"><a href="#System" class="headerlink" title="System"></a>System</h3><p>System id the operation, or combination of operations applied to an input signal. The result of applying the operations to the input signal is termed the output signal. </p>
+<p>$$ y(t) &#x3D; H \lbrace x(t) \rbrace $$</p>
+<p>$$ y[n] &#x3D; H \lbrace x[n] \rbrace $$</p>
+<p>H is the <strong>system function</strong>. </p>
+<p>H may be linear or non-linear function. </p>
+<p>H may be time-invariant or time-varying function. </p>
+<ul>
+<li>eg: Moving average system.</li>
+</ul>
+<h3 id="Properties-of-systems"><a href="#Properties-of-systems" class="headerlink" title="Properties of systems"></a>Properties of systems</h3><h4 id="Linearity"><a href="#Linearity" class="headerlink" title="Linearity"></a>Linearity</h4><p>iff it satisfies the <strong>superposistion and homogeneity</strong> properties. </p>
+<ul>
+<li><p>Superposition</p>
+<p>iff $y_1(t)+y_2(t)$ is the output of input $x_1(t)+x_2(t)$. </p>
+</li>
+<li><p>Homogeneity</p>
+<p>iff $ay(t)$ is the output of $ax(t)$. </p>
+</li>
+<li><p>Linearity </p>
+<p>when input $ x(t) &#x3D; \sum_{i&#x3D;1}^{N} a_i x_i(t) $, output $ y(t) &#x3D; \sum_{i&#x3D;1}^{N} a_i y_i(t) $</p>
+</li>
+</ul>
+<p>$$ y(t) &#x3D; H \lbrace \sum_{i&#x3D;1}^{N} a_i x_i(t) \rbrace &#x3D; \sum_{i&#x3D;1}^{N} a_i H \lbrace x_i(t)\rbrace &#x3D; \sum_{i&#x3D;1}^{N} a_i y_i(t) $$</p>
+<p>H must commute with scaling and summation. </p>
+<h4 id="Time-Invariance"><a href="#Time-Invariance" class="headerlink" title="Time Invariance"></a>Time Invariance</h4><p>iff H does not change over time. </p>
+<p><em>For discrete signals, it is often called “linear shift invariance”.</em></p>
+<p>$$ let \ x_2(t) &#x3D; x_1(t-\tau) &#x3D; S^\tau \lbrace x_1(t) \rbrace $$</p>
+<p>$$ y_1(t-\tau) &#x3D; S^\tau \lbrace y_1(t) \rbrace &#x3D; S^\tau H \lbrace x_1(t) \rbrace$$</p>
+<p>$$ y_2(t) &#x3D; H \lbrace x_2(t) \rbrace &#x3D; \lbrace x_1(t-\tau) \rbrace &#x3D; H S^\tau \lbrace x_1(t) \rbrace $$</p>
+<p>iff $ y_2(t) &#x3D; y1(t-\tau) $ when $ x_2(t) &#x3D; x_1(t-\tau) $</p>
+<p>that is, $ HS^\tau &#x3D; S^\tau H $</p>
+<h4 id="Memory"><a href="#Memory" class="headerlink" title="Memory"></a>Memory</h4><p>Memoryless: iff the output signal is a function of <strong>only the present value</strong> of the input signal. </p>
+<p>With memory: depends on values of the input signal at any past (or future) time. </p>
+<h4 id="Stability"><a href="#Stability" class="headerlink" title="Stability"></a>Stability</h4><p>iff <strong>the output signal is bounded when the input signal is bounded</strong>. </p>
+<p><strong>Bounded input, bounded output (BIBO) stable</strong></p>
+<p>$$ \vert y(t) \vert \leq M_y &lt; \infty \ given \ \vert x(t) \vert \leq M_x &lt; \infty , \forall t $$</p>
+<h4 id="Causality-因果"><a href="#Causality-因果" class="headerlink" title="Causality 因果"></a>Causality 因果</h4><p>iff the output signal at the present time <strong>depends only on the input signal at the present or past times</strong>. </p>
+<ul>
+<li><p>Causal (right-sided)<br>only present and past are required</p>
+</li>
+<li><p>Anticausal (left-sided)<br>only future are required</p>
+</li>
+<li><p>Noncausal (two-sided)<br>present, past and future are all required</p>
+</li>
+</ul>
+<h3 id="System-architecture"><a href="#System-architecture" class="headerlink" title="System architecture"></a>System architecture</h3><ul>
+<li><p>Single-input-single-output (SISO)</p>
+</li>
+<li><p>Multiple-input-multiple-output (MIMO)</p>
+</li>
+</ul>
+<hr>
+<h2 id="LTI-Systems"><a href="#LTI-Systems" class="headerlink" title="LTI Systems"></a>LTI Systems</h2><h3 id="Impulse-Response"><a href="#Impulse-Response" class="headerlink" title="Impulse Response"></a>Impulse Response</h3><p>The impulse responde <strong>completely</strong> characterizes the behaviour of an LTI system. </p>
+<ul>
+<li><p>discrete time<br>input $\delta[n]$, output $h[n] &#x3D; H\lbrace \delta[n]\rbrace$</p>
+</li>
+<li><p>continuous time<br>input $\delta(t)$, output $h(t) &#x3D; H\lbrace \delta(t)\rbrace$</p>
+</li>
+</ul>
+<p>The impulse response of an unknown system can be measured by applying an impulse to the input and measure the output response. </p>
+<ul>
+<li>Discrete: unit impulse function</li>
+<li>Continuous: approx. Dirac delta function</li>
+</ul>
+<h3 id="Convolution"><a href="#Convolution" class="headerlink" title="Convolution"></a>Convolution</h3><p>The <strong>output of an LTI system</strong> is given by <mark style="background-color: #9fc5e8;">the convolution of the input signal with the system’s impulse response</mark>. </p>
+<p>$$ y(t) &#x3D; x(t) * h(t) $$</p>
+<p>$$ y[n] &#x3D; x[n] * h[n] $$</p>
+<h4 id="Convolution-Sum"><a href="#Convolution-Sum" class="headerlink" title="Convolution Sum"></a>Convolution Sum</h4><p>In terms of delayed and scaled unit impulse functions:<br>$$ x[n] &#x3D; \sum_{k&#x3D;-\infty}^{\infty} x[k]\delta[n-k] $$</p>
+<p>$$ y[n] &#x3D; H \lbrace \sum_{k&#x3D;-\infty}^{\infty} x[k]\delta[n-k] \rbrace &#x3D; \sum_{k&#x3D;-\infty}^{\infty} x[k]H \lbrace \delta[n-k] \rbrace $$</p>
+<p>$$ y[n] &#x3D; \sum_{k&#x3D;-\infty}^{\infty} x[k]h[n-k] $$</p>
+<h4 id="Convolution-Integral"><a href="#Convolution-Integral" class="headerlink" title="Convolution Integral"></a>Convolution Integral</h4><p>In terms of delayed and scaled unit impulse functions:<br>$$ x(t) &#x3D; \int_{-\infty}^{\infty} x(\tau)\delta(t-\tau) d\tau $$</p>
+<p>$$ y(t) &#x3D; x(t)*h(t) &#x3D; \int_{-\infty}^{\infty} x(\tau)h(t-\tau) d\tau $$</p>
+<h4 id="Step-Response"><a href="#Step-Response" class="headerlink" title="Step Response"></a>Step Response</h4><p>The output in response to a unit step input. </p>
+<p>$$ s[n] &#x3D; \sum_{k&#x3D;-\infty}^{n} h[k] $$</p>
+<p>$$ s(t) &#x3D; \int_{-\infty}^{t} h(\tau)d\tau $$</p>
+<h3 id="Differential-and-Difference-Representations"><a href="#Differential-and-Difference-Representations" class="headerlink" title="Differential and Difference Representations"></a>Differential and Difference Representations</h3><h4 id="Differential-equation-continuous"><a href="#Differential-equation-continuous" class="headerlink" title="Differential equation (continuous)"></a>Differential equation (continuous)</h4><p>$$ \sum_{k&#x3D;0}^{N} a_k \frac {d^k y(t)}{dt^k} &#x3D; \sum_{k&#x3D;0}^{M} b_k \frac {d^k x(t)}{dt^k} $$</p>
+<h4 id="Difference-equation-discrete"><a href="#Difference-equation-discrete" class="headerlink" title="Difference equation (discrete)"></a>Difference equation (discrete)</h4><p>$$ \sum_{k&#x3D;0}^{N} a_k y[n-k] &#x3D; \sum_{k&#x3D;0}^{M} b_k x[n-k] $$</p>
+<p><em>$a_k$ and $b_k$ are constant coefficients, N and M describe the order.</em></p>
+<p>$$ y[n] &#x3D; \frac{1}{a_0}\sum_{k&#x3D;0}^{M} b_k x[n-k] - \frac{1}{a_0} \sum_{k&#x3D;0}^{N} a_k y[n-k] $$</p>
+<h4 id="Roots-of-the-characteristic-equation"><a href="#Roots-of-the-characteristic-equation" class="headerlink" title="Roots of the characteristic equation"></a>Roots of the characteristic equation</h4><table>
+<thead>
+<tr>
+<th></th>
+<th>Homogeneous equation</th>
+<th>Solution form</th>
+<th>Characteristic equation</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Continuous</td>
+<td>$\sum_{k&#x3D;0}^{N}a_k\frac{d^ky^{(h)}(t)}{dt^k}&#x3D;0$</td>
+<td>$y^{(h)}(t)&#x3D;\sum_{i&#x3D;1}^{N}c_ie^{r_it}$</td>
+<td>$\sum_{k&#x3D;0}^{N}a_kr^k&#x3D;0$</td>
+</tr>
+<tr>
+<td>Discrete</td>
+<td>$\sum_{k&#x3D;0}^{N}a_ky^{(h)}[n-k]&#x3D;0$</td>
+<td>$y^{(h)}[n]&#x3D;\sum_{i&#x3D;1}^{N}c_ir_i^n$</td>
+<td>$\sum_{k&#x3D;0}^{N}a_kr^{N-k}&#x3D;0$</td>
+</tr>
+</tbody></table>
+<p><em>$r_i$ are the roots of the characteristic equation.</em></p>
+<h4 id="Natural-response"><a href="#Natural-response" class="headerlink" title="Natural response"></a>Natural response</h4><p>Components due only to the initial conditions: $y^{(nr)}$</p>
+<h4 id="Forced-response"><a href="#Forced-response" class="headerlink" title="Forced response"></a>Forced response</h4><p>Component due only to the input signal: $y^{(fr)}$</p>
+<h3 id="Block-Diagrams"><a href="#Block-Diagrams" class="headerlink" title="Block Diagrams"></a>Block Diagrams</h3><p><img src="https://github.com/thisisamor/blog_pic/blob/main/year2/Signals_and_Systems/block-diagram.jpg?raw=true" alt="block diagram"></p>
+<h3 id="Frequency-Response"><a href="#Frequency-Response" class="headerlink" title="Frequency Response"></a>Frequency Response</h3><ul>
+<li>the system’s <strong>gain</strong> as a continuous function of frequency</li>
+<li>the systems’s effect on the <strong>amplitude and phase</strong> of a sinusoidal input with frequency varied across the frequency range of interest</li>
+</ul>
+<p>For $ x(t) &#x3D; e^{j\omega t}$: </p>
+<p>$$ y(t) &#x3D; \int_{-\infty}^{\infty} x(\tau)h(t-\tau) d\tau &#x3D; \int_{-\infty}^{\infty} h(\tau)x(t-\tau) d\tau &#x3D; \int_{-\infty}^{\infty} h(\tau)e^{j\omega (t-\tau)}d\tau &#x3D; e^{j\omega t}\int_{-\infty}^{\infty} h(\tau)e^{-j\omega \tau}d\tau &#x3D; e^{j\omega t}H(j\omega) $$</p>
+<p>$\int_{-\infty}^{\infty} h(\tau)e^{-j\omega \tau}d\tau$ is the gain, so:</p>
+<p>$$ H(j\omega) &#x3D; \int_{-\infty}^{\infty} h(\tau)e^{-j\omega \tau} d\tau$$</p>
+<p>Similarly: </p>
+<p>$$ H(e^{j\Omega}) &#x3D; \sum_{k&#x3D;-\infty}^{\infty} h[k]e^{-j\Omega k} $$</p>
+<ul>
+<li>The output y is a complex sinusoid of same frequency as the input x. </li>
+<li>Frequency response H is a function of <strong>frequency</strong>, not of time. </li>
+<li>Frequency response H is a <strong>complex value</strong> at each frequency.</li>
+</ul>
+<hr>
+<h2 id="Sampling"><a href="#Sampling" class="headerlink" title="Sampling"></a>Sampling</h2><p><strong>Frequency spectrum</strong>: $X(j\omega)$, describes the magnitude and phase of each frequency that the signal contains. </p>
+<p>$\omega_m$: the highest frequency contained in $x(t)$. </p>
+<p>$T_s$: the sampling interval (period) in seconds. </p>
+<p>$f_s &#x3D; \frac {1}{T_s}$: the sampling frequency in samples per second. </p>
+<p>$\omega_s&#x3D;\frac {2\pi}{T_s}$</p>
+<p>$n$: the sample index</p>
+<h3 id="Sampling-Theorem"><a href="#Sampling-Theorem" class="headerlink" title="Sampling Theorem"></a>Sampling Theorem</h3><p>$x(t)$ is completely determined by $x(nT_s)$, if $\omega_s&gt;2\omega_m$. </p>
+<ul>
+<li>all the information is captured</li>
+<li>can be perfectly reconstructed</li>
+</ul>
+<h3 id="Sampling-Process"><a href="#Sampling-Process" class="headerlink" title="Sampling Process"></a>Sampling Process</h3><p>For a sampling function $p(t)$, with period $T_s$ and $\omega_s &#x3D;\frac {2\pi}{T_s}$, its spectrum is:<br>$$ P(j\omega) &#x3D; \frac {2\pi}{T_s} \sum_{k&#x3D;-\infty}^{\infty} \delta(\omega-k\omega_s) $$</p>
+<p><mark style="background-color: #9fc5e8;">The product of two signals $s(t)&#x3D;q(t)r(t)$ in the time domain corresponds to <strong>$\frac{1}{2\pi} \times $ the convolution</strong> of their spectra in the frequency domain.</mark></p>
+<p>(see example 2 in problem sheet.)</p>
+<h3 id="Aliasing-混叠"><a href="#Aliasing-混叠" class="headerlink" title="Aliasing 混叠"></a>Aliasing 混叠</h3><p><strong>Nyquist Sampling Criterion</strong>: the samples uniquely represent a signal only when we impose the rule that <mark style="background-color: #9fc5e8;">the signal frequency is less than half of the sampling frequency</mark>. </p>
+<h4 id="Anti-aliasing-filter"><a href="#Anti-aliasing-filter" class="headerlink" title="Anti-aliasing filter"></a>Anti-aliasing filter</h4><p>Sometimes the sampling frequency is fixed so cannot choose it dependent on the signal. It is then necessary to <strong>band-limit signals</strong> prior to sampling to avoid aliasing. </p>
+<p><mark style="background-color: #9fc5e8;">Band-limiting is achieved by lowpass filtering the continuous signal $x(t)$ using a continuous-time anti-aliasing filter, which removes all signal components at or above half the sample frequency.</mark></p>
+<p><img src="https://github.com/thisisamor/blog_pic/blob/main/year2/Signals_and_Systems/anti-aliasing-filter.jpg?raw=true" alt="anti-aliasing filter"></p>
+<h3 id="Signal-Reconstruction"><a href="#Signal-Reconstruction" class="headerlink" title="Signal Reconstruction"></a>Signal Reconstruction</h3><h4 id="Ideal-implementation"><a href="#Ideal-implementation" class="headerlink" title="Ideal implementation"></a>Ideal implementation</h4><p>Consider: </p>
+<p><img src="https://github.com/thisisamor/blog_pic/blob/main/year2/Signals_and_Systems/rectangular-func-inverse-fourier.jpg?raw=true" alt="inverse fourier of a rectangular function"></p>
+<p>Multiplication in the frequency domain is equivalent to convolution in the time domain. </p>
+<p>Recall: </p>
+<p>$$ x_{\delta}(t) &#x3D; \sum_{n&#x3D;-\infty}^{\infty} x[n]\delta(t-nT_s) $$</p>
+<p>So: </p>
+<p>$$ x(t) &#x3D; \sum_{n&#x3D;-\infty}^{\infty} x[n]sinc(\omega_s \frac{(t-nT_s)} {2\pi}) $$</p>
+<h4 id="Practical-implementation"><a href="#Practical-implementation" class="headerlink" title="Practical implementation"></a>Practical implementation</h4><p><em>(Why the ideal approach is not practical:</em></p>
+<ul>
+<li><em>the filter is non-causal</em></li>
+<li><em>the filter requires infinite summation)</em></li>
+</ul>
+<p>More practical reconstruction: </p>
+<p><img src="https://github.com/thisisamor/blog_pic/blob/main/year2/Signals_and_Systems/signal-reconstruction.jpg?raw=true" alt="signal reconstruction"></p>
+<ul>
+<li><p><strong>zero-order hold</strong> (ZOH): converts samples into a staircase waveform.<br>Formed by convolution of $x[n]$ with the $h_o(t)$.<br>$$ H_o(j\omega)&#x3D;2e^{-j\omega T_s&#x2F;2} \frac {sin(\omega T_s &#x2F;2)}{\omega} $$<br><img src="https://github.com/thisisamor/blog_pic/blob/main/year2/Signals_and_Systems/ZOH.jpg?raw=true" alt="ZOH"></p>
+</li>
+<li><p><strong>anti-imaging filter</strong> (reconstruction filter): removes spectral images.</p>
+</li>
+</ul>
+<p><img src="https://github.com/thisisamor/blog_pic/blob/main/year2/Signals_and_Systems/ZOH-anti-imaging-combined.jpg?raw=true" alt="anti-imaging filter"></p>
+<ul>
+<li>untiy gain (0dB) over the frequency range $ -\omega_m &lt; \omega &lt; \omega_m $</li>
+<li>almost complete suppression of the spectual images</li>
+<li>can be implemented as a digital filter prior to D-to-A conversion</li>
+</ul>
+<h3 id="Oversampling"><a href="#Oversampling" class="headerlink" title="Oversampling"></a>Oversampling</h3><p>When the difference between $\omega_m$ and $\omega_s-\omega_m$ becomes smaller, at $\omega_m$ the filter must have unity gain, at $\omega_s-\omega_m$ the filter must have high attenuation. </p>
+<p>These requirements are relaxed by using oversampling. </p>
+<ul>
+<li>Increases $\omega_s$ (compared to the minimum required value). </li>
+<li>Increases the computation complexity (more samples per second to process). </li>
+<li>Decreases the complexity of the anti-aliasing filter design (analog filtering).</li>
+</ul>
+<h3 id="Quantization"><a href="#Quantization" class="headerlink" title="Quantization"></a>Quantization</h3><p>Sampling is discrete in <strong>time</strong>, quantization is discrete in <strong>amplitude</strong>. </p>
+<p>Define a set of amplitudes known as the <strong>quantization levels</strong>. </p>
+<p>Precision of the quantization is proportional to the number of bits in each codeword. </p>
+<ul>
+<li>8 bits gives $2^8&#x3D;256$ quantization levels (for image)</li>
+<li>16 bits gives $2^16&#x3D;65536$ quantization levels (for music)</li>
+</ul>
+<hr>
+<h2 id="Fourier"><a href="#Fourier" class="headerlink" title="Fourier"></a>Fourier</h2><hr>
+<h2 id="Laplace"><a href="#Laplace" class="headerlink" title="Laplace"></a>Laplace</h2><hr>
+<h2 id="Z-transforms"><a href="#Z-transforms" class="headerlink" title="Z-transforms"></a>Z-transforms</h2><hr>
+<h2 id="Filters"><a href="#Filters" class="headerlink" title="Filters"></a>Filters</h2>
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/study/" rel="tag"># study</a>
+              <a href="/tags/review/" rel="tag"># review</a>
+              <a href="/tags/signals-and-systems/" rel="tag"># signals and systems</a>
+          </div>
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-item">
+                <a href="/2023/04/22/006-Compilers-Review/" rel="prev" title="Compilers Review">
+                  <i class="fa fa-chevron-left"></i> Compilers Review
+                </a>
+            </div>
+            <div class="post-nav-item">
+            </div>
+          </div>
+    </footer>
+  </article>
+</div>
+
+
+
+
+
+
+</div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+
+
+<div class="copyright">
+  &copy; 
+  <span itemprop="copyrightYear">2023</span>
+  <span class="with-love">
+    <i class="fa-solid fa-carrot"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Amor</span>
+</div>
+  <div class="powered-by">Powered by <a href="https://hexo.io/" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/" rel="noopener" target="_blank">NexT.Gemini</a>
+  </div>
+
+    </div>
+  </footer>
+
+  
+  <div class="back-to-top" role="button" aria-label="Back to top">
+    <i class="fa fa-arrow-up fa-lg"></i>
+    <span>0%</span>
+  </div>
+
+<noscript>
+  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
+
+
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js" integrity="sha256-XL2inqUJaslATFnHdJOi9GfQ60on8Wx1C2H8DYiN1xY=" crossorigin="anonymous"></script>
+<script src="/js/comments.js"></script><script src="/js/utils.js"></script><script src="/js/motion.js"></script><script src="/js/next-boot.js"></script>
+
+  
+
+  <script class="next-config" data-name="mermaid" type="application/json">{"enable":true,"theme":{"light":"default","dark":"dark"},"js":{"url":"https://cdnjs.cloudflare.com/ajax/libs/mermaid/9.4.3/mermaid.min.js","integrity":"sha256-e0o3JYsdjqKajf9eOe22FhioYSz9WofRY4dLKo3F6do="}}</script>
+  <script src="/js/third-party/tags/mermaid.js"></script>
+
+
+
+  
+
+
+
+
+  
+
+  <script class="next-config" data-name="enableMath" type="application/json">true</script><script class="next-config" data-name="mathjax" type="application/json">{"enable":true,"tags":"none","js":{"url":"https://cdnjs.cloudflare.com/ajax/libs/mathjax/3.2.2/es5/tex-mml-chtml.js","integrity":"sha256-MASABpB4tYktI2Oitl4t+78w/lyA+D7b/s9GEP0JOGI="}}</script>
+<script src="/js/third-party/math/mathjax.js"></script>
+
+
+
+</body>
+</html>

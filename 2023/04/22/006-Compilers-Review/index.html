@@ -27,16 +27,16 @@
 <meta property="og:site_name" content="This is Amor">
 <meta property="og:description" content="Review of Compilers.">
 <meta property="og:locale" content="en_US">
-<meta property="og:image" content="https://github.com/thisisamor/blog_pic/blob/main/Compilers/NFA1.jpg?raw=true">
-<meta property="og:image" content="https://github.com/thisisamor/blog_pic/blob/main/Compilers/NFA2.jpg?raw=true">
+<meta property="og:image" content="https://github.com/thisisamor/blog_pic/blob/main/year2/Compilers/NFA1.jpg?raw=true">
+<meta property="og:image" content="https://github.com/thisisamor/blog_pic/blob/main/year2/Compilers/NFA2.jpg?raw=true">
 <meta property="article:published_time" content="2023-04-22T08:03:19.000Z">
-<meta property="article:modified_time" content="2023-04-22T16:52:55.963Z">
+<meta property="article:modified_time" content="2023-04-23T14:18:01.069Z">
 <meta property="article:author" content="Amor">
 <meta property="article:tag" content="study">
 <meta property="article:tag" content="review">
 <meta property="article:tag" content="compilers">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="https://github.com/thisisamor/blog_pic/blob/main/Compilers/NFA1.jpg?raw=true">
+<meta name="twitter:image" content="https://github.com/thisisamor/blog_pic/blob/main/year2/Compilers/NFA1.jpg?raw=true">
 
 
 <link rel="canonical" href="http://example.com/2023/04/22/006-Compilers-Review/">
@@ -118,7 +118,7 @@
       <div class="sidebar-panel-container">
         <!--noindex-->
         <div class="post-toc-wrap sidebar-panel">
-            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Introduction"><span class="nav-number">1.</span> <span class="nav-text">Introduction</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Terminology"><span class="nav-number">1.1.</span> <span class="nav-text">Terminology</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Phases-of-a-Compiler"><span class="nav-number">1.2.</span> <span class="nav-text">Phases of a Compiler</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#Lexical-analysis-lexical-scanner"><span class="nav-number">1.2.1.</span> <span class="nav-text">Lexical analysis (lexical scanner)</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Syntax-analysis-phase-Parser"><span class="nav-number">1.2.2.</span> <span class="nav-text">Syntax analysis phase (Parser)</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Global-optimization-optional"><span class="nav-number">1.2.3.</span> <span class="nav-text">Global optimization (optional)</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Code-generation"><span class="nav-number">1.2.4.</span> <span class="nav-text">Code generation</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Local-optimization-optional"><span class="nav-number">1.2.5.</span> <span class="nav-text">Local optimization (optional)</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Implementation-Techniques"><span class="nav-number">1.3.</span> <span class="nav-text">Implementation Techniques</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#Bootstrapping"><span class="nav-number">1.3.1.</span> <span class="nav-text">Bootstrapping</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Cross-Compiling"><span class="nav-number">1.3.2.</span> <span class="nav-text">Cross Compiling</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Compiling-to-intermediate-form"><span class="nav-number">1.3.3.</span> <span class="nav-text">Compiling to intermediate form</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Lexical-Analysis"><span class="nav-number">2.</span> <span class="nav-text">Lexical Analysis</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Formal-Languages"><span class="nav-number">2.1.</span> <span class="nav-text">Formal Languages</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#Language-elements"><span class="nav-number">2.1.1.</span> <span class="nav-text">Language elements</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Regular-expressions-regex"><span class="nav-number">2.1.2.</span> <span class="nav-text">Regular expressions (regex)</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Finite-automation-finite-state-machines"><span class="nav-number">2.1.3.</span> <span class="nav-text">Finite automation (finite state machines)</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Lex"><span class="nav-number">2.2.</span> <span class="nav-text">Lex</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#structure"><span class="nav-number">2.2.1.</span> <span class="nav-text">structure</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Syntax-Analysis"><span class="nav-number">3.</span> <span class="nav-text">Syntax Analysis</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Top-down-parsing"><span class="nav-number">4.</span> <span class="nav-text">Top down parsing</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Bottom-up-parsing"><span class="nav-number">5.</span> <span class="nav-text">Bottom up parsing</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Code-generation-1"><span class="nav-number">6.</span> <span class="nav-text">Code generation</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Optimization"><span class="nav-number">7.</span> <span class="nav-text">Optimization</span></a></li></ol></div>
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Introduction"><span class="nav-number">1.</span> <span class="nav-text">Introduction</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Terminology"><span class="nav-number">1.1.</span> <span class="nav-text">Terminology</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Phases-of-a-Compiler"><span class="nav-number">1.2.</span> <span class="nav-text">Phases of a Compiler</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#Lexical-analysis-lexical-scanner"><span class="nav-number">1.2.1.</span> <span class="nav-text">Lexical analysis (lexical scanner)</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Syntax-analysis-phase-Parser"><span class="nav-number">1.2.2.</span> <span class="nav-text">Syntax analysis phase (Parser)</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Global-optimization-optional"><span class="nav-number">1.2.3.</span> <span class="nav-text">Global optimization (optional)</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Code-generation"><span class="nav-number">1.2.4.</span> <span class="nav-text">Code generation</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Local-optimization-optional"><span class="nav-number">1.2.5.</span> <span class="nav-text">Local optimization (optional)</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Implementation-Techniques"><span class="nav-number">1.3.</span> <span class="nav-text">Implementation Techniques</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#Bootstrapping"><span class="nav-number">1.3.1.</span> <span class="nav-text">Bootstrapping</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Cross-Compiling"><span class="nav-number">1.3.2.</span> <span class="nav-text">Cross Compiling</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Compiling-to-intermediate-form"><span class="nav-number">1.3.3.</span> <span class="nav-text">Compiling to intermediate form</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Lexical-Analysis"><span class="nav-number">2.</span> <span class="nav-text">Lexical Analysis</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Formal-Languages"><span class="nav-number">2.1.</span> <span class="nav-text">Formal Languages</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#Language-elements"><span class="nav-number">2.1.1.</span> <span class="nav-text">Language elements</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Regular-expressions-regex"><span class="nav-number">2.1.2.</span> <span class="nav-text">Regular expressions (regex)</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Finite-automation-finite-state-machines"><span class="nav-number">2.1.3.</span> <span class="nav-text">Finite automation (finite state machines)</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Lex"><span class="nav-number">2.2.</span> <span class="nav-text">Lex</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#structure"><span class="nav-number">2.2.1.</span> <span class="nav-text">structure</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Syntax-Analysis-Parse"><span class="nav-number">3.</span> <span class="nav-text">Syntax Analysis (Parse)</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Grammars"><span class="nav-number">3.1.</span> <span class="nav-text">Grammars</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Ambiguities-in-Programming-Languages"><span class="nav-number">3.2.</span> <span class="nav-text">Ambiguities in Programming Languages</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#The-Parsing-Problem"><span class="nav-number">3.3.</span> <span class="nav-text">The Parsing Problem</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Top-down-parsing"><span class="nav-number">4.</span> <span class="nav-text">Top down parsing</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Bottom-up-parsing"><span class="nav-number">5.</span> <span class="nav-text">Bottom up parsing</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Code-generation-1"><span class="nav-number">6.</span> <span class="nav-text">Code generation</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Optimization"><span class="nav-number">7.</span> <span class="nav-text">Optimization</span></a></li></ol></div>
         </div>
         <!--/noindex-->
 
@@ -133,18 +133,18 @@
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
         <a href="/archives">
-          <span class="site-state-item-count">9</span>
+          <span class="site-state-item-count">10</span>
           <span class="site-state-item-name">posts</span>
         </a>
       </div>
       <div class="site-state-item site-state-categories">
           <a href="/categories">
-        <span class="site-state-item-count">3</span>
+        <span class="site-state-item-count">4</span>
         <span class="site-state-item-name">categories</span></a>
       </div>
       <div class="site-state-item site-state-tags">
           <a href="/tags">
-        <span class="site-state-item-count">9</span>
+        <span class="site-state-item-count">10</span>
         <span class="site-state-item-name">tags</span></a>
       </div>
   </nav>
@@ -209,6 +209,15 @@
       <span class="post-meta-item-text">Posted on</span>
 
       <time title="Created: 22-04-2023 09:03:19" itemprop="dateCreated datePublished" datetime="2023-04-22T09:03:19+01:00">22-04-2023</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">In</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/Review/" itemprop="url" rel="index"><span itemprop="name">Review</span></a>
+        </span>
     </span>
 
   
@@ -357,10 +366,11 @@
 </ul>
 <p><mark style="background-color: #9fc5e8;">Non-Deterministic Finite Automaton (NFA)</mark></p>
 <p>Need to keep track of all the states you <strong>could</strong> be in. </p>
-<p><img src="https://github.com/thisisamor/blog_pic/blob/main/Compilers/NFA1.jpg?raw=true" alt="NFA1"><br><img src="https://github.com/thisisamor/blog_pic/blob/main/Compilers/NFA2.jpg?raw=true" alt="NFA2"></p>
+<p>Thompson’s algorithm: </p>
+<p><img src="https://github.com/thisisamor/blog_pic/blob/main/year2/Compilers/NFA1.jpg?raw=true" alt="NFA1"><br><img src="https://github.com/thisisamor/blog_pic/blob/main/year2/Compilers/NFA2.jpg?raw=true" alt="NFA2"></p>
 <p><mark style="background-color: #9fc5e8;">Deterministic Finite Automaton (DFA)</mark></p>
 <p>Need to keep track of the state you <strong>are</strong> in. </p>
-<p>Steps: </p>
+<p>Convert NFA to DFA: </p>
 <ol>
 <li>Start with the starting state. </li>
 <li>“If we have input a, what are the possible states we can go to, from all of which states we are possibly in currently.”</li>
@@ -374,7 +384,9 @@
 <h4 id="structure"><a href="#structure" class="headerlink" title="structure"></a>structure</h4><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line">// ----Definition section----</span><br><span class="line">// Give options that tell lex how to run</span><br><span class="line">%option noyywrap</span><br><span class="line">// Import C header files as necessary</span><br><span class="line">%&#123;</span><br><span class="line">  #include &lt;studio.h&gt;</span><br><span class="line">&#125;%</span><br><span class="line">// Define names for regexes</span><br><span class="line">D [ 0-9 ]</span><br><span class="line">l [ A-Z ]</span><br><span class="line">%%</span><br><span class="line">// ----Rules section----------</span><br><span class="line">// List of regexes and associated actions</span><br><span class="line">// &quot;if you see smth like...&quot;</span><br><span class="line">&#123;L&#125;&#123;L&#125;?&#123;D&#125; &#123;</span><br><span class="line">  printf(&quot;%s\n&quot;, yytext); </span><br><span class="line">&#125;</span><br><span class="line">// &quot;anything else...&quot;</span><br><span class="line">. &#123;</span><br><span class="line">  printf(&quot;Error!\n);</span><br><span class="line">&#125;</span><br><span class="line">%%</span><br><span class="line">// ----Code section-----------</span><br><span class="line">// Define any functions called in the rules section</span><br><span class="line">int main() &#123;</span><br><span class="line">  yylex(); </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
 <hr>
-<h2 id="Syntax-Analysis"><a href="#Syntax-Analysis" class="headerlink" title="Syntax Analysis"></a>Syntax Analysis</h2><hr>
+<h2 id="Syntax-Analysis-Parse"><a href="#Syntax-Analysis-Parse" class="headerlink" title="Syntax Analysis (Parse)"></a>Syntax Analysis (Parse)</h2><p><em>A sytax tree is a data structure in which the interior nodes represent operations, and the leaves represent operands.</em></p>
+<p><em>This process is called <strong>syntax directed translation</strong>.</em></p>
+<h3 id="Grammars"><a href="#Grammars" class="headerlink" title="Grammars"></a>Grammars</h3><h3 id="Ambiguities-in-Programming-Languages"><a href="#Ambiguities-in-Programming-Languages" class="headerlink" title="Ambiguities in Programming Languages"></a>Ambiguities in Programming Languages</h3><h3 id="The-Parsing-Problem"><a href="#The-Parsing-Problem" class="headerlink" title="The Parsing Problem"></a>The Parsing Problem</h3><hr>
 <h2 id="Top-down-parsing"><a href="#Top-down-parsing" class="headerlink" title="Top down parsing"></a>Top down parsing</h2><h2 id="Bottom-up-parsing"><a href="#Bottom-up-parsing" class="headerlink" title="Bottom up parsing"></a>Bottom up parsing</h2><h2 id="Code-generation-1"><a href="#Code-generation-1" class="headerlink" title="Code generation"></a>Code generation</h2><h2 id="Optimization"><a href="#Optimization" class="headerlink" title="Optimization"></a>Optimization</h2>
     </div>
 
@@ -398,6 +410,9 @@
                 </a>
             </div>
             <div class="post-nav-item">
+                <a href="/2023/04/23/003-Signals-And-Systems-Review/" rel="next" title="Signals And Systems Review">
+                  Signals And Systems Review <i class="fa fa-chevron-right"></i>
+                </a>
             </div>
           </div>
     </footer>
