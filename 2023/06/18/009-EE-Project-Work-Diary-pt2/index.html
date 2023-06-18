@@ -1,0 +1,773 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width">
+<meta name="theme-color" content="#222" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#222" media="(prefers-color-scheme: dark)"><meta name="generator" content="Hexo 6.3.0">
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lora:300,300italic,400,400italic,700,700italic%7CNoto+Serif+SC:300,300italic,400,400italic,700,700italic%7Cserif:300,300italic,400,400italic,700,700italic&display=swap&subset=latin,latin-ext">
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha256-HtsXJanqjKTc8vVQjO4YMhiqFoXkfBsjBWcX91T1jr8=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
+
+<script class="next-config" data-name="main" type="application/json">{"hostname":"example.com","root":"/","images":"/images","scheme":"Gemini","darkmode":true,"version":"8.15.1","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":{"enable":false,"style":null},"bookmark":{"enable":false,"color":"#222","save":"manual"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"Searching...","empty":"We didn't find any results for the search: ${query}","hits_time":"${hits} results found in ${time} ms","hits":"${hits} results found"}}</script><script src="/js/config.js"></script>
+
+    <meta name="description" content="My day-to-day work diary of my college project. Part 2 (Week 3 - Week 5)">
+<meta property="og:type" content="article">
+<meta property="og:title" content="009-EE-Project-Work-Diary (pt2)">
+<meta property="og:url" content="http://example.com/2023/06/18/009-EE-Project-Work-Diary-pt2/index.html">
+<meta property="og:site_name" content="This is Amor">
+<meta property="og:description" content="My day-to-day work diary of my college project. Part 2 (Week 3 - Week 5)">
+<meta property="og:locale" content="en_US">
+<meta property="og:image" content="https://github.com/thisisamor/blog_pic/blob/main/year2/EE-Project/chasis_design_ver2.jpg?raw=true">
+<meta property="og:image" content="https://github.com/thisisamor/blog_pic/blob/main/year2/EE-Project/chassis_ver2.jpg?raw=true">
+<meta property="og:image" content="https://github.com/thisisamor/blog_pic/blob/main/year2/EE-Project/rover+supporting_legs.jpg?raw=true">
+<meta property="og:image" content="https://github.com/thisisamor/blog_pic/blob/main/year2/EE-Project/check_both_sides.jpg?raw=true">
+<meta property="og:image" content="https://github.com/thisisamor/blog_pic/blob/main/year2/EE-Project/check_path.jpg?raw=true">
+<meta property="og:image" content="https://github.com/thisisamor/blog_pic/blob/main/year2/EE-Project/check_path_algorithm.jpg?raw=true">
+<meta property="og:image" content="https://github.com/thisisamor/blog_pic/blob/main/year2/EE-Project/check_both_sides_camera1.jpg?raw=true">
+<meta property="og:image" content="https://github.com/thisisamor/blog_pic/blob/main/year2/EE-Project/check_both_sides_camera2.jpg?raw=true">
+<meta property="og:image" content="https://github.com/thisisamor/blog_pic/blob/main/year2/EE-Project/angle%20calc%200%20(2).png?raw=true">
+<meta property="og:image" content="https://github.com/thisisamor/blog_pic/blob/main/year2/EE-Project/angle%20calc%201%20(2).png?raw=true">
+<meta property="og:image" content="https://github.com/thisisamor/blog_pic/blob/main/year2/EE-Project/angle%20calc%20(2).png?raw=true">
+<meta property="og:image" content="https://github.com/thisisamor/blog_pic/blob/main/year2/EE-Project/beacon+SMPS.jpg?raw=true">
+<meta property="og:image" content="https://github.com/thisisamor/blog_pic/blob/main/year2/EE-Project/rover+motor.jpg?raw=true">
+<meta property="article:published_time" content="2023-06-18T09:40:56.000Z">
+<meta property="article:modified_time" content="2023-06-18T14:59:22.922Z">
+<meta property="article:author" content="Amor">
+<meta property="article:tag" content="college">
+<meta property="article:tag" content="project">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://github.com/thisisamor/blog_pic/blob/main/year2/EE-Project/chasis_design_ver2.jpg?raw=true">
+
+
+<link rel="canonical" href="http://example.com/2023/06/18/009-EE-Project-Work-Diary-pt2/">
+
+
+
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"en","comments":true,"permalink":"http://example.com/2023/06/18/009-EE-Project-Work-Diary-pt2/","path":"2023/06/18/009-EE-Project-Work-Diary-pt2/","title":"009-EE-Project-Work-Diary (pt2)"}</script>
+
+<script class="next-config" data-name="calendar" type="application/json">""</script>
+<title>009-EE-Project-Work-Diary (pt2) | This is Amor</title>
+  
+
+
+
+
+
+
+
+
+  <noscript>
+    <link rel="stylesheet" href="/css/noscript.css">
+  </noscript>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
+  <div class="headband"></div>
+
+  <main class="main">
+    <div class="column">
+      <header class="header" itemscope itemtype="http://schema.org/WPHeader"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="Toggle navigation bar" role="button">
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <i class="logo-line"></i>
+      <p class="site-title">This is Amor</p>
+      <i class="logo-line"></i>
+    </a>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger" aria-label="Search" role="button">
+    </div>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  <ul class="main-menu menu"><li class="menu-item menu-item-home"><a href="/" rel="section">Home</a></li><li class="menu-item menu-item-archives"><a href="/archives" rel="section">Archives</a></li><li class="menu-item menu-item-categories"><a href="/categories" rel="section">Categories</a></li><li class="menu-item menu-item-tags"><a href="/tags" rel="section">Tags</a></li><li class="menu-item menu-item-about"><a href="/about" rel="section">About</a></li>
+  </ul>
+</nav>
+
+
+
+
+</header>
+        
+  
+  <aside class="sidebar">
+
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
+      <ul class="sidebar-nav">
+        <li class="sidebar-nav-toc">
+          Table of Contents
+        </li>
+        <li class="sidebar-nav-overview">
+          Overview
+        </li>
+      </ul>
+
+      <div class="sidebar-panel-container">
+        <!--noindex-->
+        <div class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Week-3"><span class="nav-number">1.</span> <span class="nav-text">Week 3</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#May-5th-Mon"><span class="nav-number">1.1.</span> <span class="nav-text">May 5th (Mon)</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#New-chassis-design"><span class="nav-number">1.1.1.</span> <span class="nav-text">New chassis design</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Powering"><span class="nav-number">1.1.2.</span> <span class="nav-text">Powering</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#May-6th-Tue"><span class="nav-number">1.2.</span> <span class="nav-text">May 6th (Tue)</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#Chassis-with-supporting-leg"><span class="nav-number">1.2.1.</span> <span class="nav-text">Chassis with supporting leg</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#May-7th-Wed"><span class="nav-number">1.3.</span> <span class="nav-text">May 7th (Wed)</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#Camera-vision-optimisation"><span class="nav-number">1.3.1.</span> <span class="nav-text">Camera vision optimisation</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#May-8th-Thur"><span class="nav-number">1.4.</span> <span class="nav-text">May 8th (Thur)</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#Check-two-sides"><span class="nav-number">1.4.1.</span> <span class="nav-text">Check two sides</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#ESP32-algorithm"><span class="nav-number">1.4.2.</span> <span class="nav-text">ESP32 algorithm</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#May-9th-Fri"><span class="nav-number">1.5.</span> <span class="nav-text">May 9th (Fri)</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#Motor-command-generator"><span class="nav-number">1.5.1.</span> <span class="nav-text">Motor command generator</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Check-wall-from-memo"><span class="nav-number">1.5.2.</span> <span class="nav-text">Check wall from memo</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Week-4"><span class="nav-number">2.</span> <span class="nav-text">Week 4</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Jun-11th-Sun"><span class="nav-number">2.1.</span> <span class="nav-text">Jun 11th (Sun)</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#C-code-for-debugging"><span class="nav-number">2.1.1.</span> <span class="nav-text">C++ code for debugging</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Find-new-path"><span class="nav-number">2.1.2.</span> <span class="nav-text">Find new path</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Jun-12th-Mon"><span class="nav-number">2.2.</span> <span class="nav-text">Jun 12th (Mon)</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#Position-calculation"><span class="nav-number">2.2.1.</span> <span class="nav-text">Position calculation</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Jun-13th-Tue"><span class="nav-number">2.3.</span> <span class="nav-text">Jun 13th (Tue)</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#Angle-calculation"><span class="nav-number">2.3.1.</span> <span class="nav-text">Angle calculation</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Jun-14th-Wed"><span class="nav-number">2.4.</span> <span class="nav-text">Jun 14th (Wed)</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Jun-15th-Thur"><span class="nav-number">2.5.</span> <span class="nav-text">Jun 15th (Thur)</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Jun-16th-Fri"><span class="nav-number">2.6.</span> <span class="nav-text">Jun 16th (Fri)</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#UART"><span class="nav-number">2.6.1.</span> <span class="nav-text">UART</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#PWM-Motor"><span class="nav-number">2.6.2.</span> <span class="nav-text">PWM Motor</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Power-system-beacon"><span class="nav-number">2.6.3.</span> <span class="nav-text">Power system - beacon</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Jun-17th-Sat"><span class="nav-number">2.7.</span> <span class="nav-text">Jun 17th (Sat)</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#Stepper-Motor"><span class="nav-number">2.7.1.</span> <span class="nav-text">Stepper Motor</span></a></li></ol></li></ol></li></ol></div>
+        </div>
+        <!--/noindex-->
+
+        <div class="site-overview-wrap sidebar-panel">
+          <div class="site-author animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="Amor"
+      src="/images/amor_avatar.gif">
+  <p class="site-author-name" itemprop="name">Amor</p>
+  <div class="site-description" itemprop="description"></div>
+</div>
+<div class="site-state-wrap animated">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+        <a href="/archives">
+          <span class="site-state-item-count">16</span>
+          <span class="site-state-item-name">posts</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+          <a href="/categories">
+        <span class="site-state-item-count">5</span>
+        <span class="site-state-item-name">categories</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+          <a href="/tags">
+        <span class="site-state-item-count">14</span>
+        <span class="site-state-item-name">tags</span></a>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author animated">
+      <span class="links-of-author-item">
+        <a href="https://github.com/thisisamor" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;thisisamor" rel="noopener me" target="_blank">GitHub</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="https://amor-zhao.notion.site/amor-zhao/Amor-s-Dashboard-33d838340d45480980835d213c19ea5a" title="Dashboard → https:&#x2F;&#x2F;amor-zhao.notion.site&#x2F;amor-zhao&#x2F;Amor-s-Dashboard-33d838340d45480980835d213c19ea5a" rel="noopener me" target="_blank">Dashboard</a>
+      </span>
+  </div>
+
+        </div>
+      </div>
+    </div>
+
+    
+  </aside>
+
+
+    </div>
+
+    <div class="main-inner post posts-expand">
+
+
+  
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="en">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2023/06/18/009-EE-Project-Work-Diary-pt2/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/amor_avatar.gif">
+      <meta itemprop="name" content="Amor">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="This is Amor">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="009-EE-Project-Work-Diary (pt2) | This is Amor">
+      <meta itemprop="description" content="My day-to-day work diary of my college project. Part 2 (Week 3 - Week 5)">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          009-EE-Project-Work-Diary (pt2)
+        </h1>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">Posted on</span>
+
+      <time title="Created: 18-06-2023 10:40:56" itemprop="dateCreated datePublished" datetime="2023-06-18T10:40:56+01:00">18-06-2023</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">In</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/Project/" itemprop="url" rel="index"><span itemprop="name">Project</span></a>
+        </span>
+    </span>
+
+  
+</div>
+
+
+          
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+        <p style="opacity: 0.7;">Start Notes: 
+
+<p><small style="opacity: 0.7;"> Part 2 of my work diary. The last post got tooooo long. </small></p>
+<hr>
+<h2 id="Week-3"><a href="#Week-3" class="headerlink" title="Week 3"></a>Week 3</h2><h3 id="May-5th-Mon"><a href="#May-5th-Mon" class="headerlink" title="May 5th (Mon)"></a>May 5th (Mon)</h3><p><mark style="background-color: #7099a7;"> Worked on designing a new chassis for the rover. We were aiming to design a physical structure so that not only the camera would have a specific angle and height to ground, but also would ensure the control system to have enough space for balancing (before it hits the ground).  </mark></p>
+<h4 id="New-chassis-design"><a href="#New-chassis-design" class="headerlink" title="New chassis design"></a>New chassis design</h4><p>Top layer: breadboard, FPGA (ribbon cables connecting to the camera)</p>
+<p>Bottom layer: battery, motor driver (motors)</p>
+<p><img src="https://github.com/thisisamor/blog_pic/blob/main/year2/EE-Project/chasis_design_ver2.jpg?raw=true" alt="chassis design ver2"></p>
+<p><img src="https://github.com/thisisamor/blog_pic/blob/main/year2/EE-Project/chassis_ver2.jpg?raw=true" alt="implemented chassis ver2"></p>
+<h4 id="Powering"><a href="#Powering" class="headerlink" title="Powering"></a>Powering</h4><p>A 7.2V NiMH battery is directly connected to the PCB with motor driver, a USB - type A cable is then uesd to power the FPGA, together with the ESP32 (on top of it) and the D8M camera. The gyroscope on the breadboard connects to 5V output and GRD on ESP32. Therefore the whole system shares the common ground. </p>
+<hr>
+<h3 id="May-6th-Tue"><a href="#May-6th-Tue" class="headerlink" title="May 6th (Tue)"></a>May 6th (Tue)</h3><p><mark style="background-color: #7099a7;"> Made some minor changes on physical design. Tested camera vision on new chassis version. </mark></p>
+<h4 id="Chassis-with-supporting-leg"><a href="#Chassis-with-supporting-leg" class="headerlink" title="Chassis with supporting leg"></a>Chassis with supporting leg</h4><p>More stable during testing. </p>
+<p><img src="https://github.com/thisisamor/blog_pic/blob/main/year2/EE-Project/rover+supporting_legs.jpg?raw=true" alt="supporting leg and camera angle"></p>
+<p>We were considering about an upside down implementation of camera, as it would provide a lower camera angle. However, we eventually went back to the original design as the current angle is already acceptable. </p>
+<hr>
+<h3 id="May-7th-Wed"><a href="#May-7th-Wed" class="headerlink" title="May 7th (Wed)"></a>May 7th (Wed)</h3><p><mark style="background-color: #7099a7;"> Tested and improved the camera detection method.  </mark></p>
+<h4 id="Camera-vision-optimisation"><a href="#Camera-vision-optimisation" class="headerlink" title="Camera vision optimisation"></a>Camera vision optimisation</h4><p>Considering about the following 2 scenarios (path on the side vs no path on the side), it would be helpful for the rover to be able to detect the paths without actually turning around (which, would be the only solution if the camera is only capable of telling whether or not there is a wall in front of the moving direction). </p>
+<p><img src="https://github.com/thisisamor/blog_pic/blob/main/year2/EE-Project/check_both_sides.jpg?raw=true" alt="path detection examples"></p>
+<p>We firstly approached by solving the problem “is there a path in the middle of a wall?” When we tried to turn the rover by a certain degree (so that the wall to be considered just goes through the camera vision), and program to check this white line pixel by pixel. </p>
+<p><img src="https://github.com/thisisamor/blog_pic/blob/main/year2/EE-Project/check_path.jpg?raw=true" alt="camera vision: wall checking"></p>
+<p>This is doable, however, with a few limitations: </p>
+<ol>
+<li>The angle to be turned is not very hard to calculate, as it is not linear with respect to the length of the wall. </li>
+<li>Apart from the wall to be considered, the other parts of the maze would also be in the camera view, which made the analysis more complicated. </li>
+<li>(Partially because of the last two points,) the precision of this method is rather poor, in order to get a reliable result, the rover had to double check for a few more times for a longer wall, which made the optimisation less effective.</li>
+</ol>
+<p>Another approach was checking the distance between the two wall in front of the vehicle on both sides. </p>
+<p><img src="https://github.com/thisisamor/blog_pic/blob/main/year2/EE-Project/check_path_algorithm.jpg?raw=true" alt="wall checking algorithm"></p>
+<p>As shown in the graph above, by setting a threshold on the upper 1&#x2F;4 of the camera view, it constantly measures the distance between the left and right side’s white pixels. (When the distance increases significantly, it is considered as a new path.)</p>
+<p>The drawback of this method is that if the rover is not in the center of the path, it may wrongly detect a path in the front. </p>
+<hr>
+<h3 id="May-8th-Thur"><a href="#May-8th-Thur" class="headerlink" title="May 8th (Thur)"></a>May 8th (Thur)</h3><p><mark style="background-color: #7099a7;"> Tested and decided the final detection method to be used (check two sides). </mark></p>
+<p><mark style="background-color: #7099a7;"> Added corresponding analyse functions for optimisation. Fixed bugs in current code. </mark></p>
+<p><mark style="background-color: #7099a7;"> Tried to help testing the motor function, ended up with burning another ESP32. </mark></p>
+<p><small style="opacity: 0.7;"> Im never using my laptop to upload any code onto esp again. :((it still hurts</small></p>
+<h4 id="Check-two-sides"><a href="#Check-two-sides" class="headerlink" title="Check two sides"></a>Check two sides</h4><p>The identical results should be as shown below. </p>
+<p><img src="https://github.com/thisisamor/blog_pic/blob/main/year2/EE-Project/check_both_sides_camera1.jpg?raw=true" alt="camera vision: path detection"></p>
+<p><img src="https://github.com/thisisamor/blog_pic/blob/main/year2/EE-Project/check_both_sides_camera2.jpg?raw=true" alt="camera vision: path detection"></p>
+<h4 id="ESP32-algorithm"><a href="#ESP32-algorithm" class="headerlink" title="ESP32 algorithm"></a>ESP32 algorithm</h4><p>The starting position has to be detected at the beginning of exploring process. After which, the data memory would have to be initialised accoring to the detection result. This part is shown as the code below. </p>
+<p><strong>Data_memo.cpp</strong></p>
+<table>
+<thead>
+<tr>
+<th>function name</th>
+<th>input</th>
+<th>output</th>
+<th>usage</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>void next_state(int next)</td>
+<td>conditions</td>
+<td></td>
+<td>update next state</td>
+</tr>
+<tr>
+<td>int get_state()</td>
+<td></td>
+<td>current_state</td>
+<td>check current state when entering loop</td>
+</tr>
+<tr>
+<td>void init_stepper_count()    void add_stepper_count(int n)</td>
+<td></td>
+<td></td>
+<td>track the stepper motor</td>
+</tr>
+<tr>
+<td>void init_turn_count()         void track_turn_count(int n)</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>std::vector<int> track_beacon_angle(String beacon_colour)</td>
+<td>beacon detection string</td>
+<td>[1] [2] [3]: whether or not the three beacons have been detected; 1 &#x3D; yes;  0 &#x3D; no;</td>
+<td>update motor_Y, motor_B and motor_R (motor steppers count when the beacon is detected)</td>
+</tr>
+<tr>
+<td>void update_current_angle(double angle)</td>
+<td></td>
+<td></td>
+<td>update current angle directly</td>
+</tr>
+<tr>
+<td>void estimate_current_angle(int direction, int steps)</td>
+<td></td>
+<td>-Pi ≤ current angle ≤ Pi</td>
+<td>keep track of current angle</td>
+</tr>
+<tr>
+<td>double get_current_angle()</td>
+<td></td>
+<td>current_angle</td>
+<td></td>
+</tr>
+<tr>
+<td>void calculate_current_position()</td>
+<td></td>
+<td></td>
+<td>use motor_Y, motor_B and motor_R to calculate current position</td>
+</tr>
+<tr>
+<td>void estimate_current_position(int steps)</td>
+<td></td>
+<td></td>
+<td>use current_position and currrent_angle to estimate current position</td>
+</tr>
+<tr>
+<td>std::pair&lt;int, int&gt; get_current_position(int steps)</td>
+<td></td>
+<td>current_position</td>
+<td></td>
+</tr>
+<tr>
+<td>void insert(struct HashTable* ht, int key, Node value)</td>
+<td>node</td>
+<td></td>
+<td>insert new node into hash table &#x2F;&#x2F; USE add_node INSTEAD</td>
+</tr>
+<tr>
+<td>void graph_init()</td>
+<td></td>
+<td></td>
+<td>set up: insert node (0, 0)</td>
+</tr>
+<tr>
+<td>Node get_node(struct HashTable* ht, int key)</td>
+<td></td>
+<td></td>
+<td>look up a node in the graph (traversal)</td>
+</tr>
+<tr>
+<td>String get_graph()</td>
+<td></td>
+<td>String with node, coordinates, and connection info</td>
+<td>&#x2F; between attributes;                , between connected nodes (same vector);</td>
+</tr>
+<tr>
+<td>void add_node( std::pair&lt;int, int&gt; new_node_position, std::vector&lt;std::vector<int>&gt; connect )</td>
+<td>node coordinate, connection info</td>
+<td></td>
+<td>make a new node and call insert function</td>
+</tr>
+<tr>
+<td>void update_node( struct HashTable* ht, int key, std::vector&lt;std::vector<int>&gt; new_connect )</td>
+<td>new connection info vector</td>
+<td></td>
+<td>update connection info of a node in the graph</td>
+</tr>
+<tr>
+<td>std::vector<int> delete_connect( std::vector&lt;std::vector<int>&gt; &amp;connect, int delete_id )</td>
+<td>connection info vector + id to be deleted</td>
+<td>new connection info vector</td>
+<td>delete an id in a connection info vector &#x2F;&#x2F; FOR insert new node TO USE</td>
+</tr>
+<tr>
+<td>void insert_new_node( struct HashTable* ht, int node1_id, int node2_id, int new_node_id)</td>
+<td>node 1 id; node 2 id; new node id;</td>
+<td></td>
+<td>add a new node between 2 exsited node + migrate the connection info to new node + delete old connection between 2 node. &#x2F;&#x2F; NOTICE: new node must be initialised first</td>
+</tr>
+<tr>
+<td>void add_process()</td>
+<td></td>
+<td></td>
+<td>add process to process stack (at current position)</td>
+</tr>
+<tr>
+<td>void finish_process()</td>
+<td></td>
+<td></td>
+<td>delete the top process from process stack</td>
+</tr>
+<tr>
+<td>std::pair&lt;int, int&gt; get_process()</td>
+<td></td>
+<td>node id pair (to be checked next)</td>
+<td>return the top process from the process stack</td>
+</tr>
+<tr>
+<td>void split_process()</td>
+<td></td>
+<td></td>
+<td>&#x2F;&#x2F; TODO: split 1 process into 2, when a new node is inserted between the precious 2 nodes</td>
+</tr>
+<tr>
+<td>void add_node_at_current_position()</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>void check_node_at_new_node()</td>
+<td></td>
+<td></td>
+<td>if the route passed a new node, add it to the graph</td>
+</tr>
+<tr>
+<td>void check_node_at_new_path()</td>
+<td></td>
+<td></td>
+<td>if current position is new node, add it to the graph</td>
+</tr>
+<tr>
+<td>std::vector<int> find_new_path()</td>
+<td></td>
+<td>motor command vector</td>
+<td>&#x2F;&#x2F; I want to change this later</td>
+</tr>
+<tr>
+<td>std::vector<int> dijkstra()</td>
+<td></td>
+<td>node id route</td>
+<td>shortest route</td>
+</tr>
+</tbody></table>
+<p><strong>Balance_control.cpp</strong></p>
+<table>
+<thead>
+<tr>
+<th>function name</th>
+<th>input</th>
+<th>output</th>
+<th>usage</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>void motor_control_custom(int STPL, int STPR, int DIRL, int DIRR, std::vector<int> command)</td>
+<td>command [0] &#x3D; DIRL; command [1] &#x3D; DIRR; command [2] &#x3D; STPL; command [3] &#x3D; STPR</td>
+<td></td>
+<td></td>
+</tr>
+</tbody></table>
+<p><strong>Calculation.cpp</strong></p>
+<table>
+<thead>
+<tr>
+<th>function name</th>
+<th>input</th>
+<th>output</th>
+<th>usage</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>double cot(double angle)</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>double degree_to_radian(double degree)</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>std::pair&lt;double, double&gt; angle_calculation(int motor_R, int motor_B, int motor_Y)</td>
+<td>revolution counts at R, B, Y beacons</td>
+<td>a &#x3D; angle between Y and B; b &#x3D; angle between B and R (radian)</td>
+<td>position calculation</td>
+</tr>
+<tr>
+<td>double angle_estimation(double current_angle, int direction, int steps)</td>
+<td></td>
+<td></td>
+<td>angle estimation</td>
+</tr>
+<tr>
+<td>std::pair&lt;int, int&gt; position_calculation(double angle_a, double angle_b)</td>
+<td>a and b in radian</td>
+<td>x and y coordinates</td>
+<td>position calculation</td>
+</tr>
+<tr>
+<td>std::pair&lt;int, int&gt; position_estimation(std::pair&lt;int, int&gt; current_position, double current_angle, int steps)</td>
+<td>current_position and current angle</td>
+<td>estimated new current_position</td>
+<td>position estimation</td>
+</tr>
+<tr>
+<td>bool check_intersection(std::pair&lt;int, int&gt; node1, std::pair&lt;int, int&gt; node2, std::pair&lt;int, int&gt; node3, std::pair&lt;int, int&gt; node4)</td>
+<td>x, y coordinates of 4 nodes</td>
+<td>true &#x3D; intersect; false &#x3D; not intersect</td>
+<td>optimisation (node adding)</td>
+</tr>
+<tr>
+<td>std::pair&lt;int, int&gt; intersection_calculation(std::pair&lt;int, int&gt; node1, std::pair&lt;int, int&gt; node2, std::pair&lt;int, int&gt; node3, std::pair&lt;int, int&gt; node4)</td>
+<td>x, y coordinates of 4 nodes</td>
+<td>the intersection position of the 4 nodes</td>
+<td>optimisation (node adding)</td>
+</tr>
+</tbody></table>
+<p><strong>FPGA_communication.cpp</strong></p>
+<table>
+<thead>
+<tr>
+<th>function name</th>
+<th>input</th>
+<th>output</th>
+<th>usage</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>String read_FPGA_wall(int wall_0, int wall_1, int wall_2)</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>String read_FPGA_beacon(int beacon_0, int beacon_1)</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>void write_FPGA(int key_0, int key_1, int camera_command)</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>String UART_read_FPGA()</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody></table>
+<p><strong>WiFi_connection.cpp</strong></p>
+<table>
+<thead>
+<tr>
+<th>function name</th>
+<th>input</th>
+<th>output</th>
+<th>usage</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>void wifi_connection()</td>
+<td></td>
+<td></td>
+<td>wifi connection</td>
+</tr>
+<tr>
+<td>bool check_wifi()</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>void client_post(String message)</td>
+<td>normal: current position; finished state: full node graph;</td>
+<td></td>
+<td>post to server</td>
+</tr>
+<tr>
+<td>void client_get()</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody></table>
+<hr>
+<h3 id="May-9th-Fri"><a href="#May-9th-Fri" class="headerlink" title="May 9th (Fri)"></a>May 9th (Fri)</h3><p><mark style="background-color: #7099a7;"> Worked on ESP32 programming. </mark></p>
+<h4 id="Motor-command-generator"><a href="#Motor-command-generator" class="headerlink" title="Motor command generator"></a>Motor command generator</h4><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br></pre></td><td class="code"><pre><span class="line">std::vector&lt;int&gt; forward = &#123;1, 0, 1, 1&#125;; </span><br><span class="line">std::vector&lt;int&gt; left = &#123;1, 0, 0, 1&#125;; </span><br><span class="line">std::vector&lt;int&gt; right = &#123;1, 0, 1, 0&#125;; </span><br><span class="line">std::vector&lt;std::vector&lt;int&gt;&gt; motor_command_generator(std::vector&lt;int&gt; node_route)</span><br><span class="line">&#123;</span><br><span class="line">    std::vector&lt;std::vector&lt;int&gt;&gt; motor_command; </span><br><span class="line">    int i = 1; </span><br><span class="line">    while ( i &lt; node_route.size() )</span><br><span class="line">    &#123;</span><br><span class="line">        // forward command</span><br><span class="line">        std::vector&lt;int&gt; tmp = forward; </span><br><span class="line">        tmp.push_back( get_step_num( get_node(node_route[i-1]).position, get_node(node_route[i]).position ) ); </span><br><span class="line">        motor_command.push_back(tmp); </span><br><span class="line">        i++; </span><br><span class="line">        // turn direction</span><br><span class="line">        if (i != node_route.size() )</span><br><span class="line">        &#123;</span><br><span class="line">            int tmp_turn = get_angle_num(get_angle(get_node(node_route[i-1]).position, get_node(node_route[i]).position, 0), get_angle(get_node(node_route[i-1]).position, get_node(node_route[i]).position, 0) ); </span><br><span class="line">            if ( tmp_turn &gt; 0 )</span><br><span class="line">            &#123;</span><br><span class="line">                tmp = left; </span><br><span class="line">                tmp.push_back(tmp_turn); </span><br><span class="line">                motor_command.push_back(tmp); </span><br><span class="line">            &#125;</span><br><span class="line">            else if( tmp_turn &lt; 0 )</span><br><span class="line">            &#123;</span><br><span class="line">                tmp = right; </span><br><span class="line">                tmp.push_back(-tmp_turn); </span><br><span class="line">                motor_command.push_back(tmp); </span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    return motor_command; </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h4 id="Check-wall-from-memo"><a href="#Check-wall-from-memo" class="headerlink" title="Check wall from memo"></a>Check wall from memo</h4><p>Following shows an optimisation method which was later abandoned (because of the complexity of code and the lack of precision of the location calculation). </p>
+<p>This method was initially planned to reduce the exploring time by not checking the same wall again. (If already checked on one side, do not look at it on the other side.)</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br></pre></td><td class="code"><pre><span class="line">// from node1 to node2</span><br><span class="line">// direction: 1 = left; -1 = right; </span><br><span class="line">// return: true = checked; false = not_checked; </span><br><span class="line">bool check_wall_from_memo(int node3, int node4, bool direction)</span><br><span class="line">&#123;</span><br><span class="line">    struct HashEntry* first = node_graph-&gt;table[0];</span><br><span class="line">    while (first != NULL)    </span><br><span class="line">    &#123;</span><br><span class="line">        int i = 0; </span><br><span class="line">        while ( i &lt; first-&gt;value.connected_node.size() ) </span><br><span class="line">        &#123;</span><br><span class="line">            std::vector&lt;int&gt; tmp = first-&gt;value.connected_node[i]; // TODO: optimise the order of checking </span><br><span class="line">            if ( tmp[1] == 1 ) // left wall -&gt; bool = true</span><br><span class="line">            &#123;</span><br><span class="line">                if ( check_wall((first-&gt;value).position, get_node(tmp[0]).position, get_node(node3).position, get_node(node4).position, true, direction))</span><br><span class="line">                &#123;</span><br><span class="line">                    return true; </span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">            if ( tmp[2] == 1 ) // right wall -&gt; bool = false</span><br><span class="line">            &#123;</span><br><span class="line">                if ( check_wall((first-&gt;value).position, get_node(tmp[0]).position, get_node(node3).position, get_node(node4).position, false, direction))</span><br><span class="line">                &#123;</span><br><span class="line">                    return true; </span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">            i++; </span><br><span class="line">        &#125;</span><br><span class="line">        first = first-&gt;next;</span><br><span class="line">    &#125;</span><br><span class="line">    return false; </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<hr>
+<h2 id="Week-4"><a href="#Week-4" class="headerlink" title="Week 4"></a>Week 4</h2><h3 id="Jun-11th-Sun"><a href="#Jun-11th-Sun" class="headerlink" title="Jun 11th (Sun)"></a>Jun 11th (Sun)</h3><p><mark style="background-color: #7099a7;"> Changed the code into C++ and used iostream to manually input the camera detection result, and debugged by checking the output motor commands. </mark></p>
+<h4 id="C-code-for-debugging"><a href="#C-code-for-debugging" class="headerlink" title="C++ code for debugging"></a>C++ code for debugging</h4><p>Fixed errors in Hash Entry. (The orginal one was not correctly writing values into the table)</p>
+<p>Full code on <a target="_blank" rel="noopener" href="https://github.com/thisisamor/rover-test-code/blob/main/test/algorithm_test_demo.cpp">GitHub</a>. </p>
+<h4 id="Find-new-path"><a href="#Find-new-path" class="headerlink" title="Find new path"></a>Find new path</h4><p>A solution for finding new path is to assess different functions for main loop to execute with respect to the postion that is currently being checked. </p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br><span class="line">114</span><br><span class="line">115</span><br><span class="line">116</span><br><span class="line">117</span><br><span class="line">118</span><br><span class="line">119</span><br><span class="line">120</span><br><span class="line">121</span><br><span class="line">122</span><br><span class="line">123</span><br><span class="line">124</span><br><span class="line">125</span><br><span class="line">126</span><br><span class="line">127</span><br><span class="line">128</span><br><span class="line">129</span><br><span class="line">130</span><br><span class="line">131</span><br><span class="line">132</span><br><span class="line">133</span><br><span class="line">134</span><br><span class="line">135</span><br><span class="line">136</span><br><span class="line">137</span><br><span class="line">138</span><br><span class="line">139</span><br><span class="line">140</span><br><span class="line">141</span><br><span class="line">142</span><br><span class="line">143</span><br><span class="line">144</span><br><span class="line">145</span><br><span class="line">146</span><br><span class="line">147</span><br><span class="line">148</span><br><span class="line">149</span><br><span class="line">150</span><br><span class="line">151</span><br></pre></td><td class="code"><pre><span class="line">typedef enum </span><br><span class="line">&#123;</span><br><span class="line">    moving, </span><br><span class="line">    node_left, </span><br><span class="line">    node_right, </span><br><span class="line">    path_left, </span><br><span class="line">    path_right</span><br><span class="line">&#125; Checking;</span><br><span class="line">Checking current_check; </span><br><span class="line">void update_checking()</span><br><span class="line">&#123;</span><br><span class="line">    switch (current_check) </span><br><span class="line">    &#123;</span><br><span class="line">        case node_left:  </span><br><span class="line">            stack-&gt;node_left_right_checked.first = true;</span><br><span class="line">            break; </span><br><span class="line">        case node_right:  </span><br><span class="line">            stack-&gt;node_left_right_checked.second = true;</span><br><span class="line">            break; </span><br><span class="line">        case path_left:  </span><br><span class="line">            stack-&gt;path_left_right_checked.first = true;</span><br><span class="line">            break; </span><br><span class="line">        case path_right: </span><br><span class="line">            stack-&gt;path_left_right_checked.second = true;</span><br><span class="line">            break; </span><br><span class="line">        default: </span><br><span class="line">            current_check = moving; </span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line">std::vector&lt;std::vector&lt;int&gt;&gt; find_new_path()</span><br><span class="line">&#123;</span><br><span class="line">    std::vector&lt;std::vector&lt;int&gt;&gt; motor_command; </span><br><span class="line">    while (currentState != finish)</span><br><span class="line">    &#123;</span><br><span class="line">        // TODO: check if at stack_second</span><br><span class="line">        if ( same_position(current_position, get_node(stack-&gt;node_id_pair.second).position) == false )</span><br><span class="line">        &#123;</span><br><span class="line">            std::cout &lt;&lt; &quot;Moving to stack position: check node &quot; &lt;&lt; stack-&gt;node_id_pair.second &lt;&lt; std::endl; </span><br><span class="line">            // if not, move to that position</span><br><span class="line">            for (int i=0; i&lt;=last_id; i++)</span><br><span class="line">            &#123;</span><br><span class="line">                if ( same_position(get_node(i).position, current_position) )</span><br><span class="line">                &#123;</span><br><span class="line">                    motor_command = motor_command_generator(&#123;i, stack-&gt;node_id_pair.second&#125;); </span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        // 1. top process: node_left_right_checked</span><br><span class="line">            // not &#123;true, true&#125; -&gt; motor command generate, [return]</span><br><span class="line">            // &#123;true, true&#125; -&gt; continue</span><br><span class="line">        if ( stack-&gt;node_left_right_checked.first == false ) // node left not checked</span><br><span class="line">        &#123;</span><br><span class="line">            current_check = node_left; </span><br><span class="line">            motor_command.push_back(left); // turn left</span><br><span class="line">            (motor_command[0]).push_back(get_angle_num(0, M_PI_2)); </span><br><span class="line">            // std::cout &lt;&lt; get_angle_num(0, M_PI_2) &lt;&lt;std::endl; </span><br><span class="line">            std::cout &lt;&lt; &quot;Node left not checked, motor command: &quot;; </span><br><span class="line">            printVector(motor_command[0]); </span><br><span class="line">            return motor_command; </span><br><span class="line">            // TODO: modify node.left_wall</span><br><span class="line">        &#125;</span><br><span class="line">        else if ( stack-&gt;node_left_right_checked.second == false ) // node right not checked</span><br><span class="line">        &#123;</span><br><span class="line">            current_check = node_right; </span><br><span class="line">            motor_command.push_back(right); // turn right</span><br><span class="line">            (motor_command[0]).push_back(get_angle_num(0, M_PI_2)); </span><br><span class="line">            std::cout &lt;&lt; &quot;Node right not checked, motor command: &quot;; </span><br><span class="line">            printVector(motor_command[0]); </span><br><span class="line">            return motor_command; </span><br><span class="line">            // TODO: modify node.right_wall</span><br><span class="line">        &#125;</span><br><span class="line">        // 2. top process: first -&gt; second (backwards)</span><br><span class="line">            // 2.1 check_wall_from_memo</span><br><span class="line">                // wall not checked yet -&gt; motor command generate, [return]</span><br><span class="line">                // wall exist -&gt; update process stack, continue</span><br><span class="line">        if ( stack-&gt;path_left_right_checked.first == false ) // path left not checked</span><br><span class="line">        &#123;</span><br><span class="line">            stack-&gt;path_left_right_checked.first = true; </span><br><span class="line">            if (check_wall_from_memo( stack-&gt;node_id_pair.first, stack-&gt;node_id_pair.second, true ) == false)</span><br><span class="line">            &#123;</span><br><span class="line">                // generate motor command </span><br><span class="line">                // TODO: test camera detection path</span><br><span class="line">                    // if accurate: one step</span><br><span class="line">                    // else: many steps (one at a time)</span><br><span class="line">                current_check = path_left; </span><br><span class="line">                motor_command.push_back(fake); </span><br><span class="line">                std::cout &lt;&lt; &quot;Path left not checked, logic not implemented, here is a fake command: &quot;; </span><br><span class="line">                printVector(motor_command[0]); </span><br><span class="line">                return motor_command; </span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        if ( stack-&gt;path_left_right_checked.second == false ) // path left not checked</span><br><span class="line">        &#123;</span><br><span class="line">            stack-&gt;path_left_right_checked.second = true; </span><br><span class="line">            if (check_wall_from_memo( stack-&gt;node_id_pair.first, stack-&gt;node_id_pair.second, false ) == false)</span><br><span class="line">            &#123;</span><br><span class="line">                // generate motor command </span><br><span class="line">                // TODO: test camera detection path</span><br><span class="line">                    // if accurate: one step</span><br><span class="line">                    // else: many steps (one at a time)</span><br><span class="line">                current_check = path_right; </span><br><span class="line">                motor_command.push_back(fake); </span><br><span class="line">                std::cout &lt;&lt; &quot;Path right not checked, logic not implemented, here is a fake command: &quot;; </span><br><span class="line">                printVector(motor_command[0]); </span><br><span class="line">                return motor_command; </span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        // 3. if everything have been checked, delete top process</span><br><span class="line">        std::cout &lt;&lt; &quot;Top stack all checked, delete stack: &quot; &lt;&lt; stack-&gt;node_id_pair.first &lt;&lt; &quot;-&gt;&quot; &lt;&lt; stack-&gt;node_id_pair.second &lt;&lt; std::endl; </span><br><span class="line">        finish_process(); </span><br><span class="line">        // NOTE: currently using recursive call until new motor command is found</span><br><span class="line">        // not sure if this is the best way</span><br><span class="line">        return find_new_path(); </span><br><span class="line">    &#125; </span><br><span class="line">    // if stack is empty, return &#123;&#123;0, 0, 0, 0, 0&#125;&#125; to stop exploring</span><br><span class="line">    return &#123;&#123;0, 0, 0, 0, 0&#125;&#125;; </span><br><span class="line">&#125;</span><br><span class="line">// when a new path is found</span><br><span class="line">// check if current_position is a new node</span><br><span class="line">// if so, add the new one</span><br><span class="line">void check_node_at_new_path() </span><br><span class="line">&#123;</span><br><span class="line">    bool indicator = false; </span><br><span class="line">    struct HashEntry* current = node_graph-&gt;table[0];</span><br><span class="line">    while (current != NULL)    </span><br><span class="line">    &#123;</span><br><span class="line">        if (same_position((current-&gt;value).position, current_position) == 0)</span><br><span class="line">        &#123;</span><br><span class="line">            indicator = true; </span><br><span class="line">        &#125;</span><br><span class="line">        current = current-&gt;next;</span><br><span class="line">    &#125;</span><br><span class="line">    if (indicator == false)</span><br><span class="line">    &#123;</span><br><span class="line">        std::cout &lt;&lt; &quot;Checking current position: node not added yet&quot; &lt;&lt; std::endl; </span><br><span class="line">        std::pair&lt;int, int&gt; new_node_position = current_position; </span><br><span class="line">        std::vector&lt;std::vector&lt;int&gt;&gt; tmp; </span><br><span class="line">        add_node(new_node_position, tmp); </span><br><span class="line">        // 1. split top process</span><br><span class="line">            // 1.1  new_node -&gt; stack_second  : checking side = true; other side = migrate; </span><br><span class="line">            // 1.2  stack_first -&gt; new_node   : checking side = false; other side = migrate; </span><br><span class="line">            // TODO: checking side memo</span><br><span class="line">        Process* new_process = new Process; </span><br><span class="line">        new_process-&gt;node_id_pair = std::make_pair(last_id, stack-&gt;node_id_pair.second); </span><br><span class="line">        new_process-&gt;path_left_right_checked = </span><br><span class="line">        stack-&gt;node_id_pair = std::make_pair(stack-&gt;node_id_pair.first, last_id); </span><br><span class="line">        // 2. add stack_first and stack_second to tmp</span><br><span class="line">        // (connection info)</span><br><span class="line">        // std::printf(&quot;New node added at (&quot; + String(new_node_position.first) + &quot;, &quot; + String(new_node_position.second) + &quot; ).&quot;);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<hr>
+<h3 id="Jun-12th-Mon"><a href="#Jun-12th-Mon" class="headerlink" title="Jun 12th (Mon)"></a>Jun 12th (Mon)</h3><p><mark style="background-color: #7099a7;"> Fixed bug in position calculation and the corresponding algorithm errors. </mark></p>
+<h4 id="Position-calculation"><a href="#Position-calculation" class="headerlink" title="Position calculation"></a>Position calculation</h4><p>In the given 2.4 * 3.6 (m) arena, the rover locates itself by measuring the angles between each two beacons ($\alpha$, $\beta$). </p>
+<p>The position is unique, as shown below. Location M is on the intersection of circumcircle of triangle MRB and triangle MBY. </p>
+<p><img src="https://github.com/thisisamor/blog_pic/blob/main/year2/EE-Project/angle%20calc%200%20(2).png?raw=true" alt="position calculation 1"></p>
+<p>Angle $RMB$ is the inscribed angle of circle $O_2$, therefore the central angle $RO_2B$ is twice the size of $\alpha$. </p>
+<p>Using trigonometric, the coordinate of $O_2$ can be representated as $(\frac{length}{2}, \frac{length}{2}cot(\alpha))$. </p>
+<p>Similarly, $O_1 (length-\frac{width}{2}cot(\beta), -\frac{width}{2})$.</p>
+<p><img src="https://github.com/thisisamor/blog_pic/blob/main/year2/EE-Project/angle%20calc%201%20(2).png?raw=true" alt="position calculation 2"></p>
+<p>Let the coordinate of M be $(x, y)$. </p>
+<p>Both $MO_2B$ and $MO_1B$ are isosceles triangles, therefore $O_1O_2$ is the perpendicular bisector of segment $MB$. The coordinate of N can be represented as $(\frac{length}{2}+\frac{x}{2}, -\frac{width}{2}+\frac{y}{2})$. </p>
+<p><img src="https://github.com/thisisamor/blog_pic/blob/main/year2/EE-Project/angle%20calc%20(2).png?raw=true" alt="position calculation 3"></p>
+<p>The three angles in the figure above have same size $\theta$. Using trigonometric, $tan(\theta)$ could be represented as: </p>
+<p>$$ tan(\theta) &#x3D; \frac {width+y} {length-x}$$<br>$$ tan(\theta) &#x3D; \frac {\frac{length}{2}+\frac{x}{2}-\frac{length}{2}} {-\frac{width}{2}+\frac{y}{2}-\frac{length}{2}cot(\alpha)} $$<br>$$ tan(\theta) &#x3D; \frac {length-\frac{width}{2}cot(\beta)-\frac{length}{2}+\frac{x}{2}} {-\frac{width}{2}+\frac{width}{2}-\frac{y}{2}}  $$</p>
+<p>Solve the above equations for x and y, the coordinate of M is: </p>
+<p>$$x &#x3D; length - \frac{length*width}{2} * \frac { ((\frac{length}{2}*cot(α))-(\frac{width}{2})) * (cot⁡(α)*cot⁡(β)-1) } {(\frac{length}{2}*cot⁡(α)- \frac{width}{2})^2 + (\frac{length}{2}-\frac{width}{2}*cot⁡(β) )^2}$$</p>
+<p>$$y&#x3D; - width+  \frac{length*width}{2} * (1- \frac {((\frac{width}{2}*cot(β))-(\frac{length}{2})) * (cot⁡(α)*cot⁡(β)-1)} {(\frac{length}{2}*cot⁡(α)-\frac{width}{2})^2  +(\frac{length}{2}-\frac{width}{2}*cot⁡(β))^2})$$</p>
+<hr>
+<h3 id="Jun-13th-Tue"><a href="#Jun-13th-Tue" class="headerlink" title="Jun 13th (Tue)"></a>Jun 13th (Tue)</h3><p><mark style="background-color: #7099a7;"> Tested data parsing and recontructing on server side (when receiving requests from esp). (Used plain text instead of jsonpayload.) </mark></p>
+<h4 id="Angle-calculation"><a href="#Angle-calculation" class="headerlink" title="Angle calculation"></a>Angle calculation</h4><p>Currently using input as gyroscope reading for testing the algorithm (with position and node data processing). The following code is a simple calculator which uses python to provide the simulated gyro reading. </p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br></pre></td><td class="code"><pre><span class="line">import math</span><br><span class="line"></span><br><span class="line">def range(angle):</span><br><span class="line">    if angle &lt; 0:</span><br><span class="line">        angle += 360</span><br><span class="line">    return angle</span><br><span class="line"></span><br><span class="line">while True:</span><br><span class="line">    x = float(input(&quot;current position x: &quot;))</span><br><span class="line">    y = float(input(&quot;current position y: &quot;))</span><br><span class="line">    angle = float(input(&quot;current angle: &quot;))</span><br><span class="line"></span><br><span class="line">    Y = math.atan(-y / (360.0 - x)) * 180 / math.pi</span><br><span class="line">    B = -math.atan((240.0 + y) / (360.0 - x)) * 180 / math.pi</span><br><span class="line">    R = -90.0 - math.atan(x / (240.0 + y)) * 180 / math.pi</span><br><span class="line"></span><br><span class="line">    if angle &gt;= Y:</span><br><span class="line">        print(&quot;angle_Y =&quot;, angle - Y)</span><br><span class="line">        print(&quot;angle_B =&quot;, angle - B)</span><br><span class="line">        print(&quot;angle_R =&quot;, angle - R)</span><br><span class="line">    elif angle &gt;= B:</span><br><span class="line">        print(&quot;angle_Y =&quot;, 360 + angle - Y)</span><br><span class="line">        print(&quot;angle_B =&quot;, angle - B)</span><br><span class="line">        print(&quot;angle_R =&quot;, angle - R)</span><br><span class="line">    elif angle &gt;= R:</span><br><span class="line">        print(&quot;angle_Y =&quot;, 360 + angle - Y)</span><br><span class="line">        print(&quot;angle_B =&quot;, 360 + angle - B)</span><br><span class="line">        print(&quot;angle_R =&quot;, angle - R)</span><br><span class="line">    else:</span><br><span class="line">        print(&quot;angle_Y =&quot;, 360 + angle - Y)</span><br><span class="line">        print(&quot;angle_B =&quot;, 360 + angle - B)</span><br><span class="line">        print(&quot;angle_R =&quot;, 360 + angle - R)</span><br></pre></td></tr></table></figure>
+<hr>
+<h3 id="Jun-14th-Wed"><a href="#Jun-14th-Wed" class="headerlink" title="Jun 14th (Wed)"></a>Jun 14th (Wed)</h3><p><mark style="background-color: #7099a7;"> Finished and tested trace back algorithm with path checking. Full code see <a target="_blank" rel="noopener" href="https://github.com/thisisamor/rover-test-code/blob/main/test/algorithm_test_demo.cpp">GitHub</a>. </mark></p>
+<p><mark style="background-color: #7099a7;"> Wrote something in the report (having a consulting session on Thursday). </mark></p>
+<hr>
+<h3 id="Jun-15th-Thur"><a href="#Jun-15th-Thur" class="headerlink" title="Jun 15th (Thur)"></a>Jun 15th (Thur)</h3><p><mark style="background-color: #7099a7;"> Added motor function and gyro read into main loop, tested full program (without pid controller). MPU-6050 failed to work with FPGA capboard. </mark></p>
+<p>The output from cap board (supposed to be 5V) failed to supply the ideal work voltage for MPU, ended up with the gyro unable to activate. The battery is not an ideal power supply either, cuz that would be too big a voltage for the chip. </p>
+<p>The FPGA currently had to be powered with external cable, as the flashed programme is not permenantly stored. This might be the reason why the power from cap board is not enough for activating the chip. </p>
+<hr>
+<h3 id="Jun-16th-Fri"><a href="#Jun-16th-Fri" class="headerlink" title="Jun 16th (Fri)"></a>Jun 16th (Fri)</h3><p><mark style="background-color: #7099a7;"> Fixed issues in UART connection. </mark></p>
+<p><mark style="background-color: #7099a7;"> Had problem while testing the motor commands with pwm. Blew up a third esp32. TTTT</mark></p>
+<p><mark style="background-color: #7099a7;"> The beacons were tested working with the SMPS power control system. </mark></p>
+<h4 id="UART"><a href="#UART" class="headerlink" title="UART"></a>UART</h4><p>Must not use <code>pinMode</code> to define the UART ports in setup function. (Error: UART not available.)</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">\\ DO NOT: </span><br><span class="line">  pinMode(UART_RXD, INPUT); </span><br><span class="line">  pinMode(UART_TXD, OUTPUT); </span><br><span class="line"></span><br><span class="line">\\ error: </span><br><span class="line">  Serial2.available() == 0; </span><br></pre></td></tr></table></figure>
+
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br></pre></td><td class="code"><pre><span class="line">\\ This is enough</span><br><span class="line">  Serial.begin(115200);</span><br><span class="line">  Serial2.begin(115200, SERIAL_8N1, UART_RXD, UART_TXD); </span><br><span class="line"></span><br><span class="line">\\ receive data: </span><br><span class="line">uint32_t getMsg()&#123;</span><br><span class="line">  byte b0, b1, b2, b3;</span><br><span class="line">  uint32_t msg;</span><br><span class="line">  if (Serial2.available() &gt; 0) &#123;</span><br><span class="line">    b0 = Serial2.read();</span><br><span class="line">    b1 = Serial2.read();</span><br><span class="line">    b2 = Serial2.read();</span><br><span class="line">    b3 = Serial2.read();</span><br><span class="line">    msg = (b3&lt;&lt;24)|(b2&lt;&lt;16)|(b1&lt;&lt;8)|(b0);</span><br><span class="line">    return msg;</span><br><span class="line">  &#125;</span><br><span class="line">  else &#123;</span><br><span class="line">    //Serial.println(&quot;UART not available.&quot;);</span><br><span class="line">    return 0;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line">std::vector&lt;String&gt; read_FPGA()&#123;</span><br><span class="line">  String wall;   // 3-bit: &#123;wall_flag, hori_flag&#125;</span><br><span class="line">  String beacon;</span><br><span class="line">  String near;</span><br><span class="line">  String enter_two;</span><br><span class="line">  uint32_t msg;</span><br><span class="line">  std::vector&lt;String&gt; read_out;</span><br><span class="line"></span><br><span class="line">  do &#123;</span><br><span class="line">    msg = getMsg();</span><br><span class="line">  &#125; while ((msg == 0x00524242) || (msg==0));</span><br><span class="line">      </span><br><span class="line">    wall = String(bitRead(msg,31)) + String(bitRead(msg,30)) + String(bitRead(msg,29));</span><br><span class="line">    beacon = String(bitRead(msg,28)) + String(bitRead(msg,27));</span><br><span class="line">    near = String(bitRead(msg,26));</span><br><span class="line">    enter_two = String(bitRead(msg,25)) + String(bitRead(msg,24));</span><br><span class="line"></span><br><span class="line">    read_out.push_back(wall);</span><br><span class="line">    read_out.push_back(beacon);</span><br><span class="line">    read_out.push_back(near);</span><br><span class="line">    read_out.push_back(enter_two);</span><br><span class="line">    return read_out;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>The other problem is that the UART does not provide synchronization of reading messages (ie. results are out of order due to the delays while executing other functions in main loop). </p>
+<h4 id="PWM-Motor"><a href="#PWM-Motor" class="headerlink" title="PWM Motor"></a>PWM Motor</h4><p>The current design (wtih 2 supporting legs) is giving the rover too much drag so it doesn’t move at all. </p>
+<p>(If you lift the rover up you can see that the wheels are actually rotating, but not when you put it in the arena.)</p>
+<p>We increased the torque by changing the pwm frequency, then the esp32 stoppped working. This time it is not powered by two power supplies (im pretty sure) but somehow the esptool setup was burnt. </p>
+<h4 id="Power-system-beacon"><a href="#Power-system-beacon" class="headerlink" title="Power system - beacon"></a>Power system - beacon</h4><p><img src="https://github.com/thisisamor/blog_pic/blob/main/year2/EE-Project/beacon+SMPS.jpg?raw=true" alt="beacon with SMPS"></p>
+<hr>
+<h3 id="Jun-17th-Sat"><a href="#Jun-17th-Sat" class="headerlink" title="Jun 17th (Sat)"></a>Jun 17th (Sat)</h3><p><mark style="background-color: #7099a7;"> Stepper motors were working (finally!!!) </mark></p>
+<p><mark style="background-color: #7099a7;"> Tested simple exploring, seems to be working. </mark></p>
+<h4 id="Stepper-Motor"><a href="#Stepper-Motor" class="headerlink" title="Stepper Motor"></a>Stepper Motor</h4><p>Solved the following problems: </p>
+<ol>
+<li><p>MUST include the AccelStepper library correctly in platformIO. (Check the version information in platformio.ini config file)</p>
+</li>
+<li><p>DO NOT use <code>pinMode</code> to initialise the motor pins in setup function, only use the lib functions to define Lstepper and Rstepper is enough. </p>
+</li>
+<li><p><code>Lstepper.move(numSteps);</code> sets the stepper motor with a certain value to move, this is triggered by <code>Lstepper.run();</code>. Check the remainning steps by calling <code>Lstepper.distanceToGo();</code>.</p>
+</li>
+</ol>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br></pre></td><td class="code"><pre><span class="line">#include &lt;AccelStepper.h&gt;</span><br><span class="line">#define dirPin 26</span><br><span class="line">#define stepPin 25</span><br><span class="line">#define stepsPerRevolution 200</span><br><span class="line">#define dirPin2 33 //only use IO pins not RxTx and digital </span><br><span class="line">#define stepPin2 32</span><br><span class="line">//// Define a stepper and the pins it will use</span><br><span class="line">AccelStepper Lstepper (AccelStepper::DRIVER, stepPin, dirPin);</span><br><span class="line">AccelStepper Rstepper (AccelStepper::DRIVER, stepPin2, dirPin2); // Defaults to AccelStepper::FULL4WIRE (4 pins) on 2, 3, 4, 5</span><br><span class="line">int numSteps;</span><br><span class="line">float stepAngle = 1.8;  // 1.8degrees per step for NEMA17</span><br><span class="line">float gearRatio = 1.0; //Should be 1, but vary for testing</span><br><span class="line"></span><br><span class="line">void motor_init()</span><br><span class="line">&#123;</span><br><span class="line">  Lstepper.setMaxSpeed(200);</span><br><span class="line">  Rstepper.setMaxSpeed(200);</span><br><span class="line">  Lstepper.setAcceleration(100);</span><br><span class="line">  Rstepper.setAcceleration(100);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">int numstepscalcyaw (double yaw)&#123;</span><br><span class="line">  numSteps = yaw*2.5/stepAngle/gearRatio;//assume yaw is degree for now</span><br><span class="line">  return numSteps;  // Move stepper motor 2 by the specified number of steps</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">int numstepscalcdist(double dist)&#123;</span><br><span class="line">  numSteps = dist/1000*200/0.2136;//divide by 1000 to be in meters,divide by circumference of wheel and multiply by number of steps</span><br><span class="line">  return numSteps;  // Move stepper motor 2 by the specified number of steps</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">void motor (int dir, double value)&#123;</span><br><span class="line">  if (dir == -1)&#123;//turn right</span><br><span class="line">    numSteps = numstepscalcyaw(value);</span><br><span class="line">    Lstepper.move(numSteps);</span><br><span class="line">    Rstepper.move(numSteps);</span><br><span class="line">  &#125;</span><br><span class="line">  else if (dir == 0)&#123;//forward</span><br><span class="line">    numSteps = numstepscalcdist(value);</span><br><span class="line">    Lstepper.move(numSteps);</span><br><span class="line">    Rstepper.move(-1*numSteps);</span><br><span class="line">  &#125;</span><br><span class="line">  else if (dir == 1)&#123;//turn left</span><br><span class="line">    numSteps = numstepscalcyaw(value);</span><br><span class="line">    Lstepper.move(-1*numSteps);</span><br><span class="line">    Rstepper.move(-1*numSteps);</span><br><span class="line">  &#125;</span><br><span class="line">  while (Lstepper.distanceToGo() != 0 || Rstepper.distanceToGo() != 0) &#123;</span><br><span class="line">    // mpu6050.readSensor();</span><br><span class="line">    Lstepper.run();</span><br><span class="line">    Rstepper.run();</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>(The final rover should look a bit tidier.)</p>
+<p><img src="https://github.com/thisisamor/blog_pic/blob/main/year2/EE-Project/rover+motor.jpg?raw=true" alt="rover with stepper motor"></p>
+<hr>
+
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/college/" rel="tag"># college</a>
+              <a href="/tags/project/" rel="tag"># project</a>
+          </div>
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-item">
+                <a href="/2023/05/26/009-EE-Project-Work-Diary-pt1/" rel="prev" title="EE Project Work Diary (pt1)">
+                  <i class="fa fa-chevron-left"></i> EE Project Work Diary (pt1)
+                </a>
+            </div>
+            <div class="post-nav-item">
+            </div>
+          </div>
+    </footer>
+  </article>
+</div>
+
+
+
+
+
+
+</div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+
+
+<div class="copyright">
+  &copy; 
+  <span itemprop="copyrightYear">2023</span>
+  <span class="with-love">
+    <i class="fa-solid fa-carrot"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Amor</span>
+</div>
+  <div class="powered-by">Powered by <a href="https://hexo.io/" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/" rel="noopener" target="_blank">NexT.Gemini</a>
+  </div>
+
+    </div>
+  </footer>
+
+  
+  <div class="back-to-top" role="button" aria-label="Back to top">
+    <i class="fa fa-arrow-up fa-lg"></i>
+    <span>0%</span>
+  </div>
+
+<noscript>
+  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
+
+
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js" integrity="sha256-XL2inqUJaslATFnHdJOi9GfQ60on8Wx1C2H8DYiN1xY=" crossorigin="anonymous"></script>
+<script src="/js/comments.js"></script><script src="/js/utils.js"></script><script src="/js/motion.js"></script><script src="/js/next-boot.js"></script>
+
+  
+
+  <script class="next-config" data-name="mermaid" type="application/json">{"enable":true,"theme":{"light":"default","dark":"dark"},"js":{"url":"https://cdnjs.cloudflare.com/ajax/libs/mermaid/9.4.3/mermaid.min.js","integrity":"sha256-e0o3JYsdjqKajf9eOe22FhioYSz9WofRY4dLKo3F6do="}}</script>
+  <script src="/js/third-party/tags/mermaid.js"></script>
+
+
+
+  
+
+
+
+
+  
+
+  <script class="next-config" data-name="enableMath" type="application/json">true</script><script class="next-config" data-name="mathjax" type="application/json">{"enable":true,"tags":"none","js":{"url":"https://cdnjs.cloudflare.com/ajax/libs/mathjax/3.2.2/es5/tex-mml-chtml.js","integrity":"sha256-MASABpB4tYktI2Oitl4t+78w/lyA+D7b/s9GEP0JOGI="}}</script>
+<script src="/js/third-party/math/mathjax.js"></script>
+
+
+
+</body>
+</html>
