@@ -122,7 +122,7 @@
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
         <a href="/archives">
-          <span class="site-state-item-count">20</span>
+          <span class="site-state-item-count">21</span>
           <span class="site-state-item-name">posts</span>
         </a>
       </div>
@@ -158,6 +158,93 @@
     </div>
 
     <div class="main-inner index posts-expand">
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2023/07/29/013-A-Comprehensive-Study-Of-Compiler-Tech/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/amor_avatar.gif">
+      <meta itemprop="name" content="Amor">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="This is Amor">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="undefined | This is Amor">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/2023/07/29/013-A-Comprehensive-Study-Of-Compiler-Tech/" class="post-title-link" itemprop="url">A Comprehensive Study Of Compiler Technology</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">Posted on</span>
+
+      <time title="Created: 28-07-2023 17:46:40" itemprop="dateCreated datePublished" datetime="2023-07-28T17:46:40+01:00">28-07-2023</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">In</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/Intern/" itemprop="url" rel="index"><span itemprop="name">Intern</span></a>
+        </span>
+    </span>
+
+  
+</div>
+
+
+          
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <p style="opacity: 0.5">Trying to do some research on parsing theory.</p>
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/2023/07/29/013-A-Comprehensive-Study-Of-Compiler-Tech/">
+                Read more &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
 
     
 
@@ -220,27 +307,15 @@
     
     
     <div class="post-body" itemprop="articleBody">
-          <p style="opacity: 0.7;"> Start Notes: 
-
-<p><small style="opacity: 0.7;"> </small></p>
-<hr>
-<h3 id="llvm-安装调试"><a href="#llvm-安装调试" class="headerlink" title="llvm 安装调试"></a>llvm 安装调试</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">apt install llvm</span><br><span class="line">apt install clang</span><br><span class="line">apt install build-essential</span><br><span class="line">apt install zip</span><br><span class="line">apt install cmake</span><br><span class="line">apt install python3</span><br><span class="line">unzip llvm-project-main.zip</span><br><span class="line">mkdir llvm</span><br><span class="line">cd llvm-project-main</span><br><span class="line">mkdir build</span><br><span class="line">cd build</span><br><span class="line">cmake -DLLVM_ENABLE_PROJECTS=&quot;clang;lldb&quot; -DCMAKE_BUILD_TYPE=&quot;Debug&quot; -DCMAKE_INSTALL_PREFIX=&quot;/usr/local/llvm&quot; ../llvm</span><br><span class="line">make</span><br></pre></td></tr></table></figure>
-
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">root@LAPTOP-BFFKBFTN:~/llvm-project-llvmorg-16.0.6# cmake -S llvm -B build -G Ninja -DCMAKE_BUILD_TYPE=Debug</span><br><span class="line">root@LAPTOP-BFFKBFTN:~/llvm-project-llvmorg-16.0.6# cmake -DLLVM_ENABLE_PROJECTS=&quot;clang;lldb&quot; -DCMAKE_BUILD_TYPE=&quot;Debug&quot; -DCMAKE_INSTALL_PREFIX=&quot;/usr/local/llvm&quot; llvm</span><br><span class="line">root@LAPTOP-BFFKBFTN:~/llvm-project-llvmorg-16.0.6# make</span><br></pre></td></tr></table></figure>
-
-<hr>
-<h3 id="Kaleidoscope-LLVM"><a href="#Kaleidoscope-LLVM" class="headerlink" title="Kaleidoscope + LLVM"></a>Kaleidoscope + LLVM</h3><p><a target="_blank" rel="noopener" href="https://www.llvm.org/docs/tutorial/MyFirstLanguageFrontend/index.html">教程</a></p>
-<p>运行：</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">clang++ -g -O3 toy.cpp `llvm-config --cxxflags --ldflags --system-libs --libs core` -o toy</span><br><span class="line">./toy</span><br></pre></td></tr></table></figure>
-
-<hr>
-<h3 id="CTPG-Compile-Time-Parser-Generator"><a href="#CTPG-Compile-Time-Parser-Generator" class="headerlink" title="CTPG (Compile Time Parser Generator)"></a>CTPG (Compile Time Parser Generator)</h3><p><a target="_blank" rel="noopener" href="https://github.com/peter-winter/ctpg">GitHub Repo</a></p>
-<p>运行：</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">g++ test_ctpg.cpp -std=c++17 -o test_stpg</span><br><span class="line">./test_ctpg &quot;10, 20, 30&quot;</span><br></pre></td></tr></table></figure>
-
-<hr>
-<h3 id="License-许可证"><a href="#License-许可证" class="headerlink" title="License 许可证"></a>License 许可证</h3><hr>
-<h3 id=""><a href="#" class="headerlink" title=""></a></h3>
+          <p style="opacity: 0.5">Clang++ LLVM 踩坑撞墙指南。</p>
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/2023/07/18/012-%E7%90%86%E8%A7%A3LLVM%E6%9E%B6%E6%9E%84/">
+                Read more &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
       
     </div>
 
@@ -284,7 +359,7 @@
     </span>
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
-          <a href="/2023/07/16/011-Java-%E7%AC%94%E8%AE%B0/" class="post-title-link" itemprop="url">Java Notes</a>
+          <a href="/2023/07/16/011-Java-%E7%AC%94%E8%AE%B0/" class="post-title-link" itemprop="url">Java 笔记</a>
         </h2>
 
         <div class="post-meta-container">
@@ -321,7 +396,7 @@
     <div class="post-body" itemprop="articleBody">
           <p style="opacity: 0.7;">Start Notes: 
 
-<p><small style="opacity: 0.7;"> </small></p>
+<p><small style="opacity: 0.7;"> 试图入门。</small></p>
 <hr>
 <h2 id="Introduction"><a href="#Introduction" class="headerlink" title="Introduction"></a>Introduction</h2><p>In Java, every line of code that can actually run needs to be inside a class. </p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">public class Main &#123;</span><br><span class="line">    public static void main(String[] args) &#123;</span><br><span class="line">        System.out.println(&quot;This will be printed&quot;);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
