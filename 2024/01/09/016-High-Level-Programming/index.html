@@ -20,15 +20,15 @@
 
 <script class="next-config" data-name="main" type="application/json">{"hostname":"example.com","root":"/","images":"/images","scheme":"Gemini","darkmode":true,"version":"8.15.1","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":{"enable":false,"style":null},"bookmark":{"enable":false,"color":"#222","save":"manual"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"Searching...","empty":"We didn't find any results for the search: ${query}","hits_time":"${hits} results found in ${time} ms","hits":"${hits} results found"}}</script><script src="/js/config.js"></script>
 
-    <meta name="description" content="cheatsheet 前半程大概会是个四不像的 F# 入门指南吧。">
+    <meta name="description" content="前半程大概会是个四不像的 F# 入门指南吧，后面是Issie项目记录。">
 <meta property="og:type" content="article">
 <meta property="og:title" content="High Level Programming">
 <meta property="og:url" content="http://example.com/2024/01/09/016-High-Level-Programming/index.html">
 <meta property="og:site_name" content="This is Amor">
-<meta property="og:description" content="cheatsheet 前半程大概会是个四不像的 F# 入门指南吧。">
+<meta property="og:description" content="前半程大概会是个四不像的 F# 入门指南吧，后面是Issie项目记录。">
 <meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2024-01-09T10:55:50.000Z">
-<meta property="article:modified_time" content="2024-01-12T14:14:05.940Z">
+<meta property="article:modified_time" content="2024-02-14T03:39:30.837Z">
 <meta property="article:author" content="Amor">
 <meta property="article:tag" content="college">
 <meta property="article:tag" content="review">
@@ -102,7 +102,7 @@
   
   <aside class="sidebar">
 
-    <div class="sidebar-inner sidebar-overview-active">
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
       <ul class="sidebar-nav">
         <li class="sidebar-nav-toc">
           Table of Contents
@@ -115,6 +115,7 @@
       <div class="sidebar-panel-container">
         <!--noindex-->
         <div class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Intro"><span class="nav-number">1.</span> <span class="nav-text">Intro</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Type"><span class="nav-number">2.</span> <span class="nav-text">Type</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Functional-Programming"><span class="nav-number">3.</span> <span class="nav-text">Functional Programming</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Individual-Project"><span class="nav-number">4.</span> <span class="nav-text">Individual Project</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-Code-Analysis"><span class="nav-number">4.1.</span> <span class="nav-text">1. Code Analysis</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-DrawBlock-Test-amp-Improvement"><span class="nav-number">4.2.</span> <span class="nav-text">2. DrawBlock Test &amp; Improvement</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-RotateScale"><span class="nav-number">4.3.</span> <span class="nav-text">3. RotateScale</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-SheetBeatifyHelper-Functions"><span class="nav-number">4.4.</span> <span class="nav-text">4. SheetBeatifyHelper Functions</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Group-Work"><span class="nav-number">5.</span> <span class="nav-text">Group Work</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link"><span class="nav-number">5.1.</span> <span class="nav-text"></span></a></li></ol></li></ol></div>
         </div>
         <!--/noindex-->
 
@@ -189,7 +190,7 @@
 
     <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
       <meta itemprop="name" content="High Level Programming | This is Amor">
-      <meta itemprop="description" content="">
+      <meta itemprop="description" content="前半程大概会是个四不像的 F# 入门指南吧，后面是Issie项目记录。">
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
@@ -228,8 +229,173 @@
     
     
     <div class="post-body" itemprop="articleBody">
-        <p><a target="_blank" rel="noopener" href="https://intranet.ee.ic.ac.uk/t.clarke/hlp/images/cheatsheet/index.html">cheatsheet</a></p>
-<p>前半程大概会是个四不像的 F# 入门指南吧。</p>
+        <p style="opacity: 0.7;">Start Notes: 
+
+<small style="opacity: 0.7;">
+
+<p>F# 入门：<a target="_blank" rel="noopener" href="https://intranet.ee.ic.ac.uk/t.clarke/hlp/images/cheatsheet/index.html">cheatsheet</a></p>
+<p>Issie：<a target="_blank" rel="noopener" href="https://github.com/tomcl/issie">GitHub repo</a></p>
+</small>
+
+<hr>
+<h2 id="Intro"><a href="#Intro" class="headerlink" title="Intro"></a>Intro</h2><h2 id="Type"><a href="#Type" class="headerlink" title="Type"></a>Type</h2><h2 id="Functional-Programming"><a href="#Functional-Programming" class="headerlink" title="Functional Programming"></a>Functional Programming</h2><hr>
+<h2 id="Individual-Project"><a href="#Individual-Project" class="headerlink" title="Individual Project"></a>Individual Project</h2><h3 id="1-Code-Analysis"><a href="#1-Code-Analysis" class="headerlink" title="1. Code Analysis"></a>1. Code Analysis</h3><h3 id="2-DrawBlock-Test-amp-Improvement"><a href="#2-DrawBlock-Test-amp-Improvement" class="headerlink" title="2. DrawBlock Test &amp; Improvement"></a>2. DrawBlock Test &amp; Improvement</h3><h3 id="3-RotateScale"><a href="#3-RotateScale" class="headerlink" title="3. RotateScale"></a>3. RotateScale</h3><h3 id="4-SheetBeatifyHelper-Functions"><a href="#4-SheetBeatifyHelper-Functions" class="headerlink" title="4. SheetBeatifyHelper Functions"></a>4. SheetBeatifyHelper Functions</h3><table>
+<thead>
+<tr>
+<th>Key</th>
+<th>Type</th>
+<th>Difficulty</th>
+<th>Value read or written</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>B1R, B1W</td>
+<td>RW</td>
+<td>Low</td>
+<td>The dimensions of a custom component symbol</td>
+</tr>
+<tr>
+<td>B2W</td>
+<td>W</td>
+<td>Medium</td>
+<td>The position of a symbol on the sheet</td>
+</tr>
+<tr>
+<td>B3R, B3W</td>
+<td>RW</td>
+<td>Medium</td>
+<td>Read&#x2F;write the order of ports on a specified side of a symbol</td>
+</tr>
+<tr>
+<td>B4R, B4W</td>
+<td>RW</td>
+<td>Low</td>
+<td>The reverses state of the inputs of a MUX2</td>
+</tr>
+<tr>
+<td>B5R</td>
+<td>R</td>
+<td>Low</td>
+<td>The position of a port on the sheet. It cannot directly be written.</td>
+</tr>
+<tr>
+<td>B6R</td>
+<td>R</td>
+<td>Low</td>
+<td>The Bounding box of a symbol outline (position is contained in this)</td>
+</tr>
+<tr>
+<td>B7R, B7W</td>
+<td>RW</td>
+<td>Low</td>
+<td>The rotation state of a symbol</td>
+</tr>
+<tr>
+<td>B8R, B8W</td>
+<td>RW</td>
+<td>Low</td>
+<td>The flip state of a symbol</td>
+</tr>
+<tr>
+<td>T1R</td>
+<td>R</td>
+<td>Low</td>
+<td>The number of pairs of symbols that intersect each other. See Tick3 for a related function. Count over all pairs of symbols.</td>
+</tr>
+<tr>
+<td>T2R</td>
+<td>R</td>
+<td>Low</td>
+<td>The number of distinct wire visible segments that intersect with one or more symbols. See Tick3.HLPTick3.visibleSegments for a helper. Count over all visible wire segments.</td>
+</tr>
+<tr>
+<td>T3R</td>
+<td>R</td>
+<td>Low</td>
+<td>The number of distinct pairs of segments that cross each other at right angles. Does not include 0 length segments or segments on same net intersecting at one end, or segments on same net on top of each other. Count over whole sheet.</td>
+</tr>
+<tr>
+<td>T4R</td>
+<td>R</td>
+<td>Medium</td>
+<td>Sum of wiring segment length, counting only one when there are N same-net segments overlapping (this is the visible wire length on the sheet). Count over whole sheet.</td>
+</tr>
+<tr>
+<td>T5R</td>
+<td>R</td>
+<td>Low</td>
+<td>Number of visible wire right-angles. Count over whole sheet.</td>
+</tr>
+<tr>
+<td>T6R</td>
+<td>R</td>
+<td>High</td>
+<td>The zero-length segments in a wire with non-zero segments on either side that have Lengths of opposite signs lead to a wire retracing itself. Note that this can also apply at the end of a wire (where the zero-length segment is one from the end). This is a wiring artifact that should never happen but errors in routing or separation can cause it. Count over the whole sheet. Return from one function a list of all the segments that retrace, and also a list of all the end of wire segments that retrace so far that the next segment (index &#x3D; 3 or Segments.Length – 4) - starts inside a symbol.</td>
+</tr>
+</tbody></table>
+<p>One helper function has been written in TestDrawBlock.HLPTick3 for you to use.</p>
+<table>
+<thead>
+<tr>
+<th>Key</th>
+<th>Type</th>
+<th>Difficulty</th>
+<th>Value read or written</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>n&#x2F;a</td>
+<td>R</td>
+<td>High difficulty</td>
+<td>See TestDrawBlock.HLPTick3.visibleSegments The visible segments of a wire, as a list of vectors, from source end to target end. Note that a zero length segment one from either end of a wire is allowed which if present causes the end three segments to coalesce into a single visible segment.</td>
+</tr>
+</tbody></table>
+<h2 id="Group-Work"><a href="#Group-Work" class="headerlink" title="Group Work"></a>Group Work</h2><h3 id=""><a href="#" class="headerlink" title=""></a></h3><table>
+<thead>
+<tr>
+<th>Function</th>
+<th>Adjust on sheet</th>
+<th>Primary Optimization</th>
+<th>Test using random sample inputs</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>D1. sheetAlignScale</td>
+<td>Custom component scaling. Positioning of all components</td>
+<td>Reduce wire segments without increasing wire crossings. Align sets of components</td>
+<td>Reduction in wire segments. Visual alignment of same-type components: metric that corresponds to overall visual quality</td>
+</tr>
+<tr>
+<td>D2. sheetOrderFlip</td>
+<td>Port order on custom components, flip components, flip MUX input order</td>
+<td>Reduce wire crossings.</td>
+<td>Reduction in wire crossings, other quality measures.</td>
+</tr>
+<tr>
+<td>D3. sheetWireLabelSymbol</td>
+<td>Add or remove wire labels (swapping between long wires and wire labels). Improve symbol rendering.</td>
+<td>Reduce wiring complexity (symbol rendering is judged manually on appearance)</td>
+<td>Test ability to add labels without overlap in presence of adjacent components with visually helpful placement.</td>
+</tr>
+<tr>
+<td>X1. sheetRouteSeparate*</td>
+<td>Change existing routing or separation code to improve it and reduce artifacts</td>
+<td>Reduce special case problems, make operation idempotent</td>
+<td>Test for idempotence and corner case problem reduction. Test for over-long wires</td>
+</tr>
+<tr>
+<td>X2. sheetReplace*</td>
+<td>All component placement: topology recreated ignoring existing placement</td>
+<td>All of the above</td>
+<td>All of the above</td>
+</tr>
+<tr>
+<td>D4.</td>
+<td>Integrate (as much as possible) all deliverables into a single function which works well. Provide tests which demonstrate that it works.</td>
+<td></td>
+<td></td>
+</tr>
+</tbody></table>
 
     </div>
 
